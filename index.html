@@ -1,0 +1,57 @@
+---
+layout: default
+---
+
+<div id="uploadpage" class="hidden">
+  <div class="row">
+    <div class="col-md-12">
+      <div id="holder" class="text-center"><h2 data-l10n="help" id="help">Drop images here or just click</h2></div>
+      <div class="input"><input type="file" id="imageUpload" multiple="multiple" accept="image/*" /></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div id="button"><button type="button" class="btn btn-primary btn-lg btn-block" data-l10n="upload">Upload</button></div>
+      <h4 id="uploading" class="hidden"><i class="icon-spin5 animate-spin"></i> <span data-l10n="uploading">Uploading</span></h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h3 class="text-center why" data-l10n="why">Why img.bi is secure and awesome?</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">  
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title text-center" data-l10n="cryptography">Cryptography</h3>
+        </div>
+        <div class="panel-body" data-l10n="cryptography-text">
+          Images are encrypted using <a href="https://en.wikipedia.org/wiki/Advanced_Encryption_Standard">AES-256</a> with random key in your browser before upload. Nobody can view your images, even people who have direct access to servers. We also use <a href="https://en.wikipedia.org/wiki/Transport_Layer_Security">TLS</a> which defend you from <a href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack">Man-in-the-Middle attacks</a>.
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">  
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title text-center" data-l10n="open-source">Open source</h3>
+        </div>
+        <div class="panel-body" data-l10n="open-source-text">
+          We believe that only open source crypto is acceptable, so all source code of img.bi is <a href="https://github.com/imgbi">available on GitHub</a> under GPLv3 license.
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">  
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title text-center" data-l10n="privacy">Privacy</h3>
+        </div>
+        <div class="panel-body" data-l10n="privacy-text">
+          We do not store any logs, except <a href="https://en.wikipedia.org/wiki/SHA-3">SHA-3</a> hash of uploader&#39;s IP address with random <a href="https://en.wikipedia.org/wiki/Salt_%28cryptography%29">salt</a> for a day. But our hosting provider and systems like <a href="https://en.wikipedia.org/wiki/SORM">SORM</a>, <a href="https://en.wikipedia.org/wiki/Hepting_v._AT%26T">NarusInsight</a>, <a href="https://en.wikipedia.org/wiki/Titan_traffic_database">Titan traffic database</a> and other can store their own logs. Be careful.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="viewpage">
+</div>

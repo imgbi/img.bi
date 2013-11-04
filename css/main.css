@@ -1,0 +1,98 @@
+.input {
+  height:0px;
+  overflow:hidden;
+}
+#holder {
+  border: 10px dashed #ccc;
+  width: 100%;
+  min-height: 300px;
+  margin: 20px auto;
+}
+#holder.hover, #holder:hover {
+  border: 10px dashed #768ADD;
+}
+#holder.error {
+  border: 10px dashed #ff0000;
+}
+#holder img {
+  display:inline;
+  margin:10px;
+}
+#holder p {
+  margin: 10px;
+  font-size: 14px;
+}
+.noscript {
+  width:100%;
+  height:100%;
+  z-index:10;
+  background-color:#ffffff;
+  font-size:30pt;
+}
+.page-header a {
+  color:#000000;
+}
+.page-header a:hover {
+  text-decoration:none;
+}
+
+#indiesocial-init a {
+  margin:3px;
+}
+#indiesocial-init {
+  margin-bottom:10px;
+}
+.hidden {
+  display:none;
+}
+#logo.red {
+  color:#DF3434;
+}
+#logo.green {
+  color:#65F94B;
+}
+#logo.black {
+  color:#000000;
+}
+#logo.yellow {
+  color:#C2C212;
+}
+#logo.orange {
+  color:#DF571B;
+}
+#logo.purple {
+  color:#C20F92;
+}
+#logo.grey {
+  color:#7F7F7F;
+}
+#logo.blue {
+  color:#0000FF;
+}
+.lang a {
+  text-decoration: none;
+  border-bottom: 1px dashed #000080;
+  margin: 1px;
+}
+.lang a:hover {
+  color: #f00000;
+}
+.image {
+  max-width:700px;
+  max-height:700px;
+  cursor: zoom-in;
+  cursor: -webkit-zoom-in;
+  cursor: -moz-zoom-in;
+}
+.link {
+  margin-top: 10px;
+  cursor: copy !important;
+}
+.zoom-out {
+  cursor: zoom-out;
+  cursor: -webkit-zoom-out;
+  cursor: -moz-zoom-out;
+}
+.why {
+  margin-top: 50px;
+}

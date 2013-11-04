@@ -1,0 +1,17 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Anton Nesterov -- CEO
+
+# TECHNOLOGY COLOPHON
+    Python, web.py,
+    HTML5, CSS3,
+    SJCL, IndieSocial,
+    l10n.js, Fontello,
+    Bootstrap, Jekyll
+
+# SITE
+	Language: English / Russian
+	Doctype:HTML5

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{{ site.name }}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/fontello.css" />
+    <link rel="stylesheet" href="/css/animation.css" />
+    <link rel="localization" hreflang="ru" href="/locales/ru.json" type="application/vnd.oftn.l10n+json"/>
+    <link rel="localization" hreflang="en" href="/locales/en.json" type="application/vnd.oftn.l10n+json"/>
+    <script type="text/javascript" src="/scripts/indiesocial.min.js"></script>
+    <script type="text/javascript" src="/scripts/l10n.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="pull-right lang">
+        <a title="English" id="en">en</a>
+        <a title="Русский" id="ru">ru</a>
+      </div>
+      <div class="page-header">
+        <a href="/"><h1><span id="logo">{{ site.name }}</span> <small data-l10n="slogan">really secure image hosting</small></h1></a>
+      </div>
+
+      {{ content }}
+
+      <noscript>
+        <div class="text-center noscript">Sorry, {{ site.name }} uses JS for encryption and decryption.<br />Enable JS and reload page.</div>
+      </noscript>
+      <footer class="text-center">
+        <hr />
+        <div id="indiesocial-init" data-indieSocialServices="all" data-addFontelloIcon="true"></div>
+        <p><span data-l10n="copyleft">Copyleft</span> <a href="https://img.bi">img.bi project</a>.</p>
+        <p>
+          <a href="https://github.com/imgbi" data-l10n="source">Source code</a>.
+          <a href="/contacts" data-l10n="contacts">Contacts</a>.
+        </p>
+      </footer>
+    </div>
+    <script src="/scripts/main.js"></script>
+    <script src="/scripts/sjcl.js"></script>
+  </body>
+</html>
