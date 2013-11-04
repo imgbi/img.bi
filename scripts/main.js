@@ -264,7 +264,8 @@ function l(string, fallback) {
 	var localized = string.toLocaleString();
 	if (localized !== string) {
 		return localized;
-	} else {
+	}
+  else {
 		return fallback;
 	}
 }
@@ -355,4 +356,8 @@ document.getElementById('en').onclick = function() {
 document.getElementById('ru').onclick = function() {
   localizeAll('ru');
   document.cookie = 'lang=ru; expires=Sun, 25 May 2042 00:42:00 UTC; path=/'
+};
+document.getElementById('it').onclick = function() {
+  localizeAll('it');
+  document.cookie = 'lang=it; expires=Sun, 25 May 2042 00:42:00 UTC; path=/'
 };

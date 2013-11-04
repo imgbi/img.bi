@@ -3,3 +3,5 @@ url: https://img.bi
 api: "https://img.bi/api"
 cdn: "https://img.bi/download/"
 exclude: ['Rakefile']
+jekyll-press:
+  exclude: '*.html'
