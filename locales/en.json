@@ -28,5 +28,22 @@
   "filezile": "Sorry, filesize over 3 MiB is not allowed",
   "filetype": "sorry, filetype not supported",
   "gpg": "GPG key",
-  "copyleft": "Copyleft"
+  "copyleft": "Copyleft",
+  "advertising": "Advertising",
+  "ads-descr": "We use <a href='https://github.com/komachi/kokoku'>kokoku</a> as an ad rotator. Your can select language of pages where your ads will be shown.",
+  "rules": "Rules",
+  "without-rq": "Without external requests.",
+  "no-violate-privacy": "Nothing that can violate privacy of img.bi users.",
+  "nothing-illegal": "Nothing illegal in NL on banner.",
+  "no-pop-unders": "No pop-unders, pop-ups and other bad things.",
+  "accept": "We accept Bitcoin, Litecoin and much more payment systems.",
+  "contact-us": "Contact us",
+  "embed-js": "Embed images from sites based on img.bi software.",
+  "download": "Download",
+  "view-on-github": "View on GitHub",
+  "how-to-use": "How to use",
+  "how-download": "Download img.bi.js and <a href='http://bitwiseshiftleft.github.io/sjcl/'>SJCL</a>.",
+  "how-load": "Load it",
+  "how-use": "Use!",
+  "demo": "Demo"
 }

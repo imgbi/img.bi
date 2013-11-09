@@ -20,7 +20,7 @@
   "source": "Codice Sorgente",
   "contacts": "Contatti",
   "cryptography": "Crittografia",
-  "cryptography-text": "Le immagini vengono criptate usando la criptatura <a href='https://en.wikipedia.org/wiki/Advanced_Encryption_Standard'>AES-256</a> con chiave casuale nel tuo browser prima del caricamento. Nessuno può vedere le tue immagini, neanche le persone che hanno l&#39;accesso diretto al server. Noi usiamo anche <a href='https://en.wikipedia.org/wiki/Transport_Layer_Security'>TLS</a> che ti difende dagli <a href='https://en.wikipedia.org/wiki/Man-in-the-middle_attack'>attacchi Man-in-the-Middle</a>.",
+  "cryptography-text": "Le immagini vengono criptate usando la criptatura <a href='https://it.wikipedia.org/wiki/Advanced_Encryption_Standard'>AES-256</a> con chiave casuale nel tuo browser prima del caricamento. Nessuno può vedere le tue immagini, neanche le persone che hanno l&#39;accesso diretto al server. Noi usiamo anche <a href='https://en.wikipedia.org/wiki/Transport_Layer_Security'>TLS</a> che ti difende dagli <a href='https://en.wikipedia.org/wiki/Man-in-the-middle_attack'>attacchi Man-in-the-Middle</a>.",
   "open-source": "Open Source",
   "open-source-text": "Noi crediamo che solo la crittografia open source è accettabile, così tutto il codice di img.bi è <a href='https://github.com/img.bi'>disponibile su GitHub</a> sotto licenza GPLv3.",
   "privacy": "Privacy",

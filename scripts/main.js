@@ -28,12 +28,7 @@ function imgBi() {
     sjcl.random.startCollectors();
   }
   var cookielang = document.cookie.replace(/(?:(?:^|.*;\s*)lang\s*\=\s*([^;]*).*$)|^.*$/, "$1");
-  if (cookielang == 'ru') {
-    localizeAll('ru');
-  }
-  if (cookielang == 'en') {
-    localizeAll('en');
-  }
+  localizeAll(cookielang);
   changeColor();
   if (uploadpage) {
     uploadpage.className = '';
@@ -163,6 +158,17 @@ function showImage(id, pass, uri, remove) {
     helpLink.setAttribute('data-l10n', 'link-view');
     helpLink.innerHTML = l('link-view','Link to view image.');
     form.appendChild(helpLink);
+    var embed = document.createElement('input');
+    embed.type = 'text';
+    embed.setAttribute('value', '<img data-imgbi="{{ site.url }}/#!' + id + '!' + pass + '" />');
+    embed.setAttribute('readonly', 'readonly');
+    embed.className = 'form-control link text-center';
+    form.appendChild(embed);
+    var helpEmbed = document.createElement('span');
+    helpEmbed.className = 'help-block';
+    helpEmbed.setAttribute('data-l10n', 'embed');
+    helpEmbed.innerHTML = l('embed','Embed image (require <a href="https://img.bi/js">img.bi.js</a>).');
+    form.appendChild(helpEmbed);
     if (remove) {
       var removeLink = document.createElement('input');
       removeLink.type = 'text';
@@ -274,7 +280,7 @@ function localizeAll(lang) {
   String.locale = lang;
   var elems = document.querySelectorAll('[data-l10n]');
   for (var i = 0; i < elems.length; ++i) {
-    elems[i].innerHTML = l(elems[i].getAttribute('data-l10n'), elems[i].childNodes[0].nodeValue);
+    elems[i].innerHTML = l(elems[i].getAttribute('data-l10n'), elems[i].innerHTML);
   }
   document.documentElement.lang = String.locale;
 }
