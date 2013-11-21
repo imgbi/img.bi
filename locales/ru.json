@@ -22,7 +22,7 @@
   "cryptography": "Криптография",
   "cryptography-text": "Изображения шифруются с помощью <a href='https://ru.wikipedia.org/wiki/Advanced_Encryption_Standard'>AES-256</a> со случайным ключом в вашем браузере перед загрузкой. Никто не может посмотреть ваши изображения, даже те, кто имеет прямой доступ к серверам. Мы также используем <a href='https://ru.wikipedia.org/wiki/TLS'>TLS</a>, что позволяет вам защититься от атак «<a href='https://ru.wikipedia.org/wiki/%D0%A7%D0%B5%D0%BB%D0%BE%D0%B2%D0%B5%D0%BA_%D0%BF%D0%BE%D1%81%D0%B5%D1%80%D0%B5%D0%B4%D0%B8%D0%BD%D0%B5'>человек посередине</a>».",
   "open-source": "Открытый исходный код",
-  "open-source-text": "Мы верим, что приемлимы только криптосистемы с открытым исходным кодом, поэтому все исходные коды img.bi <a href='https://github.com/img.bi'>доступны на GitHub</a> на условиях лицензии GPLv3.",
+  "open-source-text": "Мы верим, что приемлимы только криптосистемы с открытым исходным кодом, поэтому все исходные коды img.bi <a href='https://github.com/imgbi'>доступны на GitHub</a> на условиях лицензии GPLv3.",
   "privacy": "Конфеденциальность",
   "privacy-text": "Мы не храним никаких логов, кроме <a href='https://ru.wikipedia.org/wiki/Keccak'>SHA-3</a> хеша от IP адреса загружающего с <a href='https://ru.wikipedia.org/wiki/%D0%A1%D0%BE%D0%BB%D1%8C_%28%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%8F%29'>солью</a> в течении суток. Но наш хостинг провайдер и такие системы, как <a href='https://ru.wikipedia.org/wiki/%D0%A1%D0%9E%D0%A0%D0%9C'>СОРМ</a>, <a href='https://ru.wikipedia.org/wiki/NarusInsight'>NarusInsight</a>, <a href='https://en.wikipedia.org/wiki/Titan_traffic_database'>Titan traffic database</a> и другие могут хранить свои логи. Будьте осторожны.",
   "filezile": "Простите, файлы размером больше 3 мегабайт запрещены",
@@ -45,5 +45,11 @@
   "how-download": "Скачайте img.bi.js и <a href='http://bitwiseshiftleft.github.io/sjcl/'>SJCL</a>.",
   "how-load": "Загрузите их",
   "how-use": "Используйте!",
-  "demo": "Демо"
+  "demo": "Демо",
+  "apps": "Приложения",
+  "applications": "Приложения для использования img.bi",
+  "license": "Лицензия",
+  "imgbi-client-down": "командная строка, node.js",
+  "imgbi-client-descr": "Простой клиент с интерфейсом командной строки для загрузки/скачивания/удаления изображений. Также может быть использован в приложениях на Node.js.",
+  "imgbi-client-more": "Больше примеров в <a href='https://github.com/imgbi/imgbi-client/blob/master/README.md'>README</a>."
 }

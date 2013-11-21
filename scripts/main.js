@@ -24,9 +24,7 @@ else {
   document.addEventListener('load', imgBi, false);
 }
 function imgBi() {
-  if (! 'crypto' in window && ! 'getRandomValues' in window.crypto) {
-    sjcl.random.startCollectors();
-  }
+  sjcl.random.startCollectors();
   var cookielang = document.cookie.replace(/(?:(?:^|.*;\s*)lang\s*\=\s*([^;]*).*$)|^.*$/, "$1");
   localizeAll(cookielang);
   changeColor();
@@ -102,24 +100,15 @@ function encryptfile(file) {
 }
 
 function randomString(length) {
-  var charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-  var i;
-  var result = '';
-  if('crypto' in window && 'getRandomValues' in window.crypto) {
-    values = new Uint32Array(length);
-    window.crypto.getRandomValues(values);
-    for(i=0; i<length; i++) {
-      result += charset[values[i] % charset.length];
-    }
-    return result;
+  var charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789',
+  i,
+  result = '',
+  values = sjcl.random.randomWords(length);
+  for(i=0; i<length; i++) {
+    result += charset[values[i].toString().replace('-','') % charset.length];
   }
-  else {
-    values = sjcl.random.randomWords(length);
-    for(i=0; i<length; i++) {
-      result += charset[values[i].toString().replace('-','') % charset.length];
-    }
-    return result;
-  }
+  return result;
+  
 }
 function showImages() {
   uploadpage.className = 'hidden';

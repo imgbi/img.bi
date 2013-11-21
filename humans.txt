@@ -10,8 +10,9 @@
     HTML5, CSS3,
     SJCL, IndieSocial,
     l10n.js, Fontello,
-    Bootstrap, Jekyll
+    kokoku, Bootstrap
+    Jekyll
 
 # SITE
-	Language: English / Russian
+	Language: English / Russian / Italian
 	Doctype:HTML5
