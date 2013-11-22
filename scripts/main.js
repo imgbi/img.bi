@@ -35,6 +35,7 @@ function imgBi() {
   if (window.location.hash.indexOf('!') != '-1') {
     if (uploadpage) {
       uploadpage.className = 'hidden';
+      loading.className = '';
     }
     if (window.location.href.indexOf('/autorm/') == '-1') {
       var parameters = window.location.hash.split('!');
