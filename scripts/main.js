@@ -6,13 +6,14 @@ button = document.getElementById('button'),
 logo = document.getElementById('logo'),
 uploadpage = document.getElementById('uploadpage'),
 viewpage = document.getElementById('viewpage'),
+loading = document.getElementById('loading'),
 removeButton = document.getElementById('remove-button'),
 autormButton = document.getElementById('autorm-button'),
 allFiles = [],
 uploadedFiles = [],
 zoom,
 isFiles,
-acceptedTypes = ['image/png', 'image/jpeg', 'image/gif', 'image/svg+xml'],
+acceptedTypes = ['image/png', 'image/jpeg', 'image/gif', 'image/svg+xml', 'image/webp'],
 maxSize = '3145728';
 if (window.addEventListener) {
   window.addEventListener('load', imgBi, false);
@@ -233,13 +234,20 @@ function loadFile(id,pass,autorm) {
   request.onload = function() {
     if (request.status == 200) {
       var result = sjcl.decrypt(pass,request.responseText);
+      var data = result.match(/^data:(.+);base64,*/);
       if (result) {
-        if (autorm) {
-          removeFile(id,autorm,true);
+        if (acceptedTypes.indexOf(data[1]) != '-1') {
+          if (autorm) {
+            removeFile(id,autorm,true);
+          }
+          loading.className = 'hidden';
+          showImage(id, pass, result);
+          setZoom();
         }
-        showImage(id, pass, result);
-        setZoom();
-        
+        else {
+          alert(data[1] + ': ' + l('filetype','sorry, filetype not supported'));
+          window.location = '/';
+        }
       }
       else {
         alert(l('failed-decrypt', 'Failed to decrypt image'));
@@ -338,6 +346,7 @@ if (autormButton) {
     var parameters = window.location.hash.split('!');
     document.getElementById('autorm').className = 'hidden';
     loadFile(parameters[1],parameters[2],parameters[3]);
+    loading.className = '';
   };
 }
 logo.onmouseover = function() {

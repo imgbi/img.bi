@@ -51,5 +51,6 @@
   "license": "Лицензия",
   "imgbi-client-down": "командная строка, node.js",
   "imgbi-client-descr": "Простой клиент с интерфейсом командной строки для загрузки/скачивания/удаления изображений. Также может быть использован в приложениях на Node.js.",
-  "imgbi-client-more": "Больше примеров в <a href='https://github.com/imgbi/imgbi-client/blob/master/README.md'>README</a>."
+  "imgbi-client-more": "Больше примеров в <a href='https://github.com/imgbi/imgbi-client/blob/master/README.md'>README</a>.",
+  "loading": "Загружается"
 }

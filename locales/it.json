@@ -52,5 +52,6 @@
   "license": "License",
   "imgbi-client-down": "command-line, node.js",
   "imgbi-client-descr": "Just a simple command-line client for uploading/downloading/deleting images. Also can be used in Node.js applications.",
-  "imgbi-client-more": "More examples in <a href='https://github.com/imgbi/imgbi-client/blob/master/README.md'>README</a>."
+  "imgbi-client-more": "More examples in <a href='https://github.com/imgbi/imgbi-client/blob/master/README.md'>README</a>.",
+  "loading": "Loading"
 }
