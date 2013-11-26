@@ -14,7 +14,7 @@ uploadedFiles = [],
 zoom,
 isFiles,
 acceptedTypes = ['image/png', 'image/jpeg', 'image/gif', 'image/svg+xml', 'image/webp'],
-maxSize = '3145728';
+maxSize = 3145728;
 if (window.addEventListener) {
   window.addEventListener('load', imgBi, false);
 }
@@ -242,7 +242,7 @@ function loadFile(id,pass,autorm) {
             removeFile(id,autorm,true);
           }
           loading.className = 'hidden';
-          showImage(id, pass, result);
+          showImage(id, pass, result, window.location.hash.split('!')[3]);
           setZoom();
         }
         else {

@@ -25,7 +25,7 @@
   "open-source-text": "Мы верим, что приемлимы только криптосистемы с открытым исходным кодом, поэтому все исходные коды img.bi <a href='https://github.com/imgbi'>доступны на GitHub</a> на условиях лицензии GPLv3.",
   "privacy": "Конфеденциальность",
   "privacy-text": "Мы не храним никаких логов, кроме <a href='https://ru.wikipedia.org/wiki/Keccak'>SHA-3</a> хеша от IP адреса загружающего с <a href='https://ru.wikipedia.org/wiki/%D0%A1%D0%BE%D0%BB%D1%8C_%28%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%8F%29'>солью</a> в течении суток. Но наш хостинг провайдер и такие системы, как <a href='https://ru.wikipedia.org/wiki/%D0%A1%D0%9E%D0%A0%D0%9C'>СОРМ</a>, <a href='https://ru.wikipedia.org/wiki/NarusInsight'>NarusInsight</a>, <a href='https://en.wikipedia.org/wiki/Titan_traffic_database'>Titan traffic database</a> и другие могут хранить свои логи. Будьте осторожны.",
-  "filezile": "Простите, файлы размером больше 3 мегабайт запрещены",
+  "filesize": "Простите, файлы размером больше 3 мегабайт запрещены",
   "filetype": "простите, данный тип файла не поддерживается",
   "gpg": "GPG ключ",
   "copyleft": "Копилефт",
@@ -36,6 +36,7 @@
   "no-violate-privacy": "Реклама не может нарушать конфеденциальность пользователей img.bi.",
   "nothing-illegal": "На баннере не может быть ничего, что запрещено в Нидерландах.",
   "no-pop-unders": "Никаких pop-under, pop-up подобных плохих вещей.",
+  "acceptable-ads": "Реклама должна быть <a href='https://adblockplus.org/ru/acceptable-ads#criteria'>ненавязчивой</a>.",
   "accept": "Мы принимаем Bitcoin, Litecoin и много чего еще.",
   "contact-us": "Свяжитесь с нами",
   "embed-js": "Встраивайте изображения с сайтов, основанных на программном обеспечении img.bi.",
@@ -52,5 +53,8 @@
   "imgbi-client-down": "командная строка, node.js",
   "imgbi-client-descr": "Простой клиент с интерфейсом командной строки для загрузки/скачивания/удаления изображений. Также может быть использован в приложениях на Node.js.",
   "imgbi-client-more": "Больше примеров в <a href='https://github.com/imgbi/imgbi-client/blob/master/README.md'>README</a>.",
-  "loading": "Загружается"
+  "loading": "Загружается",
+  "img.bi-firefox-down": "Дополнение для Firefox",
+  "install": "Установить",
+  "img.bi-firefox-descr": "Дополнение для Firefox, позволяющее загружать изображения на img.bi из браузера."
 }
