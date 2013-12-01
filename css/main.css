@@ -15,8 +15,9 @@
   border: 10px dashed #ff0000;
 }
 #holder img {
-  display:inline;
-  margin:10px;
+  display: inline;
+  margin: 10px;
+  width: 250px;
 }
 #holder p {
   margin: 10px;
@@ -95,4 +96,8 @@
 }
 .why {
   margin-top: 50px;
+}
+
+#remove-button {
+  margin:10px;
 }

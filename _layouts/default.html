@@ -15,8 +15,11 @@
     <link rel="localization" hreflang="ru" href="/locales/ru.json" type="application/vnd.oftn.l10n+json"/>
     <link rel="localization" hreflang="en" href="/locales/en.json" type="application/vnd.oftn.l10n+json"/>
     <link rel="localization" hreflang="it" href="/locales/it.json" type="application/vnd.oftn.l10n+json"/>
-    <script type="text/javascript" src="/scripts/indiesocial.min.js"></script>
+    <script type="text/javascript" src="/scripts/minified.min.js"></script>
     <script type="text/javascript" src="/scripts/l10n.js"></script>
+    <script type="text/javascript" src="/scripts/sjcl.js"></script>
+    <script type="text/javascript" src="/scripts/main.js"></script>
+    <script type="text/javascript" src="/scripts/indiesocial.min.js"></script>
     <script type="text/javascript" src="/scripts/img.bi.min.js"></script>
 
   </head>
@@ -30,9 +33,7 @@
       <div class="page-header">
         <a href="/"><h1><span id="logo">{{ site.name }}</span> <small data-l10n="slogan">really secure image hosting</small></h1></a>
       </div>
-
       {{ content }}
-
       <noscript>
         <div class="text-center noscript">Sorry, {{ site.name }} uses JS for encryption and decryption.<br />Enable JS and reload page.</div>
       </noscript>
@@ -44,11 +45,10 @@
           <a href="https://github.com/imgbi" data-l10n="source">Source code</a>.
           <a href="/contacts" data-l10n="contacts">Contacts</a>.
           <a href="/ads" data-l10n="advertising">Advertising</a>.
+          <a href="/donate" data-l10n="donate">Donate</a>.
           <a href="/apps" data-l10n="apps">Apps</a>.
         </p>
       </footer>
     </div>
-    <script src="/scripts/main.js"></script>
-    <script src="/scripts/sjcl.js"></script>
   </body>
 </html>

@@ -2,13 +2,14 @@
 layout: default
 ---
 
-<div class="row" id="autorm">
-  <div class="col-md-12 text-center">
-    <h3 data-l10n="are-you-sure-autorm">Are you sure you want view this image? This image will be remove after that.</h3>
-    <button type="button" class="btn btn-primary btn-lg" data-l10n="autorm-button" id="autorm-button">Yes, show me that image</button>
-  </div>
+<div class="alert alert-danger text-center">
+  <h3 data-l10n="autoremoved">Image was autoremoved.</h3>
 </div>
 <div id="loading" class="hidden">
   <h4 class="text-center"><i class="icon-spin5 animate-spin"></i> <span data-l10n="loading">Loading</span></h4>
 </div>
-<div id="viewpage"></div>
+<div id="viewpage" class="hidden">
+  <div class="text-center imageview">
+    <img class="image" />
+  </div>
+</div>

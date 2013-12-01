@@ -13,8 +13,6 @@
   "failed-upload": "Impossibile caricare l&#39;immagine",
   "link-remove": "Link per rimuovere l&#39;immagine.",
   "link-auto-remove": "Rimuovi l&#39;immagine dopo averla vista.",
-  "are-you-sure-autorm": "Sei sicuro di voler vedere questa immagine? Dopo di ciò verrà rimossa.",
-  "autorm-button": "Sì, mostramela",
   "embed": "Embeddda l&#39;immagine (richiede <a href='https://img.bi/js'>img.bi.js</a>).",
   "link-view": "Link per vedere l&#39;immagine.",
   "source": "Codice Sorgente",
@@ -57,5 +55,12 @@
   "loading": "Loading",
   "img.bi-firefox-down": "Firefox add-on",
   "install": "Install",
-  "img.bi-firefox-descr": "Add-on for Firefox which let you upload images to img.bi from your browser."
+  "img.bi-firefox-descr": "Add-on for Firefox which let you upload images to img.bi from your browser.",
+  "donate": "Donate",
+  "donate-descr": "img.bi is an open source project available free of charge to anyone. But servers, domains, certs and many other things cost some money. Even a little donation helps to run img.bi.",
+  "bitcoin": "Bitcoin address",
+  "litecoin": "Litecoin address",
+  "donate-contact": "<a href='/contacts'>Contact us</a> if you want to donate another way.",
+  "donate-ads": "Also, you can <a href='/ads'>buy ads</a> on img.bi. That will help too.",
+  "autoremoved":"Image was autoremoved."
 }

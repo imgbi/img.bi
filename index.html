@@ -11,8 +11,8 @@ layout: default
   </div>
   <div class="row">
     <div class="col-md-12">
-      <div id="button"><button type="button" class="btn btn-primary btn-lg btn-block" data-l10n="upload">Upload</button></div>
-      <h4 id="uploading" class="hidden"><i class="icon-spin5 animate-spin"></i> <span data-l10n="uploading">Uploading</span></h4>
+      <button type="button" id="button" class="btn btn-primary btn-lg btn-block" data-l10n="upload">Upload</button>
+      <h4 id="uploading" class="text-center hidden"><i class="icon-spin5 animate-spin"></i> <span data-l10n="uploading">Uploading</span></h4>
     </div>
   </div>
   <div class="row">
@@ -53,7 +53,27 @@ layout: default
     </div>
   </div>
 </div>
-<div id="loading" class='hidden'>
+<div id="loading" class="hidden">
   <h4 class="text-center"><i class="icon-spin5 animate-spin"></i> <span data-l10n="loading">Loading</span></h4>
 </div>
-<div id="viewpage"></div>
+<div id="viewpage" class="hidden">
+  <div class="text-center imageview">
+    <img class="image" />
+  </div>
+  <div class="row inputs">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="form-group text-center">
+        <input type="text" readonly="readonly" class="form-control link text-center link-view">
+        <span class="help-block" data-l10n="link-view">Link to view image.</span>
+        <input type="text" readonly="readonly" class="form-control link text-center embed">
+        <span class="help-block" data-l10n="embed">Embed image (require <a href="https://img.bi/js">img.bi.js</a>).</span>
+        <div class="rmlinks hidden">
+          <input type="text" readonly="readonly" class="form-control link text-center link-remove">
+          <span class="help-block" data-l10n="link-remove">Link to remove image.</span>
+          <input type="text" readonly="readonly" class="form-control link text-center link-auto-remove">
+          <span class="help-block" data-l10n="link-auto-remove">Remove image after first view.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

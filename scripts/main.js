@@ -1,267 +1,96 @@
 ---
 ---
-var holder = document.getElementById('holder'),
-imageUpload = document.getElementById('imageUpload'),
-button = document.getElementById('button'),
-logo = document.getElementById('logo'),
-uploadpage = document.getElementById('uploadpage'),
-viewpage = document.getElementById('viewpage'),
-loading = document.getElementById('loading'),
-removeButton = document.getElementById('remove-button'),
-autormButton = document.getElementById('autorm-button'),
-allFiles = [],
-uploadedFiles = [],
-zoom,
-isFiles,
+var MINI = require('minified'),
+_=MINI._, $=MINI.$, $$=MINI.$$, EE=MINI.EE, HTML=MINI.HTML,
 acceptedTypes = ['image/png', 'image/jpeg', 'image/gif', 'image/svg+xml', 'image/webp'],
-maxSize = 3145728;
-if (window.addEventListener) {
-  window.addEventListener('load', imgBi, false);
-}
-else if(window.attachEvent) {
-  window.attachEvent('onload', imgBi);
-}
-else {
-  document.addEventListener('load', imgBi, false);
-}
-function imgBi() {
+maxSize = 3145728,
+siteurl = '{{ site.url }}',
+siteapi = '{{ site.api }}',
+sitecdn = '{{ site.cdn }}';
+
+$(function() {
   sjcl.random.startCollectors();
-  var cookielang = document.cookie.replace(/(?:(?:^|.*;\s*)lang\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+  var cookielang = document.cookie.replace(/(?:(?:^|.*;\s*)lang\s*\=\s*([^;]*).*$)|^.*$/, '$1');
   localizeAll(cookielang);
   changeColor();
-  if (uploadpage) {
-    uploadpage.className = '';
-  }
+  $('#uploadpage').set('-hidden');
   if (window.location.hash.indexOf('!') != '-1') {
-    if (uploadpage) {
-      uploadpage.className = 'hidden';
-      loading.className = '';
-    }
-    if (window.location.href.indexOf('/autorm/') == '-1') {
-      var parameters = window.location.hash.split('!');
-      loadFile(parameters[1],parameters[2]);
-    }
-  }
-}
-function setZoom() {
-  var image = document.getElementsByClassName('image');
-  for (var i = 0; i < image.length; ++i) {
-      var item = image[i];  
-      item.onclick = function() {
-        if (zoom != 1) {
-          this.className = 'zoom-out';
-          zoom = 1;
-        }
-        else {
-          this.className = 'image';
-          zoom = 0;
-        }
-      };
-  }
-}
-function previewfile(file) {
-  if (acceptedTypes.indexOf(file.type) != '-1') {
-    if (file.size < maxSize) {
-      var reader = new FileReader();
-      reader.onload = function (event) {
-        removeHelp();
-        encryptfile(event.target.result);
-        var image = new Image();
-        image.src = event.target.result;
-        image.width = 250;
-        holder.appendChild(image);
-      };
-      reader.readAsDataURL(file);
-      isFiles = true;
+    $('#uploadpage').set('hidden');
+    $('#loading').set('-hidden');
+    var params = window.location.hash.split('!');
+    if (window.location.href.indexOf('/autorm/') != '-1') {
+      loadFile(params[1],params[2],params[3]);
     }
     else {
-      alert(l('filesize','Sorry, filesize over 3 MiB is not allowed'));
+      loadFile(params[1],params[2]);
     }
   }
-  else {
-    alert(file.type + ': ' + l('filetype','sorry, filetype not supported'));
-  }
-}
-function readfiles(files) {
-    for (var i = 0; i < files.length; i++) {
-      previewfile(files[i]);
-    }
-}
-function removeHelp(){
-  var help = document.getElementById('help');
-  if (help) {
-    help.outerHTML = '';
-    delete help;
-  }
-}
+  $('#logo').on('mouseover', function() {
+    changeColor();
+  });
+  $('#holder').on('click', function() {
+    $('#imageUpload')[0].click();
+  });
+  $('#imageUpload').on('change', function() {
+    previewFiles($('#imageUpload')[0].files);
+  });
+  $('#holder').on('dragover', function () {
+    $('#holder').set('hover');
+  });
+  $('#holder').on('dragend drop', function () {
+    $('#holder').set('-hover');
+  });
+  $('#holder').on('drop', function (e) {
+    previewFiles(e.dataTransfer.files);
+  });
 
-function encryptfile(file) {
-  var pass = randomString(40);
-  var encrypted = sjcl.encrypt(pass, file, {ks:256});
-  allFiles.push({pass:pass,data:encrypted,uri:file});
-}
+  $('#button').on('click', function() {
+    $('#button').set('+hidden');
+    $('#uploading').set('-hidden');
+    uploadFiles();
+  });
 
-function randomString(length) {
-  var charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789',
-  i,
-  result = '',
-  values = sjcl.random.randomWords(length);
-  for(i=0; i<length; i++) {
-    result += charset[values[i].toString().replace('-','') % charset.length];
-  }
-  return result;
-  
-}
-function showImages() {
-  uploadpage.className = 'hidden';
-  for (i in uploadedFiles) {
-    showImage(uploadedFiles[i].id, uploadedFiles[i].pass, uploadedFiles[i].uri, uploadedFiles[i].remove);
-  }
-  setZoom();
-}
+  $('#remove-button').on('click', function() {
+    var params = window.location.hash.split('!');
+    removeFile(params[1],params[3]);
+    alert('Removed');
+    window.location = '/';
+  });
 
-function showImage(id, pass, uri, remove) {
-  var images = document.createElement('div');
-  images.className = 'text-center';
-  viewpage.appendChild(images);
-  var image = new Image();
-  image.src = uri;
-  image.className = 'image';
-  images.appendChild(image);
-  if (window.location.href.indexOf('/autorm/') == '-1') {
-    var row = document.createElement('div');
-    row.className = 'row';
-    viewpage.appendChild(row);
-    var col = document.createElement('div');
-    col.className = 'col-md-6 col-md-offset-3';
-    row.appendChild(col);
-    var form = document.createElement('div');
-    form.className = 'form-group text-center';
-    col.appendChild(form);
-    var link = document.createElement('input');
-    link.type = 'text';
-    link.setAttribute('value', '{{ site.url }}/#!' + id + '!' + pass);
-    link.setAttribute('readonly', 'readonly');
-    link.className = 'form-control link text-center';
-    form.appendChild(link);
-    var helpLink = document.createElement('span');
-    helpLink.className = 'help-block';
-    helpLink.setAttribute('data-l10n', 'link-view');
-    helpLink.innerHTML = l('link-view','Link to view image.');
-    form.appendChild(helpLink);
-    var embed = document.createElement('input');
-    embed.type = 'text';
-    embed.setAttribute('value', '<img data-imgbi="{{ site.url }}/#!' + id + '!' + pass + '" />');
-    embed.setAttribute('readonly', 'readonly');
-    embed.className = 'form-control link text-center';
-    form.appendChild(embed);
-    var helpEmbed = document.createElement('span');
-    helpEmbed.className = 'help-block';
-    helpEmbed.setAttribute('data-l10n', 'embed');
-    helpEmbed.innerHTML = l('embed','Embed image (require <a href="https://img.bi/js">img.bi.js</a>).');
-    form.appendChild(helpEmbed);
-    if (remove) {
-      var removeLink = document.createElement('input');
-      removeLink.type = 'text';
-      removeLink.setAttribute('value', '{{ site.url }}/rm/#!' + id + '!' + pass + '!' + remove);
-      removeLink.setAttribute('readonly', 'readonly');
-      removeLink.className = 'form-control link text-center';
-      form.appendChild(removeLink);
-      var helpRemoveLink = document.createElement('span');
-      helpRemoveLink.className = 'help-block';
-      helpRemoveLink.setAttribute('data-l10n','link-remove');
-      helpRemoveLink.innerHTML = l('link-remove','Link to remove image.');
-      form.appendChild(helpRemoveLink);
-      var autoRemoveLink = document.createElement('input');
-      autoRemoveLink.type = 'text';
-      autoRemoveLink.setAttribute('value', '{{ site.url }}/autorm/#!' + id + '!' + pass + '!' + remove);
-      autoRemoveLink.setAttribute('readonly', 'readonly');
-      autoRemoveLink.className = 'form-control link text-center';
-      form.appendChild(autoRemoveLink);
-      var helpAutoRemoveLink = document.createElement('span');
-      helpAutoRemoveLink.className = 'help-block';
-      helpAutoRemoveLink.setAttribute('data-l10n','link-auto-remove');
-      helpAutoRemoveLink.innerHTML = l('link-auto-remove','Remove image after first view.');
-      form.appendChild(helpAutoRemoveLink);
-      var init = document.getElementById('indiesocial-init');
-      init.innerHTML = '';
-      init.setAttribute('data-URL','{{ site.url }}/#!' + id + '!' + pass);
-      indieSocial();
+  $('.imageview img').on('click', function() {
+    if ($(this).get('@class') == 'image') {
+      $(this).set('+zoom-out -image');
     }
-  }
-}
-function upload(data) {
-  for (i in allFiles) {
-    var count = parseInt(i) + 1;
-    uploadFile(allFiles[i], new XMLHttpRequest(), count);
-  }
-}
-function uploadFile(file, http, count) {
-  var url = '{{ site.api }}/upload';
-  http.open("POST", url, true);
-  http.setRequestHeader("Content-length", file.data.length);
-  http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  http.setRequestHeader("Connection", "close");
-  http.onreadystatechange = function() {
-    if(http.readyState == 4) {
-      if (http.status == 200) {
-        var uploaded = JSON.parse(http.responseText);
-        if (uploaded.status == 'OK') {
-          uploadedFiles.push({pass:file.pass,uri:file.uri,id:uploaded.id,remove:uploaded.pass});
-          if (allFiles.length == count) {
-            showImages();
-          }
-        }
-        else {
-          alert(uploaded.status);
-        }
-      }
-      else {
-        alert(l('failed-upload','Failed to upload image'));
-      }
+    else {
+      $(this).set('+image -zoom-out');
     }
-    
-  };
-  http.send('encrypted=' + encodeURIComponent(file.data));
-}
+  });
+  $('#en').on('click', function() {
+    localizeAll('en');
+    document.cookie = 'lang=en; expires=Sun, 25 May 2042 00:42:00 UTC; path=/'
+  });
+  $('#ru').on('click', function() {
+    localizeAll('ru');
+    document.cookie = 'lang=ru; expires=Sun, 25 May 2042 00:42:00 UTC; path=/'
+  });
+  $('#it').on('click', function() {
+    localizeAll('it');
+    document.cookie = 'lang=it; expires=Sun, 25 May 2042 00:42:00 UTC; path=/'
+  });
+});
+
 function changeColor() {
   var colors = ['red', 'green', 'black', 'yellow', 'orange', 'purple', 'grey', 'blue'];
-  logo.className = colors[Math.floor(Math.random()*colors.length)];
+  $('#logo').set(colors[Math.floor(Math.random()*colors.length)]);
 }
-function loadFile(id,pass,autorm) {
-  var url = "{{ site.cdn }}" + id;
-  var request = new XMLHttpRequest();
-  request.open("GET", url);
-  request.onload = function() {
-    if (request.status == 200) {
-      var result = sjcl.decrypt(pass,request.responseText);
-      var data = result.match(/^data:(.+);base64,*/);
-      if (result) {
-        if (acceptedTypes.indexOf(data[1]) != '-1') {
-          if (autorm) {
-            removeFile(id,autorm,true);
-          }
-          loading.className = 'hidden';
-          showImage(id, pass, result, window.location.hash.split('!')[3]);
-          setZoom();
-        }
-        else {
-          alert(data[1] + ': ' + l('filetype','sorry, filetype not supported'));
-          window.location = '/';
-        }
-      }
-      else {
-        alert(l('failed-decrypt', 'Failed to decrypt image'));
-        window.location = '/';
-      }
-    }
-    else {
-      alert(l('failed-load','Failed to load image'));
-      window.location = '/';
-      
-    }
-  };
-  request.send(null);
+
+function localizeAll(lang) {
+  String.locale = lang;
+  $('[data-l10n]').each(function(elem) {
+    $(elem).fill(HTML(l($(elem).get('%l10n'),elem.innerHTML)));
+  });
+  
+  document.documentElement.lang = String.locale;
 }
 
 function l(string, fallback) {
@@ -274,95 +103,123 @@ function l(string, fallback) {
 	}
 }
 
-function localizeAll(lang) {
-  String.locale = lang;
-  var elems = document.querySelectorAll('[data-l10n]');
-  for (var i = 0; i < elems.length; ++i) {
-    elems[i].innerHTML = l(elems[i].getAttribute('data-l10n'), elems[i].innerHTML);
-  }
-  document.documentElement.lang = String.locale;
-}
-function removeFile(id,remove,autorm) {
-  var url = "{{ site.api }}/remove?id=" + id + '&password=' + remove;
-  var request = new XMLHttpRequest();
-  request.open("GET", url);
-  request.onload = function() {
-    if (request.status == 200) {
-      var response = JSON.parse(request.responseText).status;
-      if (! autorm) {
-        alert(response);
-        if (response == 'Success') {
-          window.location = '/';
+
+function uploadFiles() {
+  $('#holder img').each(function(image,count) {
+    var pass = randomString(40),
+    encrypted = sjcl.encrypt(pass, image.src, {ks:256});
+    $.request('post', siteapi + '/upload', {encrypted:encrypted})
+      .then(function success(txt) {
+        var json = $.parseJSON(txt);
+        if (json.status == 'OK') {
+          $('#viewpage').set('-hidden');
+          $('#uploadpage').set('+hidden');
+          showImage(image.src,count);
+          addLinks(json.id,pass,json.pass,count);
         }
+        else {
+          alert(json.status);
+        }
+      },
+      function error(status, statusText, responseText) {
+        alert(l('failed-upload','Failed to upload image'));
+    });
+  });
+}
+
+function randomString(length) {
+  var charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789',
+  i,
+  result = '',
+  values = sjcl.random.randomWords(length);
+  for(i=0; i<length; i++) {
+    result += charset[values[i].toString().replace('-','') % charset.length];
+  }
+  return result;
+}
+
+function loadFile(id,pass,rmpass) {
+  $.request('get', sitecdn + id)
+    .then(function success(txt) {
+      try {
+        var result = sjcl.decrypt(pass,txt),
+        data = result.match(/^data:(.+);base64,*/);
+        if (acceptedTypes.indexOf(data[1]) != '-1') {
+          if (rmpass) {
+            removeFile(id,rmpass);
+          }
+          if (window.location.href.indexOf('rm/') == '-1') {
+            addLinks(id,pass,rmpass,0);
+          }
+          showImage(result,0);
+        }
+      }
+      catch(e) {
+        alert(l('failed-decrypt', 'Failed to decrypt image'));
+        window.location = '/';
+        return;
+      }
+    },
+    function error(status, statusText, responseText) {
+      alert(l('failed-load','Failed to load image'));
+      window.location = '/';
+    });
+  
+}
+function showImage(datauri,count) {
+  if (count > 0) {
+    $('#viewpage').add($('#viewpage .imageview').only(0).clone());
+  }
+  $('#loading').set('+hidden');
+  $('#viewpage').set('-hidden');
+  $('.image').sub(count).set({'@src': datauri, '@class': 'image'});
+  
+}
+
+function addLinks(id,pass,rmpass,count) {
+  if (count > 0) {
+    $('#viewpage').add($('#viewpage .inputs').only(0).clone());
+  }
+  $('.link-view').sub(count).set('@value',siteurl + '/#!' + id + '!' + pass);
+  $('.embed').sub(count).set('@value','<img data-imgbi="' + siteurl + ' /#!' + id + '!' + pass + '" />');
+  if (rmpass) {
+    $('.rmlinks').set('-hidden');
+    $('.link-remove').sub(count).set('@value',siteurl + '/rm/#!' + id + '!' + pass + '!' + rmpass);
+    $('.link-auto-remove').sub(count).set('@value',siteurl + '/autorm/#!' + id + '!' + pass + '!' + rmpass);
+  }
+}
+
+function previewFiles(files) {
+  for (var i = 0; i < files.length; i++) {
+    if (acceptedTypes.indexOf(files[i].type) != '-1') {
+      if (files[i].size < maxSize) {
+        var reader = new FileReader();
+        reader.onload = function (event) {
+          $('#help').remove();
+          $('#holder').add(EE('img', {'@src':event.target.result}));
+        };
+        reader.readAsDataURL(files[i]);
+      }
+      else {
+        alert(l('filesize','Sorry, filesize over 3 MiB is not allowed'));
       }
     }
     else {
-      alert(l('failed-remove', 'Failed to remove image'));
+      alert(file.type + ': ' + l('filetype','sorry, filetype not supported'));
     }
-  };
-  request.send(null);
+  }
 }
-if (holder) {
-  holder.ondragover = function () {
-    this.className = 'hover';
-    return false;
-  };
-  holder.ondragend = function () {
-    this.className = '';
-    return false;
-    hover.innerHTML = '';
-  };
-  holder.ondrop = function (e) {
-    this.className = '';
-    e.preventDefault();
-    readfiles(e.dataTransfer.files);
-  };
-  holder.onclick = function() {
-    imageUpload.click();
-  };
-}
-if (imageUpload) {
-  imageUpload.onchange = function() {
-    var oFile = imageUpload.files;
-    readfiles(oFile);
-  };
-}
-if (button) {
-  button.onclick = function() {
-    if (isFiles) {
-      upload();
-      button.className = 'hidden';
-      document.getElementById('uploading').className = 'text-center';
-    }
-  };
-}
-if (removeButton) {
-  removeButton.onclick = function() {
-    var parameters = window.location.hash.split('!');
-    removeFile(parameters[1],parameters[3]);
-  };
-}
-if (autormButton) {
-  autormButton.onclick = function() {
-    var parameters = window.location.hash.split('!');
-    document.getElementById('autorm').className = 'hidden';
-    loadFile(parameters[1],parameters[2],parameters[3]);
-    loading.className = '';
-  };
-}
-logo.onmouseover = function() {
-  changeColor();
-};
 
-document.getElementById('en').onclick = function() {
-  localizeAll('en');
-  document.cookie = 'lang=en; expires=Sun, 25 May 2042 00:42:00 UTC; path=/'
-};
-document.getElementById('ru').onclick = function() {
-  localizeAll('ru');
-  document.cookie = 'lang=ru; expires=Sun, 25 May 2042 00:42:00 UTC; path=/'
-};
-document.getElementById('it').onclick = function() {
-  localizeAll('it');
-  document.cookie = 'lang=it; expires=Sun, 25 May 2042 00:42:00 UTC; path=/'
-};
+function removeFile(id,rmpass) {
+  $.request('get', siteapi + '/remove', {id:id,password:rmpass})
+    .then(function success(txt) {
+      var json = $.parseJSON(txt);
+      if (json.status != 'Success') {
+        alert(l('failed-remove', 'Failed to remove image') + ': ' + json.status);
+      }
+    },
+    function error(status, statusText, responseText) {
+      alert(l('failed-remove', 'Failed to remove image'));
+    });
+}
+
