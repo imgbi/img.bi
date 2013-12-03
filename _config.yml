@@ -1,7 +1,7 @@
 name: "img.bi"
-url: https://img.bi
-api: https://img.bi/api
-cdn: https://img.bi/download/
+url: http://localhost:4000
+api: http://localhost:4000/api
+cdn: http://localhost:4000/download/
 exclude: ['Rakefile']
 jekyll-press:
   exclude: '*.html'

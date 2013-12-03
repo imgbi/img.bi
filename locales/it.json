@@ -62,5 +62,8 @@
   "litecoin": "Litecoin address",
   "donate-contact": "<a href='/contacts'>Contact us</a> if you want to donate another way.",
   "donate-ads": "Also, you can <a href='/ads'>buy ads</a> on img.bi. That will help too.",
-  "autoremoved":"Image was autoremoved."
+  "autoremoved":"Image was autoremoved.",
+  "in-the-internet": "In the internet",
+  "tor-hidden-service": "Tor hidden service",
+  "eepsite": "Eepsite"
 }
