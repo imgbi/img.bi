@@ -8,3 +8,5 @@ clearnet: https://img.bi
 i2p: http://imgbi.i2p
 tor: http://imgbifwwqoixh7te.onion
 buildfor: web
+jekyll-press:
+  exclude: '*.html'
