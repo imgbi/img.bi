@@ -62,6 +62,24 @@ layout: default
   </div>
   <div class="row inputs">
     <div class="col-md-6 col-md-offset-3">
+      <ul class="nav nav-tabs">
+        {% if site.buildfor == 'web' %}
+          <li class="active button-web"><a>Web</a></li>
+        {% elsif site.clearnet %}
+          <li class="button-web"><a>Web</a></li>
+        {% endif %}
+        {% if site.buildfor == 'tor' %}
+          <li class="active button-tor"><a>Tor</a></li>
+        {% elsif site.tor %}
+          <li class="button-tor"><a>Tor</a></li>
+        {% endif %}
+        {% if site.buildfor == 'i2p' %}
+          <li class="active button-eep"><a>I2P</a></li>
+        {% elsif site.i2p %}
+          <li class="button-eep"><a>I2P</a></li>
+        {% endif %}
+      </ul>
+      
       <div class="form-group text-center">
         <input type="text" readonly="readonly" class="form-control link text-center link-view">
         <span class="help-block" data-l10n="link-view">Link to view image.</span>
@@ -74,6 +92,7 @@ layout: default
           <span class="help-block" data-l10n="link-auto-remove">Remove image after first view.</span>
         </div>
       </div>
+        
     </div>
   </div>
 </div>

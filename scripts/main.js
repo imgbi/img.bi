@@ -6,7 +6,10 @@ acceptedTypes = ['image/png', 'image/jpeg', 'image/gif', 'image/svg+xml', 'image
 maxSize = 3145728,
 siteurl = '{{ site.url }}',
 siteapi = '{{ site.api }}',
-sitecdn = '{{ site.cdn }}';
+sitecdn = '{{ site.cdn }}',
+clearneturl = '{{ site.clearnet }}',
+torurl = '{{ site.tor }}',
+i2purl = '{{ site.i2p }}';
 
 $(function() {
   sjcl.random.startCollectors();
@@ -77,6 +80,23 @@ $(function() {
     localizeAll('it');
     document.cookie = 'lang=it; expires=Sun, 25 May 2042 00:42:00 UTC; path=/'
   });
+  
+  $('.button-web').on('click', function() {
+    $('.nav-tabs li').set('-active');
+    $('.button-web').set('+active');
+    changeURL(clearneturl);
+  });
+  $('.button-tor').on('click', function() {
+    $('.nav-tabs li').set('-active');
+    $('.button-tor').set('+active');
+    changeURL(torurl);
+  });
+  $('.button-eep').on('click', function() {
+    $('.nav-tabs li').set('-active');
+    $('.button-eep').set('+active');
+    changeURL(i2purl);
+  });
+  
 });
 
 function changeColor() {
@@ -221,5 +241,20 @@ function removeFile(id,rmpass) {
     function error(status, statusText, responseText) {
       alert(l('failed-remove', 'Failed to remove image'));
     });
+}
+
+function changeURL(url) {
+  $('.link-view').each(function(elem) {
+    $(elem).set('@value',_.toString($(elem).get('@value')).replace(/^https?:\/\/.*?\//,url + '/'));
+  });
+  $('.embed').each(function(elem) {
+    $(elem).set('@value',_.toString($(elem).get('@value')).replace(/https?:\/\/.*?\//,url + '/'));
+  });
+  $('.link-remove').each(function(elem) {
+    $(elem).set('@value',_.toString($(elem).get('@value')).replace(/^https?:\/\/.*?\//,url + '/'));
+  });
+  $('.link-auto-remove').each(function(elem) {
+    $(elem).set('@value',_.toString($(elem).get('@value')).replace(/^https?:\/\/.*?\//,url + '/'));
+  });
 }
 
