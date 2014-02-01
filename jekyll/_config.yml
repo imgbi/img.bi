@@ -1,12 +1,6 @@
 name: "img.bi"
 url: https://img.bi
-api: https://img.bi/api
-cdn: https://img.bi/download/
 buildfor: web
-exclude: ['Rakefile']
 clearnet: https://img.bi
 i2p: http://imgbi.i2p
 tor: http://imgbifwwqoixh7te.onion
-buildfor: web
-jekyll-press:
-  exclude: '*.html'

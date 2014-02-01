@@ -5,8 +5,13 @@
 There is only static content. For work you need also [img.bi-api](https://github.com/imgbi/img.bi-api) which will be process POST- and GET- requests.
 
 ## Build
-Edit `_config.yml` with your data, run `jekyll build`.
 
+    npm install
+    bower install
+    grunt
+    
 ## Build dependencies
-* [Jekyll](http://jekyllrb.com/)
-* [jekyll-press](https://github.com/stereobooster/jekyll-press/)
+* [Jekyll](http://jekyllrb.com)
+* [Grunt](http://gruntjs.com)
+* [Bower](http://bower.io)
+* [NPM](https://npmjs.org)

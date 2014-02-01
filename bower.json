@@ -1,0 +1,19 @@
+{
+  "name": "img.bi",
+  "dependencies": {
+    "bootstrap": "~3.1.0",
+    "indiesocial": "*",
+    "minified": "~2014.0.0-beta4.2",
+    "sjcl": "~1.0.0",
+    "img.bi.js": "*",
+    "l10n.js": "*"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "tmp",
+    "build"
+  ]
+}
+
