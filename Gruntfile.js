@@ -1,5 +1,4 @@
 module.exports = function(grunt) {
-
 grunt.initConfig({
   jekyll: {
     web: {
@@ -25,7 +24,15 @@ grunt.initConfig({
         config: 'jekyll/_config.yml',
         raw: 'buildfor: i2p\nurl: http://imgbi.i2p' 
       }
-    }
+    },
+    local: {
+      options: {
+        src: 'jekyll',
+        dest: 'build',
+        config: 'jekyll/_config.yml',
+        raw: 'buildfor: web\nurl: http://127.0.0.1:9000' 
+      }
+    },
   },
   clean: ['tmp'],
   less: {
@@ -34,7 +41,7 @@ grunt.initConfig({
         paths: ['bower_components/bootstrap/less']
       },
       files: {
-        'jekyll/css/main.css': 'less/main.less'
+        'tmp/main.css': 'less/main.less'
       }
     }
   },
@@ -51,7 +58,7 @@ grunt.initConfig({
   },
   cssmin: {
     dist: {
-      src: ['jekyll/css/main.css', 'tmp/fontello.css', 'tmp/animation.css'],
+      src: ['tmp/main.css', 'tmp/fontello.css', 'tmp/animation.css'],
       dest: 'build/css/main.css'
     }
   },
@@ -110,9 +117,19 @@ grunt.initConfig({
   connect: {
     server: {
       options: {
+        hostname: '127.0.0.1',
         port: 9000,
-        base: 'build'
-      }
+        base: 'build',
+        middleware: function (connect, options) {
+          var proxy = require('grunt-connect-proxy/lib/utils').proxyRequest;
+          return [proxy,connect.static(options.base),connect.directory(options.base)];
+        }
+      },
+      proxies: [{
+        context: '/api',
+        host: '127.0.0.1',
+        port: 8080
+      }]
     }
   },
   watch: {
@@ -123,6 +140,14 @@ grunt.initConfig({
         spawn: false,
       }
     },
+  },
+  mkdir: {
+    all: {
+      options: {
+        mode: 0700,
+        create: ['build/download']
+      }
+    }
   }
 });
 
@@ -135,13 +160,16 @@ grunt.loadNpmTasks('grunt-jekyll');
 grunt.loadNpmTasks('grunt-rename');
 grunt.loadNpmTasks('grunt-minjson');
 grunt.loadNpmTasks('grunt-contrib-connect');
+grunt.loadNpmTasks('grunt-connect-proxy');
 grunt.loadNpmTasks('grunt-contrib-watch');
 grunt.loadNpmTasks('grunt-contrib-htmlmin');
+grunt.loadNpmTasks('grunt-mkdir');
 
-grunt.registerTask('default', [ 'less', 'jekyll:web', 'fontello', 'min', 'rename', 'cssmin', 'minjson', 'htmlmin', 'clean' ]);
-grunt.registerTask('tor', [ 'less', 'jekyll:tor', 'fontello', 'min', 'rename', 'cssmin', 'minjson', 'htmlmin', 'clean' ]);
-grunt.registerTask('i2p', [ 'less', 'jekyll:i2p', 'fontello', 'min', 'rename', 'cssmin', 'minjson', 'htmlmin', 'clean' ]);
-grunt.registerTask('serve', [ 'default', 'connect', 'watch' ]);
+grunt.registerTask('afterjekyll', [ 'less', 'fontello', 'min', 'rename', 'cssmin', 'minjson', 'htmlmin', 'clean' ]);
+grunt.registerTask('default', [ 'jekyll:web', 'afterjekyll' ]);
+grunt.registerTask('tor', [ 'jekyll:tor', 'afterjekyll' ]);
+grunt.registerTask('i2p', [ 'jekyll:i2p', 'afterjekyll' ]);
+grunt.registerTask('serve', [ 'jekyll:local', 'afterjekyll', 'mkdir', 'configureProxies:server', 'connect:server', 'watch' ]);
 grunt.registerTask('deploy', 'Deploy', function(n) {
   if (grunt.option('web')) {
     grunt.task.run(['default','exec:deploy:' + grunt.option('web')]);
