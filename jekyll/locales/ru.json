@@ -64,5 +64,10 @@
   "autoremoved":"Изображение было автоматически удалено.",
   "in-the-internet": "В Интернете",
   "tor-hidden-service": "Скрытый сервис Tor",
-  "eepsite": "Ипсайт"
+  "eepsite": "Ипсайт",
+  "view-btn": "Посмотреть",
+  "remove-btn": "Удалить",
+  "load-more": "Загрузить больше",
+  "no-images": "Изображения не найдены в localStorage. Попробуйте <a href='/'>загрузить несколько</a>.",
+  "my-images": "мои изображения"
 }

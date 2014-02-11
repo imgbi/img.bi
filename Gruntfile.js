@@ -22,7 +22,7 @@ grunt.initConfig({
         src: 'jekyll',
         dest: 'build',
         config: 'jekyll/_config.yml',
-        raw: 'buildfor: i2p\nurl: http://imgbi.i2p' 
+        raw: 'buildfor: i2p\nurl: http://imgbi.i2p'
       }
     },
     local: {
@@ -30,7 +30,7 @@ grunt.initConfig({
         src: 'jekyll',
         dest: 'build',
         config: 'jekyll/_config.yml',
-        raw: 'buildfor: web\nurl: http://127.0.0.1:9000' 
+        raw: 'buildfor: web\nurl: http://127.0.0.1:9000'
       }
     },
   },
@@ -88,7 +88,8 @@ grunt.initConfig({
         'build/contacts/index.html': 'build/contacts/index.html',
         'build/donate/index.html': 'build/donate/index.html',
         'build/js/index.html': 'build/js/index.html',
-        'build/rm/index.html': 'build/rm/index.html'
+        'build/rm/index.html': 'build/rm/index.html',
+        'build/my/index.html': 'build/my/index.html'
       }
     }
   },
@@ -134,7 +135,7 @@ grunt.initConfig({
   },
   watch: {
     scripts: {
-      files: ['*'],
+      files: ['jekyll/*', 'less/*', 'bower_components/*', 'config-fontello.json'],
       tasks: ['serve'],
       options: {
         spawn: false,
@@ -145,8 +146,25 @@ grunt.initConfig({
     all: {
       options: {
         mode: 0700,
-        create: ['build/download']
+        create: ['build/download', 'build/download/thumb']
       }
+    }
+  },
+  concat: {
+    js: {
+      src: [
+        'bower_components/minified/dist/minified.js',
+        'bower_components/indiesocial/indiesocial.min.js',
+        'bower_components/img.bi.js/img.bi.min.js',
+        'bower_components/l10n.js/l10n.min.js',
+        'bower_components/sjcl/sjcl.js',
+        'build/scripts/main.js'
+      ],
+      dest: 'build/scripts/main.js'
+    },
+    css: {
+      src: ['tmp/main.css', 'tmp/fontello.css', 'tmp/animation.css'],
+      dest: 'build/css/main.css'
     }
   }
 });
@@ -164,12 +182,13 @@ grunt.loadNpmTasks('grunt-connect-proxy');
 grunt.loadNpmTasks('grunt-contrib-watch');
 grunt.loadNpmTasks('grunt-contrib-htmlmin');
 grunt.loadNpmTasks('grunt-mkdir');
+grunt.loadNpmTasks('grunt-contrib-concat');
 
 grunt.registerTask('afterjekyll', [ 'less', 'fontello', 'min', 'rename', 'cssmin', 'minjson', 'htmlmin', 'clean' ]);
 grunt.registerTask('default', [ 'jekyll:web', 'afterjekyll' ]);
 grunt.registerTask('tor', [ 'jekyll:tor', 'afterjekyll' ]);
 grunt.registerTask('i2p', [ 'jekyll:i2p', 'afterjekyll' ]);
-grunt.registerTask('serve', [ 'jekyll:local', 'afterjekyll', 'mkdir', 'configureProxies:server', 'connect:server', 'watch' ]);
+grunt.registerTask('serve', [ 'jekyll:local', 'less', 'fontello', 'concat', 'mkdir', 'configureProxies:server', 'connect:server', 'watch' ]);
 grunt.registerTask('deploy', 'Deploy', function(n) {
   if (grunt.option('web')) {
     grunt.task.run(['default','exec:deploy:' + grunt.option('web')]);

@@ -7,7 +7,8 @@ maxSize = 3145728,
 siteurl = '{{ site.url }}',
 clearneturl = '{{ site.clearnet }}',
 torurl = '{{ site.tor }}',
-i2purl = '{{ site.i2p }}';
+i2purl = '{{ site.i2p }}',
+thumbs = new Number();
 
 $(function() {
   sjcl.random.startCollectors();
@@ -24,6 +25,15 @@ $(function() {
     }
     else {
       loadFile(params[1],params[2]);
+    }
+  }
+  else if (window.location.href.indexOf('/my/') != '-1') {
+    if (localStorage.length) {
+      loadThumbs(0);
+    }
+    else {
+       $('#noimages').set('-hidden');
+       $('#loadmore').set('+hidden');
     }
   }
   $('#logo').on('mouseover', function() {
@@ -108,7 +118,8 @@ function uploadFiles() {
   $('#holder img').each(function(image,count) {
     var pass = randomString(40),
     encrypted = sjcl.encrypt(pass, image.src, {ks:256});
-    $.request('post', siteurl + '/api/upload', {encrypted:encrypted})
+    ethumb = sjcl.encrypt(pass, generateThumb(image.src), {ks:256});
+    $.request('post', siteurl + '/api/upload', {encrypted:encrypted,thumb:ethumb})
       .then(function success(txt) {
         var json = $.parseJSON(txt);
         if (json.status == 'OK') {
@@ -116,6 +127,7 @@ function uploadFiles() {
           $('#uploadpage').set('+hidden');
           showImage(image.src,count);
           addLinks(json.id,pass,json.pass,count);
+          localStorage.setItem(json.id, JSON.stringify({pass: pass, rmpass: json.pass}));
         }
         else {
           alert(json.status);
@@ -228,7 +240,10 @@ function removeFile(id,rmpass) {
   $.request('get', siteurl + '/api/remove', {id:id,password:rmpass})
     .then(function success(txt) {
       var json = $.parseJSON(txt);
-      if (json.status != 'Success') {
+      if (json.status == 'Success') {
+        localStorage.removeItem(id);
+        return true;
+      } else {
         alert(l('failed-remove', 'Failed to remove image') + ': ' + json.status);
       }
     },
@@ -249,5 +264,76 @@ function changeURL(url) {
   });
   $('.link-auto-remove').each(function(elem) {
     $(elem).set('@value',_.toString($(elem).get('@value')).replace(/^https?:\/\/.*?\//,url + '/'));
+  });
+}
+
+function generateThumb(uri) {
+  var img = new Image();
+  img.src = uri;
+  var thumbsize = 300,
+  c = document.createElement('canvas'),
+  cx = c.getContext('2d'),
+  widthratio = img.width / thumbsize,
+  heightratio = img.height / thumbsize,
+  maxratio = Math.max(widthratio, heightratio);
+  if (maxratio > 1) {
+    w = img.width / maxratio;
+    h = img.height / maxratio;
+  } else {
+    w = img.width;
+    h = img.height;
+  }
+  c.width = w;
+  c.height = h;
+  cx.fillStyle = 'white';
+  cx.fillRect (0, 0, w, h);
+  cx.drawImage(img, 0, 0, w, h);
+  return c.toDataURL('image/jpeg',0.85);
+};
+
+function getThumb(count) {
+  var id = localStorage.key(count),
+  json = $.parseJSON(localStorage.getItem(id));
+  $.request('get', siteurl + '/download/thumb/' + id)
+    .then(function success(txt) {
+      try {
+        var result = sjcl.decrypt(json.pass,txt),
+        data = result.match(/^data:(.+);base64,*/);
+          if (data[1] == 'image/jpeg' && result) {
+            $('#thumbs').add(HTML(
+              '<div class="col-md-3"><div class="thumbnail">' +
+              '<a href="' + siteurl + '/#!' + id + '!' + json.pass + '">' +
+              '<img src="' + result + '" ></a>' +
+              '<div class="caption text-center"><p>' +
+              '<a href="' + siteurl + '/#!' + id + '!' + json.pass +
+              '" class="btn btn-primary btn-sm view-button" role="button" data-l10n="view-btn">' + l('view-btn', 'View') + '</a>' +
+              '<a href="' + siteurl + '/rm/#!' + id + '!' + json.pass + '!' + json.rmpass +
+              '" class="btn btn-default btn-sm remove-button" role="button" data-l10n="remove-btn">' + l('remove-btn', 'Remove') + '</a>'+
+              '</p></div></div></div>'
+            ));
+          }
+        }
+      catch(e) {
+        localStorage.removeItem(id);
+        return;
+      }
+    },
+    function error(status, statusText, responseText) {
+      if (status == 404) {
+        localStorage.removeItem(id);
+      }
+    });
+}
+
+function loadThumbs(count) {
+  for (var i = count; i < count+8 && i < localStorage.length; i++) {
+    getThumb(i);
+  }
+  if (count+8 >= localStorage.length) {
+    $('#loadmore').set('+hidden');
+  }
+  thumbs=thumbs + count;
+  $('#loadmore').on('click', function() {
+    loadThumbs(thumbs+8);
   });
 }

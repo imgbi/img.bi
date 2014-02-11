@@ -65,5 +65,10 @@
   "autoremoved":"Image was autoremoved.",
   "in-the-internet": "In the internet",
   "tor-hidden-service": "Tor hidden service",
-  "eepsite": "Eepsite"
+  "eepsite": "Eepsite",
+  "view-btn": "View",
+  "remove-btn": "Remove",
+  "load-more": "Load more",
+  "no-images": "No images found in localStorage. Try <a href='/'>upload some</a>.",
+  "my-images": "my images"
 }
