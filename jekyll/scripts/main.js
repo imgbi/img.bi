@@ -192,7 +192,7 @@ function addLinks(id,pass,rmpass,count) {
     $('#viewpage').add($('#viewpage .inputs').only(0).clone());
   }
   $('.link-view').sub(count).set('@value',siteurl + '/#!' + id + '!' + pass);
-  $('.embed').sub(count).set('@value','<img data-imgbi="' + siteurl + ' /#!' + id + '!' + pass + '" />');
+  $('.embed').sub(count).set('@value','<img data-imgbi="' + siteurl + '/#!' + id + '!' + pass + '" />');
   if (rmpass) {
     $('.rmlinks').set('-hidden');
     $('.link-remove').sub(count).set('@value',siteurl + '/rm/#!' + id + '!' + pass + '!' + rmpass);
