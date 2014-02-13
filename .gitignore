@@ -3,6 +3,7 @@ Makefile
 jekyll/css
 bower_components
 jekyll/_site
+jekyll/kokoku.json
 
 lib-cov
 lcov.info
@@ -21,3 +22,4 @@ build
 .grunt
 
 node_modules
+
