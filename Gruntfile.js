@@ -159,7 +159,7 @@ grunt.initConfig({
         'bower_components/img.bi.js/img.bi.min.js',
         'bower_components/l10n.js/l10n.min.js',
         'bower_components/sjcl/sjcl.js',
-        'bower_components/kokoku/kokoku.min.js',
+//        'bower_components/kokoku/kokoku.min.js',
         'build/scripts/main.js'
       ],
       dest: 'build/scripts/main.js'
