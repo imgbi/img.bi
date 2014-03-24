@@ -71,6 +71,10 @@ $(function() {
     localizeAll('en');
     document.cookie = 'lang=en; expires=Sun, 25 May 2042 00:42:00 UTC; path=/'
   });
+  $('#fr').on('click', function() {
+    localizeAll('fr');
+    document.cookie = 'lang=fr; expires=Sun, 25 May 2042 00:42:00 UTC; path=/'
+  });
   $('#ru').on('click', function() {
     localizeAll('ru');
     document.cookie = 'lang=ru; expires=Sun, 25 May 2042 00:42:00 UTC; path=/'
