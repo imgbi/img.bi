@@ -19,7 +19,8 @@
     "grunt-contrib-htmlmin": "~0.1.3",
     "grunt-connect-proxy": "~0.1.7",
     "grunt-mkdir": "~0.1.1",
-    "grunt-contrib-concat": "~0.3.0"
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-compress": "^0.8.0"
   },
   "repository": {
     "type": "git",
