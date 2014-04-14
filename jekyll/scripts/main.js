@@ -69,19 +69,19 @@ $(function() {
   });
   $('#en').on('click', function() {
     localizeAll('en');
-    document.cookie = 'lang=en; expires=Sun, 25 May 2042 00:42:00 UTC; path=/'
+    document.cookie = 'lang=en; expires=Sun, 25 May 2042 00:42:00 UTC; path=/';
   });
   $('#fr').on('click', function() {
     localizeAll('fr');
-    document.cookie = 'lang=fr; expires=Sun, 25 May 2042 00:42:00 UTC; path=/'
+    document.cookie = 'lang=fr; expires=Sun, 25 May 2042 00:42:00 UTC; path=/';
   });
   $('#ru').on('click', function() {
     localizeAll('ru');
-    document.cookie = 'lang=ru; expires=Sun, 25 May 2042 00:42:00 UTC; path=/'
+    document.cookie = 'lang=ru; expires=Sun, 25 May 2042 00:42:00 UTC; path=/';
   });
   $('#it').on('click', function() {
     localizeAll('it');
-    document.cookie = 'lang=it; expires=Sun, 25 May 2042 00:42:00 UTC; path=/'
+    document.cookie = 'lang=it; expires=Sun, 25 May 2042 00:42:00 UTC; path=/';
   });
   $('#viewpage').on('click', function() {
     if (_.toString($(this).get('@class')) == 'image') {
@@ -121,7 +121,7 @@ function l(string, fallback) {
 function uploadFiles() {
   $('#holder img').each(function(image,count) {
     var pass = randomString(40),
-    encrypted = sjcl.encrypt(pass, image.src, {ks:256});
+    encrypted = sjcl.encrypt(pass, image.src, {ks:256}),
     ethumb = sjcl.encrypt(pass, generateThumb(image.src), {ks:256});
     $.request('post', siteurl + '/api/upload', {encrypted:encrypted,thumb:ethumb})
       .then(function success(txt) {
@@ -137,7 +137,7 @@ function uploadFiles() {
           alert(json.status);
         }
       },
-      function error(status, statusText, responseText) {
+      function error() {
         alert(l('failed-upload','Failed to upload image'));
     });
   });
@@ -176,7 +176,7 @@ function loadFile(id,pass,rmpass) {
         return;
       }
     },
-    function error(status, statusText, responseText) {
+    function error() {
       alert(l('failed-load','Failed to load image'));
       window.location = '/';
     });
@@ -220,15 +220,15 @@ function addLinks(id,pass,rmpass,count) {
 }
 
 function previewFiles(files) {
-  for (var i = 0; i < files.length; i++) {
-    if (acceptedTypes.indexOf(files[i].type) != '-1') {
-      if (files[i].size < maxSize) {
+  _.eachObj(files, function(i,file) {
+    if (acceptedTypes.indexOf(file.type) != '-1') {
+      if (file.size < maxSize) {
         var reader = new FileReader();
         reader.onload = function (event) {
           $('#help').remove();
           $('#holder').add(EE('img', {'@src':event.target.result}));
         };
-        reader.readAsDataURL(files[i]);
+        reader.readAsDataURL(file);
       }
       else {
         alert(l('filesize','Sorry, filesize over 3 MiB is not allowed'));
@@ -237,7 +237,7 @@ function previewFiles(files) {
     else {
       alert(file.type + ': ' + l('filetype','sorry, filetype not supported'));
     }
-  }
+  });
 }
 
 function removeFile(id,rmpass) {
@@ -251,7 +251,7 @@ function removeFile(id,rmpass) {
         alert(l('failed-remove', 'Failed to remove image') + ': ' + json.status);
       }
     },
-    function error(status, statusText, responseText) {
+    function error() {
       alert(l('failed-remove', 'Failed to remove image'));
     });
 }
@@ -279,7 +279,9 @@ function generateThumb(uri) {
   cx = c.getContext('2d'),
   widthratio = img.width / thumbsize,
   heightratio = img.height / thumbsize,
-  maxratio = Math.max(widthratio, heightratio);
+  maxratio = Math.max(widthratio, heightratio),
+  w,
+  h;
   if (maxratio > 1) {
     w = img.width / maxratio;
     h = img.height / maxratio;
@@ -293,7 +295,7 @@ function generateThumb(uri) {
   cx.fillRect (0, 0, w, h);
   cx.drawImage(img, 0, 0, w, h);
   return c.toDataURL('image/jpeg',0.85);
-};
+}
 
 function getThumb(count) {
   var id = localStorage.key(count),
@@ -322,7 +324,7 @@ function getThumb(count) {
         return;
       }
     },
-    function error(status, statusText, responseText) {
+    function error(status) {
       if (status == 404) {
         localStorage.removeItem(id);
       }
