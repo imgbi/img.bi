@@ -112,7 +112,8 @@ grunt.initConfig({
       files: {
         'build/locales/en.json': 'jekyll/locales/en.json',
         'build/locales/ru.json': 'jekyll/locales/ru.json',
-        'build/locales/it.json': 'jekyll/locales/it.json'
+        'build/locales/it.json': 'jekyll/locales/it.json',
+        'build/locales/fr.json': 'jekyll/locales/fr.json'
       }
     }
   },
@@ -180,6 +181,39 @@ grunt.initConfig({
       dest: 'build/',
       src: ['**/*']
     }
+  },
+  hashres: {
+    options: {
+      fileNameFormat: '${hash}-${name}.${ext}',
+    },
+    fontello: {
+      src: [
+        'build/font/*'
+      ],
+      dest: [
+        'build/css/main.css'
+      ]
+    },
+    prod: {
+      src: [
+        'build/css/main.css',
+        'build/scripts/main.js',
+        'build/locales/*',
+        'build/favicon.png',
+        'build/favicon152.png'
+      ],
+      dest: [
+        'build/index.html',
+        'build/ads/index.html',
+        'build/apps/index.html',
+        'build/autorm/index.html',
+        'build/contacts/index.html',
+        'build/donate/index.html',
+        'build/js/index.html',
+        'build/rm/index.html',
+        'build/my/index.html'
+      ]
+    }
   }
 });
 
@@ -198,6 +232,7 @@ grunt.loadNpmTasks('grunt-contrib-htmlmin');
 grunt.loadNpmTasks('grunt-mkdir');
 grunt.loadNpmTasks('grunt-contrib-concat');
 grunt.loadNpmTasks('grunt-contrib-compress');
+grunt.loadNpmTasks('grunt-hashres');
 
 grunt.registerTask('afterjekyll', [ 'less', 'fontello', 'min', 'rename', 'cssmin', 'minjson', 'htmlmin', 'clean' ]);
 grunt.registerTask('default', [ 'jekyll:web', 'afterjekyll' ]);
@@ -206,13 +241,13 @@ grunt.registerTask('i2p', [ 'jekyll:i2p', 'afterjekyll' ]);
 grunt.registerTask('serve', [ 'jekyll:local', 'less', 'fontello', 'concat', 'mkdir', 'configureProxies:server', 'connect:server', 'watch' ]);
 grunt.registerTask('deploy', 'Deploy', function(n) {
   if (grunt.option('web')) {
-    grunt.task.run(['default', 'compress', 'exec:deploy:' + grunt.option('web')]);
+    grunt.task.run(['default', 'hashres', 'compress', 'exec:deploy:' + grunt.option('web')]);
   }
   if (grunt.option('tor')) {
-    grunt.task.run(['tor', 'compress', 'exec:deploy:' + grunt.option('tor')]);
+    grunt.task.run(['tor', 'hashres', 'compress', 'exec:deploy:' + grunt.option('tor')]);
   }
   if (grunt.option('i2p')) {
-    grunt.task.run(['i2p', 'compress', 'exec:deploy:' + grunt.option('i2p')]);
+    grunt.task.run(['i2p', 'hashres', 'compress', 'exec:deploy:' + grunt.option('i2p')]);
   }
 });
 };
