@@ -3,11 +3,12 @@
   "dependencies": {
     "bootstrap": "~3.1.0",
     "indiesocial": "*",
-    "minified": "~2014.0.0-beta4.2",
+    "minified": "~2014.0.0-beta5.0",
     "sjcl": "~1.0.0",
     "img.bi.js": "*",
     "l10n.js": "*",
-    "kokoku": "*"
+    "kokoku": "*",
+    "zeroclipboard": "~1.3.5"
   },
   "ignore": [
     "**/.*",
@@ -17,4 +18,3 @@
     "build"
   ]
 }
-

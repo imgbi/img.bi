@@ -69,5 +69,6 @@
   "remove-btn": "Remove",
   "load-more": "Load more",
   "no-images": "No images found in localStorage. Try <a href='/'>upload some</a>.",
-  "my-images": "my images"
+  "my-images": "my images",
+  "copy": "Copy to clipboard"
 }

@@ -70,7 +70,8 @@ grunt.initConfig({
         'bower_components/img.bi.js/img.bi.min.js',
         'bower_components/l10n.js/l10n.min.js',
         'bower_components/sjcl/sjcl.js',
-        'bower_components/kokoku/kokoku.min.js',
+        //'bower_components/kokoku/kokoku.min.js',
+        'bower_components/zeroclipboard/ZeroClipboard.min.js',
         'build/scripts/main.js'
       ],
       dest: 'tmp/main.js'
@@ -152,6 +153,12 @@ grunt.initConfig({
       }
     }
   },
+  copy: {
+    main: {
+      src: 'bower_components/zeroclipboard/ZeroClipboard.swf',
+      dest: 'build/ZeroClipboard.swf',
+    },
+  },
   concat: {
     js: {
       src: [
@@ -161,6 +168,7 @@ grunt.initConfig({
         'bower_components/l10n.js/l10n.min.js',
         'bower_components/sjcl/sjcl.js',
 //        'bower_components/kokoku/kokoku.min.js',
+        'bower_components/zeroclipboard/ZeroClipboard.min.js',
         'build/scripts/main.js'
       ],
       dest: 'build/scripts/main.js'
@@ -233,12 +241,13 @@ grunt.loadNpmTasks('grunt-mkdir');
 grunt.loadNpmTasks('grunt-contrib-concat');
 grunt.loadNpmTasks('grunt-contrib-compress');
 grunt.loadNpmTasks('grunt-hashres');
+grunt.loadNpmTasks('grunt-contrib-copy');
 
-grunt.registerTask('afterjekyll', [ 'less', 'fontello', 'min', 'rename', 'cssmin', 'minjson', 'htmlmin', 'clean' ]);
+grunt.registerTask('afterjekyll', [ 'less', 'fontello', 'min', 'rename', 'cssmin', 'minjson', 'htmlmin', 'copy', 'clean' ]);
 grunt.registerTask('default', [ 'jekyll:web', 'afterjekyll' ]);
 grunt.registerTask('tor', [ 'jekyll:tor', 'afterjekyll' ]);
 grunt.registerTask('i2p', [ 'jekyll:i2p', 'afterjekyll' ]);
-grunt.registerTask('serve', [ 'jekyll:local', 'less', 'fontello', 'concat', 'mkdir', 'configureProxies:server', 'connect:server', 'watch' ]);
+grunt.registerTask('serve', [ 'jekyll:local', 'less', 'fontello', 'concat', 'mkdir', 'copy', 'configureProxies:server', 'connect:server', 'watch' ]);
 grunt.registerTask('deploy', 'Deploy', function(n) {
   if (grunt.option('web')) {
     grunt.task.run(['default', 'hashres', 'compress', 'exec:deploy:' + grunt.option('web')]);

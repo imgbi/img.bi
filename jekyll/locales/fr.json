@@ -69,5 +69,7 @@
   "remove-btn": "Supprimer",
   "load-more": "Charger plus",
   "no-images": "Pas d&#39;images trouvées dans localStorage. Essayez d&#39;en <a href='/'>transférer quelques-unes</a>.",
-  "my-images": "mes images"
+  "my-images": "mes images",
+  
+  "copy": "Copy to clipboard"
 }

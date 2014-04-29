@@ -81,14 +81,34 @@ layout: default
       </ul>
       
       <div class="form-group text-center">
-        <input type="text" readonly="readonly" class="form-control link text-center link-view">
+        <div class="input-group">
+          <input type="text" readonly="readonly" class="form-control link text-center link-view">
+          <span class="input-group-btn">
+            <button class="btn btn-default icon-clipboard link-view-copy" type="button"  title="Copy to clipboard"></button>
+          </span>
+        </div>
         <span class="help-block" data-l10n="link-view">Link to view image.</span>
-        <input type="text" readonly="readonly" class="form-control link text-center embed">
+        <div class="input-group">
+          <input type="text" readonly="readonly" class="form-control link text-center embed">
+          <span class="input-group-btn">
+            <button class="btn btn-default icon-clipboard embed-copy" type="button" title="Copy to clipboard"></button>
+          </span>
+        </div>
         <span class="help-block" data-l10n="embed">Embed image (require <a href="https://img.bi/js">img.bi.js</a>).</span>
         <div class="rmlinks hidden">
-          <input type="text" readonly="readonly" class="form-control link text-center link-remove">
+          <div class="input-group">
+            <input type="text" readonly="readonly" class="form-control link text-center link-remove">
+            <span class="input-group-btn">
+              <button class="btn btn-default icon-clipboard link-remove-copy" type="button" title="Copy to clipboard"></button>
+            </span>
+          </div>
           <span class="help-block" data-l10n="link-remove">Link to remove image.</span>
-          <input type="text" readonly="readonly" class="form-control link text-center link-auto-remove">
+          <div class="input-group">
+            <input type="text" readonly="readonly" class="form-control link text-center link-auto-remove">
+            <span class="input-group-btn">
+              <button class="btn btn-default icon-clipboard link-auto-remove-copy" type="button" title="Copy to clipboard"></button>
+            </span>
+          </div>
           <span class="help-block" data-l10n="link-auto-remove">Remove image after first view.</span>
         </div>
       </div>

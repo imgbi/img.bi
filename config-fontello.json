@@ -137,6 +137,12 @@
       "css": "diigo",
       "code": 59393,
       "src": "brandico"
+    },
+    {
+      "uid": "c9bef3dc67fea47e94c4a5030ea64dad",
+      "css": "clipboard",
+      "code": 593413,
+      "src": "elusive"
     }
   ]
 }

@@ -14,5 +14,5 @@
     Jekyll
 
 # SITE
-	Language: English / Russian / Italian
+	Language: English / Russian / Italian / French
 	Doctype:HTML5
