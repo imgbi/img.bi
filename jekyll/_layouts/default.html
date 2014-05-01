@@ -8,10 +8,9 @@
     <link href="/css/main.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="/favicon.png" sizes="128x128" />
     <link rel="apple-touch-icon-precomposed" href="/favicon152.png" sizes="152x152" />
-    <link rel="localization" hreflang="ru" href="/locales/ru.json" type="application/vnd.oftn.l10n+json"/>
-    <link rel="localization" hreflang="en" href="/locales/en.json" type="application/vnd.oftn.l10n+json"/>
-    <link rel="localization" hreflang="fr" href="/locales/fr.json" type="application/vnd.oftn.l10n+json"/>
-    <link rel="localization" hreflang="it" href="/locales/it.json" type="application/vnd.oftn.l10n+json"/>
+    {% for lang in site.languages %}
+      <link rel="localization" hreflang="{{ lang.iso }}" href="/locales/{{ lang.iso }}.json" type="application/vnd.oftn.l10n+json"/>
+    {% endfor %}
     <!-- <link rel="kokoku" href="/kokoku.json" type="application/json" /> -->
     <script async src="/scripts/main.js"></script>
   </head>
@@ -20,10 +19,9 @@
       <div class="pull-right">
         <a href="/my" data-l10n="my-images">my images</a> | 
         <span class="lang">
-          <a title="English" id="en">en</a>
-          <a title="Français" id="fr">fr</a>
-          <a title="Русский" id="ru">ru</a>
-          <a title="Italiano" id="it">it</a>
+          {% for lang in site.languages %}
+            <a title="{{ lang.name }}" id="{{ lang.iso }}">{{ lang.iso }}</a>
+          {% endfor %}
         </span>
       </div>
       <div class="page-header">

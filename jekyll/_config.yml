@@ -4,3 +4,12 @@ buildfor: web
 clearnet: https://img.bi
 i2p: http://imgbi.i2p
 tor: http://imgbifwwqoixh7te.onion
+languages:
+  - iso: en
+    name: English
+  - iso: fr
+    name: Français
+  - iso: ru
+    name: Русский
+  - iso: it
+    name: Italiano

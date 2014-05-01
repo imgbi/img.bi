@@ -7,12 +7,16 @@ maxSize = 3145728,
 siteurl = '{{ site.url }}',
 clearneturl = '{{ site.clearnet }}',
 torurl = '{{ site.tor }}',
-i2purl = '{{ site.i2p }}';
+i2purl = '{{ site.i2p }}',
+languages = [{% for lang in site.languages %}'{{ lang.iso }}', {% endfor %}];
+
 
 $(function() {
   sjcl.random.startCollectors();
-  var cookielang = document.cookie.replace(/(?:(?:^|.*;\s*)lang\s*\=\s*([^;]*).*$)|^.*$/, '$1');
-  localizeAll(cookielang);
+  var preflang = localStorage.getItem('lang') || document.cookie.replace(/(?:(?:^|.*;\s*)lang\s*\=\s*([^;]*).*$)|^.*$/, '$1') || window.navigator.userLanguage.split('-')[0] || window.navigator.language.split('-')[0];
+  if (languages.indexOf(preflang) != '-1') {
+    localizeAll(preflang);
+  }
   changeColor();
   $('#uploadpage').set('-hidden');
   if (window.location.hash.indexOf('!') != '-1') {
@@ -66,21 +70,11 @@ $(function() {
     alert('Removed');
     window.location = '/';
   });
-  $('#en').on('click', function() {
-    localizeAll('en');
-    document.cookie = 'lang=en; expires=Sun, 25 May 2042 00:42:00 UTC; path=/';
-  });
-  $('#fr').on('click', function() {
-    localizeAll('fr');
-    document.cookie = 'lang=fr; expires=Sun, 25 May 2042 00:42:00 UTC; path=/';
-  });
-  $('#ru').on('click', function() {
-    localizeAll('ru');
-    document.cookie = 'lang=ru; expires=Sun, 25 May 2042 00:42:00 UTC; path=/';
-  });
-  $('#it').on('click', function() {
-    localizeAll('it');
-    document.cookie = 'lang=it; expires=Sun, 25 May 2042 00:42:00 UTC; path=/';
+  _.each(languages, function(lang) {
+    $('#' + lang).on('click', function() {
+      localizeAll(lang);
+      localStorage.setItem('lang', lang);
+    });
   });
   $('#viewpage').on('click', function() {
     if (_.toString($(this).get('@class')) == 'image') {
