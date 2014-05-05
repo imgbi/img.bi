@@ -70,5 +70,14 @@
   "load-more": "Load more",
   "no-images": "No images found in localStorage. Try <a href='/'>upload some</a>.",
   "my-images": "my images",
-  "copy": "Copy to clipboard"
+  "copy": "Copy to clipboard",
+  "store-for": "Store for:",
+  "1d": "One day",
+  "3d": "Three days",
+  "1w": "One week",
+  "4w": "Four weeks",
+  "90d": "90 days",
+  "180d": "180 days",
+  "1y": "One year",
+  "forever": "Forever"
 }

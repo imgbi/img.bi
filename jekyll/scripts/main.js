@@ -10,14 +10,23 @@ torurl = '{{ site.tor }}',
 i2purl = '{{ site.i2p }}',
 languages = [{% for lang in site.languages %}'{{ lang.iso }}', {% endfor %}];
 
-
 $(function() {
   sjcl.random.startCollectors();
-  var preflang = localStorage.getItem('lang') || document.cookie.replace(/(?:(?:^|.*;\s*)lang\s*\=\s*([^;]*).*$)|^.*$/, '$1') || window.navigator.userLanguage.split('-')[0] || window.navigator.language.split('-')[0];
+  var preflang = localStorage.getItem('lang') || $.getCookie('lang') || window.navigator.userLanguage.split('-')[0] || window.navigator.language.split('-')[0];
   if (languages.indexOf(preflang) != '-1') {
     localizeAll(preflang);
   }
   changeColor();
+  if (localStorage.getItem('expire')) {
+    $('#expire option').each(function(item, index) {
+      if (item.value === localStorage.getItem('expire')) {
+        $('#expire')[0].selectedIndex = index;
+      }
+    });
+  }
+  else {
+    localStorage.setItem('expire', $('#expire')[0].options[$('#expire')[0].selectedIndex].value);
+  }
   $('#uploadpage').set('-hidden');
   if (window.location.hash.indexOf('!') != '-1') {
     $('#uploadpage').set('hidden');
@@ -84,6 +93,9 @@ $(function() {
       $(this).set('+image -zoom-out');
     }
   }, '.imageview img');
+  $('#expire').on('change', function(event) {
+    localStorage.setItem('expire', event.target.options[event.target.selectedIndex].value);
+  });
 });
 
 function changeColor() {
@@ -118,7 +130,7 @@ function uploadFiles() {
     var pass = randomString(40),
     encrypted = sjcl.encrypt(pass, image.src, {ks: 256}),
     ethumb = sjcl.encrypt(pass, generateThumb(image.src), {ks: 256});
-    $.request('post', siteurl + '/api/upload', {encrypted: encrypted, thumb: ethumb})
+    $.request('post', siteurl + '/api/upload', {encrypted: encrypted, thumb: ethumb, expire: localStorage.getItem('expire')})
       .then(function success(txt) {
         var json = $.parseJSON(txt);
         if (json.status == 'OK') {

@@ -15,6 +15,23 @@ layout: default
       <h4 id="uploading" class="text-center hidden"><i class="icon-spin5 animate-spin"></i> <span data-l10n="uploading">Uploading</span></h4>
     </div>
   </div>
+  <div class="form-horizontal storefor">
+    <div class="form-group">
+      <span for="store" class="col-md-2 col-md-offset-8 control-label text-muted" data-l10n="store-for">Store for:</span>
+      <div class="col-md-2">
+        <select class="form-control input-sm" id="expire">
+          <option value="1" data-l10n="1d">One day</option>
+          <option value="3" data-l10n="3d">Three days</option>
+          <option value="7" data-l10n="1w">One week</option>
+          <option value="28" data-l10n="4w">Four weeks</option>
+          <option value="90" data-l10n="90d">90 days</option>
+          <option selected value="180" data-l10n="180d">180 days</option>
+          <option value="365" data-l10n="1y">One year</option>
+          <option value="0" data-l10n="forever">Forever</option>
+        </select>
+      </div>
+    </div>
+  </div>
   <div class="row">
     <div class="col-md-12">
       <h3 class="text-center why" data-l10n="why">Why img.bi is secure and awesome?</h3>
