@@ -134,7 +134,7 @@ grunt.initConfig({
         host: '127.0.0.1',
         port: 8080
       }]
-    }
+    }    
   },
   watch: {
     scripts: {
@@ -222,6 +222,22 @@ grunt.initConfig({
         'build/my/index.html'
       ]
     }
+  },
+  jshint: {
+    all: ['Gruntfile.js', 'build/scripts/main.js']
+  },
+  jsonlint: {
+    all: {
+      src: [ 'build/locales/**.json' ]
+    }
+  },
+  htmllint: {
+    all: {
+      src: ['build/**/*.html'],
+      options: {
+        ignore: ['An “img” element must have an “alt” attribute, except under certain conditions. For details, consult guidance on providing text alternatives for images.']
+      },
+    }
   }
 });
 
@@ -242,12 +258,17 @@ grunt.loadNpmTasks('grunt-contrib-concat');
 grunt.loadNpmTasks('grunt-contrib-compress');
 grunt.loadNpmTasks('grunt-hashres');
 grunt.loadNpmTasks('grunt-contrib-copy');
+grunt.loadNpmTasks('grunt-contrib-jshint');
+grunt.loadNpmTasks('grunt-jsonlint');
+grunt.loadNpmTasks('grunt-html');
+grunt.loadNpmTasks('grunt-contrib-qunit');
 
 grunt.registerTask('afterjekyll', [ 'less', 'fontello', 'min', 'rename', 'cssmin', 'minjson', 'htmlmin', 'copy', 'clean' ]);
 grunt.registerTask('default', [ 'jekyll:web', 'afterjekyll' ]);
 grunt.registerTask('tor', [ 'jekyll:tor', 'afterjekyll' ]);
 grunt.registerTask('i2p', [ 'jekyll:i2p', 'afterjekyll' ]);
 grunt.registerTask('serve', [ 'jekyll:local', 'less', 'fontello', 'concat', 'mkdir', 'copy', 'configureProxies:server', 'connect:server', 'watch' ]);
+grunt.registerTask('test', [ 'jekyll:web', 'jshint', 'jsonlint', 'htmllint']);
 grunt.registerTask('deploy', 'Deploy', function(n) {
   if (grunt.option('web')) {
     grunt.task.run(['default', 'hashres', 'compress', 'exec:deploy:' + grunt.option('web')]);

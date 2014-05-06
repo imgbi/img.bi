@@ -9,6 +9,8 @@ Language files located in ``jekyll/locales``. Just create a new file with name `
 
 Also you need to update ``jekyll/_config.yml``.
 
+Make sure lang files contain valid JSON. You can test it with ``grunt jsonlint``.
+
 ## Build
 
     npm install

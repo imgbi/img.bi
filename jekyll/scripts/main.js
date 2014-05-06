@@ -12,7 +12,7 @@ languages = [{% for lang in site.languages %}'{{ lang.iso }}', {% endfor %}];
 
 $(function() {
   sjcl.random.startCollectors();
-  var preflang = localStorage.getItem('lang') || $.getCookie('lang') || window.navigator.userLanguage.split('-')[0] || window.navigator.language.split('-')[0];
+  var preflang = localStorage.getItem('lang') || $.getCookie('lang');
   if (languages.indexOf(preflang) != '-1') {
     localizeAll(preflang);
   }
@@ -24,7 +24,7 @@ $(function() {
       }
     });
   }
-  else {
+  else if ($('#expire')[0]) {
     localStorage.setItem('expire', $('#expire')[0].options[$('#expire')[0].selectedIndex].value);
   }
   $('#uploadpage').set('-hidden');
