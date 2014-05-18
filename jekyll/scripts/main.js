@@ -250,9 +250,6 @@ function previewFiles(files) {
         alert(l('filesize', 'Sorry, filesize over 3 MiB is not allowed'));
       }
     }
-    else {
-      alert(file.type + ': ' + l('filetype', 'sorry, filetype not supported'));
-    }
   });
 }
 
