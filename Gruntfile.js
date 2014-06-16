@@ -12,11 +12,16 @@ grunt.initConfig({
     }
   },
   cssmin: {
-    files: {
-      'build/css/main.css': ['tmp/main.css', 'tmp/fontello.css', 'tmp/animation.css']
+    combine: {
+      files: {
+        'build/css/main.css': ['tmp/main.css', 'tmp/fontello.css', 'tmp/animation.css']
+      }
     }
   },
   uglify: {
+    options: {
+      mangle: false
+    },
     main: {
       files: {
         'build/scripts/main.js': [
@@ -59,7 +64,7 @@ grunt.initConfig({
   exec: {
     deploy: {
       cmd: function(addr,dest) {
-             return 'rsync --progress -a --delete -e "ssh -q" build/ ' + addr + ':' + dest;
+             return 'torsocks rsync --progress -a --delete -e "ssh -q" build/ ' + addr + ':' + dest;
            }
     }
   },
