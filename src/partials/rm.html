@@ -1,0 +1,10 @@
+<div class="row">
+  <div class="col-md-12 text-center">
+    <h3 translate>Are you sure you want to remove this image from server? This cannot be undone.</h3>
+    <button type="button" class="btn btn-primary btn-lg" ng-click="remove()" translate>Yes, remove image</button>
+    <h4 ng-show="!image" class="text-center"><i class="icon-spin5 animate-spin"></i> <span translate>Loading</span></h4>
+    <div class="text-center" ng-init="zoom = false">
+      <img ng-src="{{image}}" ng-class="{'image': !zoom, 'zoom-out': zoom}" ng-click="zoom = !zoom" />
+    </div>
+  </div>
+</div>

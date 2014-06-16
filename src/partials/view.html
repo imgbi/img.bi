@@ -1,0 +1,30 @@
+<div class="row text-center" ng-show="images[0] == undefined">
+  <h4><i class="icon-spin5 animate-spin"></i> <span translate>Loading</span></h4>
+</div>
+
+<div ng-init="images = []">
+  <div class="row" data-ng-repeat="image in images">
+    <div class="text-center" ng-init="zoom = false">
+      <img ng-src="{{image.url}}" ng-class="{'image': !zoom, 'zoom-out': zoom}" ng-click="zoom = !zoom" />
+    </div>
+    <div class="col-md-6 col-md-offset-3 inputs">
+      <ul class="nav nav-tabs">
+        <li ng-show="config.clearnet" ng-class="{true: 'active'}[url == config.clearnet]" ng-click="url = config.clearnet"><a>Web</a></li>
+        <li ng-show="config.tor" ng-class="{true: 'active'}[url == config.tor]" ng-click="url = config.tor"><a>Tor</a></li>
+        <li ng-show="config.i2p" ng-class="{true: 'active'}[url == config.i2p]" ng-click="url = config.i2p"><a>I2P</a></li>
+      </ul>
+      <div class="form-group text-center">
+        <input type="text" readonly="readonly" class="form-control link text-center" value="{{url}}/#/{{image.id}}!{{image.pass}}">
+        <span class="help-block" translate>Link to view image.</span>
+        <input type="text" readonly="readonly" class="form-control link text-center" value="<img data-imgbi=&quot;{{url}}/#/{{image.id}}!{{image.pass}}&quot;' />">
+        <span class="help-block" translate>Embed image (require <a href="https://img.bi/#/js">img.bi.js</a>).</span>
+        <div data-ng-if="image.rmpass">
+          <input type="text" readonly="readonly" class="form-control link text-center" value="{{url}}/#rm/{{image.id}}!{{image.pass}}!{{image.rmpass}}">
+          <span class="help-block" translate>Link to remove image.</span>
+          <input type="text" readonly="readonly" class="form-control link text-center" value="{{url}}/#autorm/{{image.id}}!{{image.pass}}!{{image.rmpass}}">
+          <span class="help-block" translate>Remove image after first view.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>img.bi redirect</title>
+  </head>
+  <body>
+    <h3><a href="#" id="link">Click here</a> if you was not autoredirected</h3>
+    <script>
+      var params = window.location.hash.split('!');
+      window.location.replace('/#/rm/' + params[1] + '!' + params[2] + '!' + params[3]);
+      document.getElementById('link').href = '/#/rm/' + params[1] + '!' + params[2] + '!' + params[3];
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<div class="container" ng-init="images = []">
+  <div class="row" ng-repeat="rows in images | partition:4">
+    <div ng-repeat="image in rows">
+      <div class="col-md-3">
+        <div class="thumbnail">
+          <a href="#/{{image.id}}!{{image.pass}}"><img ng-src="{{image.uri}}"></a>
+          <div class="caption text-center">
+            <p>
+              <a href="#/{{image.id}}!{{image.pass}}" class="btn btn-primary btn-sm" role="button" translate>View</a>
+              <a href="#/rm/{{image.id}}!{{image.pass}}!{{image.rmpass}}" class="btn btn-default btn-sm" role="button" translate>Remove</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h3 class="text-center" ng-show="images[0] == undefined" translate>No images found in localStorage. Try <a href="/">upload some</a>.</h3>
+
+<div ng-show="images[0] != undefined && images.length < thumbs.length">
+  <ul class="pager text-center">
+    <li><a ng-click="loadmore()" translate>Load more</a></li>
+  </ul>
+</div>

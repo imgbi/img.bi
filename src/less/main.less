@@ -1,0 +1,106 @@
+// Core variables and mixins
+@import "variables.less";
+@import "mixins.less";
+
+// Reset
+@import "normalize.less";
+
+// Core CSS
+@import "scaffolding.less";
+@import "type.less";
+@import "grid.less";
+@import "forms.less";
+@import "code.less";
+@import "buttons.less";
+
+// Components
+@import "button-groups.less";
+@import "input-groups.less";
+@import "navs.less";
+@import "pager.less";
+@import "thumbnails.less";
+@import "alerts.less";
+@import "panels.less";
+@import "close.less";
+
+// Utility classes
+@import "utilities.less";
+@import "responsive-utilities.less";
+
+// Components w/ JavaScript
+@import "modals.less";
+
+.imageUpload {
+  display: none !important;
+}
+
+.holder {
+  border: 10px dashed #ccc;
+  width: 100%;
+  min-height: 300px;
+  margin: 20px auto;
+}
+.holder.hover, .holder:hover {
+  border: 10px dashed #768ADD;
+}
+.holder.error {
+  border: 10px dashed #ff0000;
+}
+.holder span img {
+  display: inline;
+  margin: 10px;
+  width: 250px;
+}
+.holder p {
+  margin: 10px;
+  font-size: 14px;
+}
+.noscript {
+  width:100%;
+  height:100%;
+  z-index:10;
+  background-color:#ffffff;
+  font-size:30pt;
+}
+.page-header a {
+  color:#000000;
+}
+.page-header a:hover {
+  text-decoration:none;
+}
+.lang a {
+  text-decoration: none;
+  margin: 1px;
+}
+.lang a:hover {
+  color: #f00000;
+  border-bottom: 1px dashed #000080;
+}
+.image {
+  max-width:700px;
+  max-height:700px;
+  cursor: zoom-in;
+  cursor: -webkit-zoom-in;
+  cursor: -moz-zoom-in;
+  margin: 15px 0;
+}
+.link {
+  cursor: copy !important;
+}
+.zoom-out {
+  cursor: zoom-out;
+  cursor: -webkit-zoom-out;
+  cursor: -moz-zoom-out;
+}
+.why {
+  margin: 20px 0;
+}
+.nav {
+  margin-bottom: 10px;
+}
+.storefor {
+  margin-top: 10px;
+}
+.logo {
+  color: #df571b;
+}

@@ -5,11 +5,11 @@
 There is only static content. For work you need also [img.bi-api](https://github.com/imgbi/img.bi-api) which will be process POST- and GET- requests.
 
 ## Localization
-Language files located in ``jekyll/locales``. Just create a new file with name ``<your_language>.json`` where ``<your_language>`` is a [ISO 639-1 code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes).
+For localization img.bi uses [gettext](https://en.wikipedia.org/wiki/Gettext) format. Language files located in ``src/locales``. You can edit it with your text editor or gettext editor like [Poedit](https://poedit.net/).
 
-Also you need to update ``jekyll/_config.yml``.
+If you want to add new language, run ``grunt extract``. It will create file ``src/locales/template.pot`` which you can use as a template for your language file.
 
-Make sure lang files contain valid JSON. You can test it with ``grunt jsonlint``.
+Also you need to update ``config.json``. Make sure it's a valid json, you can test it with ``grunt jsonlint``.
 
 ## Build
 
@@ -18,7 +18,6 @@ Make sure lang files contain valid JSON. You can test it with ``grunt jsonlint``
     grunt
     
 ## Build dependencies
-* [Jekyll](http://jekyllrb.com)
 * [Grunt](http://gruntjs.com)
 * [Bower](http://bower.io)
 * [NPM](https://npmjs.org)

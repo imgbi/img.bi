@@ -1,9 +1,6 @@
 tmp
 Makefile
-jekyll/css
 bower_components
-jekyll/_site
-jekyll/kokoku.json
 
 lib-cov
 lcov.info
@@ -23,3 +20,5 @@ build
 
 node_modules
 
+*.mo
+src/locales/template.pot

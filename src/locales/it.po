@@ -1,0 +1,378 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: mail@img.bi\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Domenico Luciani <domenicoleoneluciani@gmail.com>\n"
+"Language-Team: \n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/partials/upload.html
+msgid "180 days"
+msgstr ""
+
+#: src/partials/upload.html
+msgid "90 days"
+msgstr ""
+
+#: src/partials/donate.html
+msgid "<a href=\"/contacts\">Contact us</a> if you want to donate another way."
+msgstr ""
+
+#: src/partials/apps.html
+msgid ""
+"Add-on for Firefox which let you upload images to img.bi from your browser."
+msgstr ""
+
+#: src/partials/ads.html
+msgid ""
+"Ads must be <a href=\"https://adblockplus.org/en/acceptable-ads#criteria"
+"\">acceptable</a>."
+msgstr ""
+
+#: src/index.html src/partials/ads.html
+msgid "Advertising"
+msgstr ""
+
+#: src/partials/donate.html
+msgid ""
+"Also, you can <a href=\"/ads\">buy ads</a> on img.bi. That will help too."
+msgstr ""
+
+#: src/partials/apps.html
+msgid "Applications for use img.bi"
+msgstr ""
+
+#: src/index.html
+msgid "Apps"
+msgstr ""
+
+#: src/partials/rm.html
+msgid ""
+"Are you sure you want to remove this image from server? This cannot be "
+"undone."
+msgstr ""
+"Sei sicuro di voler rimuovere l&#39;immagine dal server? Non puoi tornare "
+"indietro."
+
+#: src/partials/donate.html
+msgid "Bitcoin address"
+msgstr ""
+
+#: src/partials/ads.html
+#, fuzzy
+msgid "Contact us"
+msgstr "Contatti"
+
+#: src/index.html src/partials/contacts.html
+msgid "Contacts"
+msgstr "Contatti"
+
+#: src/index.html
+msgid "Copyleft"
+msgstr ""
+
+#: src/partials/upload.html
+msgid "Cryptography"
+msgstr "Crittografia"
+
+#: src/index.html src/partials/donate.html
+msgid "Donate"
+msgstr ""
+
+#: src/partials/js.html
+msgid "Download"
+msgstr ""
+
+#: src/partials/js.html
+msgid ""
+"Download img.bi.js and <a href=\"http://bitwiseshiftleft.github.io/sjcl/"
+"\">SJCL</a>."
+msgstr ""
+
+#: src/partials/upload.html
+msgid "Drop images here or just click"
+msgstr "Trascina le immagini qui o clicca semplicemente"
+
+#: src/index.html
+msgid "Eepsite"
+msgstr ""
+
+#: src/partials/view.html
+msgid "Embed image (require <a href=\"https://img.bi/#/js\">img.bi.js</a>)."
+msgstr ""
+"Embeddda l&#39;immagine (richiede <a href=\"https://img.bi/#/js\">img.bi.js</"
+"a>)."
+
+#: src/partials/js.html
+msgid "Embed images from sites based on img.bi software."
+msgstr ""
+
+#: src/scripts/controllers.js src/scripts/services.js
+msgid "Error"
+msgstr ""
+
+#: src/scripts/controllers.js
+msgid "Error during removing"
+msgstr ""
+
+#: src/scripts/controllers.js
+msgid "File was successfuly removed."
+msgstr ""
+
+#: src/partials/apps.html
+msgid "Firefox add-on"
+msgstr ""
+
+#: src/partials/upload.html
+msgid "Forever"
+msgstr ""
+
+#: src/partials/upload.html
+msgid "Four weeks"
+msgstr ""
+
+#: src/partials/contacts.html
+msgid "GPG key"
+msgstr "Chiave GPG"
+
+#: src/partials/js.html
+msgid "How to use"
+msgstr ""
+
+#: src/partials/autorm.html
+msgid "Image was autoremoved."
+msgstr ""
+
+#: src/partials/upload.html
+msgid ""
+"Images are encrypted using <a href=\"https://en.wikipedia.org/wiki/"
+"Advanced_Encryption_Standard\">AES-256</a> with random key in your browser "
+"before upload. Nobody can view your images, even people who have direct "
+"access to servers. We also use <a href=\"https://en.wikipedia.org/wiki/"
+"Transport_Layer_Security\">TLS</a> which defend you from <a href=\"https://"
+"en.wikipedia.org/wiki/Man-in-the-middle_attack\">Man-in-the-Middle attacks</"
+"a>."
+msgstr ""
+"Le immagini vengono criptate usando la criptatura <a href=\"https://it."
+"wikipedia.org/wiki/Advanced_Encryption_Standard\">AES-256</a> con chiave "
+"casuale nel tuo browser prima del caricamento. Nessuno può vedere le tue "
+"immagini, neanche le persone che hanno l&#39;accesso diretto al server. Noi "
+"usiamo anche <a href=\"https://it.wikipedia.org/wiki/Transport_Layer_Security"
+"\">TLS</a> che ti difende dagli <a href=\"https://it.wikipedia.org/wiki/"
+"Attacco_man_in_the_middle\">attacchi Man-in-the-Middle</a>."
+
+#: src/index.html
+msgid "In the internet"
+msgstr ""
+
+#: src/partials/apps.html
+msgid "Install"
+msgstr ""
+
+#: src/partials/apps.html
+msgid ""
+"Just a simple command-line client for uploading/downloading/deleting images. "
+"Also can be used in Node.js applications."
+msgstr ""
+
+#: src/partials/apps.html
+msgid "License"
+msgstr ""
+
+#: src/partials/view.html
+msgid "Link to remove image."
+msgstr "Link per rimuovere l&#39;immagine."
+
+#: src/partials/view.html
+msgid "Link to view image."
+msgstr "Link per vedere l&#39;immagine."
+
+#: src/partials/donate.html
+msgid "Litecoin address"
+msgstr ""
+
+#: src/partials/js.html
+msgid "Load it"
+msgstr ""
+
+#: src/partials/my.html
+msgid "Load more"
+msgstr ""
+
+#: src/partials/autorm.html src/partials/rm.html src/partials/view.html
+#, fuzzy
+msgid "Loading"
+msgstr "Caricamento"
+
+#: src/partials/apps.html
+msgid ""
+"More examples in <a href=\"https://github.com/imgbi/imgbi-client/blob/master/"
+"README.md\">readme</a>."
+msgstr ""
+
+#: src/partials/my.html
+msgid "No images found in localStorage. Try <a href=\"/\">upload some</a>."
+msgstr ""
+
+#: src/partials/ads.html
+msgid "No pop-unders, pop-ups and other bad things."
+msgstr ""
+
+#: src/partials/ads.html
+msgid "Nothing illegal in NL on banner."
+msgstr ""
+
+#: src/partials/ads.html
+msgid "Nothing that can violate privacy of img.bi users."
+msgstr ""
+
+#: src/partials/upload.html
+msgid "One day"
+msgstr ""
+
+#: src/partials/upload.html
+msgid "One week"
+msgstr ""
+
+#: src/partials/upload.html
+msgid "One year"
+msgstr ""
+
+#: src/partials/upload.html
+msgid "Open source"
+msgstr "Open Source"
+
+#: src/partials/upload.html
+msgid "Privacy"
+msgstr ""
+
+#: src/partials/my.html
+msgid "Remove"
+msgstr ""
+
+#: src/partials/view.html
+msgid "Remove image after first view."
+msgstr "Rimuovi l&#39;immagine dopo averla vista."
+
+#: src/partials/ads.html
+msgid "Rules"
+msgstr ""
+
+#: src/scripts/services.js
+msgid "Sorry, filesize over %s MiB is not allowed."
+msgstr ""
+
+#: src/scripts/services.js
+msgid "Sorry, filetype %s is not supported."
+msgstr ""
+
+#: src/index.html
+msgid "Source code"
+msgstr "Codice Sorgente"
+
+#: src/partials/upload.html
+msgid "Store for:"
+msgstr ""
+
+#: src/scripts/controllers.js
+msgid "Success"
+msgstr ""
+
+#: src/partials/upload.html
+msgid "Three days"
+msgstr ""
+
+#: src/index.html
+msgid "Tor hidden service"
+msgstr ""
+
+#: src/partials/upload.html
+msgid "Upload"
+msgstr "Carica"
+
+#: src/partials/upload.html
+msgid "Uploading"
+msgstr "Caricamento"
+
+#: src/partials/js.html
+msgid "Use!"
+msgstr ""
+
+#: src/partials/my.html
+msgid "View"
+msgstr ""
+
+#: src/partials/js.html
+msgid "View on GitHub"
+msgstr ""
+
+#: src/partials/ads.html
+msgid "We accept Bitcoin, Litecoin and much more payment systems."
+msgstr ""
+
+#: src/partials/upload.html
+msgid ""
+"We believe that only open source crypto is acceptable, so all source code of "
+"img.bi is <a href=\"https://github.com/imgbi\">available on GitHub</a> under "
+"GPLv3 license."
+msgstr ""
+"Noi crediamo che solo la crittografia open source è accettabile, così tutto "
+"il codice di img.bi è <a href=\"https://github.com/imgbi\">disponibile su "
+"GitHub</a> sotto licenza GPLv3."
+
+#: src/partials/upload.html
+msgid ""
+"We do not store any logs, except <a href=\"https://en.wikipedia.org/wiki/"
+"SHA-3\">SHA-3</a> hash of uploader's IP address with random <a href="
+"\"https://en.wikipedia.org/wiki/Salt_%28cryptography%29\">salt</a> for a "
+"day. But our hosting provider and systems like <a href=\"https://en."
+"wikipedia.org/wiki/SORM\">SORM</a>, <a href=\"https://en.wikipedia.org/wiki/"
+"Hepting_v._AT%26T\">NarusInsight</a>, <a href=\"https://en.wikipedia.org/"
+"wiki/Titan_traffic_database\">Titan traffic database</a> and other can store "
+"their own logs. Be careful."
+msgstr ""
+"Noi non salviamo alcun dato, eccetto l'hash <a href=\"https://en."
+"wikipedia.org/wiki/SHA-3\">SHA-3</a> del caricamento, l&#39;indirizzo IP  "
+"con un <a href=\"https://it.wikipedia.org/wiki/Sale_%28crittografia"
+"%29\">salt</a> casuale giornaliero. Ma i nostri fornitori di servizi come <a "
+"href=\"https://it.wikipedia.org/wiki/SORM\">SORM</a>, <a href=\"https://en."
+"wikipedia.org/wiki/Hepting_v._AT%26T\">NarusInsight</a>, <a href=\"https://"
+"en.wikipedia.org/wiki/Titan_traffic_database\">Titan traffic database</a> ed "
+"altri possono salvare i loro dati, fate attenzione."
+
+#: src/partials/upload.html
+msgid "Why img.bi is secure and awesome?"
+msgstr "Perché img.bi è sicuro e fantastico?"
+
+#: src/partials/ads.html
+msgid "Without external requests."
+msgstr ""
+
+#: src/partials/rm.html
+msgid "Yes, remove image"
+msgstr "Sì, rimuovi l&#39;immagine"
+
+#: src/partials/apps.html
+msgid "command-line, node.js"
+msgstr ""
+
+#: src/partials/donate.html
+msgid ""
+"img.bi is an open source project available free of charge to anyone. But "
+"servers, domains, certs and many other things cost some money. Even a little "
+"donation helps to run img.bi."
+msgstr ""
+
+#: src/index.html
+msgid "my images"
+msgstr ""
+
+#: src/index.html
+msgid "really secure image hosting"
+msgstr "Hosting d&#39;immagini davvero sicure"

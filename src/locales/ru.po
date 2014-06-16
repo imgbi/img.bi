@@ -1,0 +1,403 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: mail@img.bi\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Anton Nesterov <komachi@openmalbox.org>\n"
+"Language-Team: \n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/partials/upload.html
+msgid "180 days"
+msgstr "180 дней"
+
+#: src/partials/upload.html
+msgid "90 days"
+msgstr "90 дней"
+
+#: src/partials/donate.html
+msgid "<a href=\"/contacts\">Contact us</a> if you want to donate another way."
+msgstr ""
+"<a href=\"/contacts\">Свяжитесь с нами</a> если вы хотите пожертвовать "
+"другим способом."
+
+#: src/partials/apps.html
+msgid ""
+"Add-on for Firefox which let you upload images to img.bi from your browser."
+msgstr ""
+"Дополнение для Firefox, позволяющее загружать изображения на img.bi из "
+"браузера."
+
+#: src/partials/ads.html
+msgid ""
+"Ads must be <a href=\"https://adblockplus.org/en/acceptable-ads#criteria"
+"\">acceptable</a>."
+msgstr ""
+"Реклама должна быть <a href=\"https://adblockplus.org/ru/acceptable-"
+"ads#criteria\">ненавязчивой</a>."
+
+#: src/index.html src/partials/ads.html
+msgid "Advertising"
+msgstr "Реклама"
+
+#: src/partials/donate.html
+msgid ""
+"Also, you can <a href=\"/ads\">buy ads</a> on img.bi. That will help too."
+msgstr ""
+"Также вы можете <a href=\"/ads\">купить рекламу</a> на img.bi. Это тоже "
+"поможет нам."
+
+#: src/partials/apps.html
+msgid "Applications for use img.bi"
+msgstr "Приложения для использования img.bi"
+
+#: src/index.html
+msgid "Apps"
+msgstr "Приложения"
+
+#: src/partials/rm.html
+msgid ""
+"Are you sure you want to remove this image from server? This cannot be "
+"undone."
+msgstr ""
+"Вы уверены что хотите удалить это изображение с сервера? Его нельзя будет "
+"восстановить."
+
+#: src/partials/donate.html
+msgid "Bitcoin address"
+msgstr "Bitcoin адрес"
+
+#: src/partials/modal.tpl.html
+msgid "Close"
+msgstr "Закрыть"
+
+#: src/partials/ads.html
+msgid "Contact us"
+msgstr "Свяжитесь с нами"
+
+#: src/index.html src/partials/contacts.html
+msgid "Contacts"
+msgstr "Контакты"
+
+#: src/index.html
+msgid "Copyleft"
+msgstr "Копилефт"
+
+#: src/partials/upload.html
+msgid "Cryptography"
+msgstr "Криптография"
+
+#: src/index.html src/partials/donate.html
+msgid "Donate"
+msgstr "Пожертвовать"
+
+#: src/partials/js.html
+msgid "Download"
+msgstr "Скачать"
+
+#: src/partials/js.html
+msgid ""
+"Download img.bi.js and <a href=\"http://bitwiseshiftleft.github.io/sjcl/"
+"\">SJCL</a>."
+msgstr ""
+"Скачайте img.bi.js и <a href=\"http://bitwiseshiftleft.github.io/sjcl/"
+"\">SJCL</a>."
+
+#: src/partials/upload.html
+msgid "Drop images here or just click"
+msgstr "Перетащите изображения сюда или просто кликните"
+
+#: src/index.html
+msgid "Eepsite"
+msgstr "Ипсайт"
+
+#: src/partials/view.html
+msgid "Embed image (require <a href=\"https://img.bi/#/js\">img.bi.js</a>)."
+msgstr ""
+"Встроить изображение (требуется <a href=\"https://img.bi/#/js\">img.bi.js</"
+"a>)."
+
+#: src/partials/js.html
+msgid "Embed images from sites based on img.bi software."
+msgstr ""
+"Встраивайте изображения с сайтов, основанных на программном обеспечении img."
+"bi."
+
+#: src/scripts/controllers.js src/scripts/services.js
+msgid "Error"
+msgstr "Ошибка"
+
+#: src/scripts/controllers.js
+msgid "Error during removing"
+msgstr "Ошибка во время удаления"
+
+#: src/scripts/controllers.js
+msgid "File was successfuly removed."
+msgstr "Файл был успешно удален."
+
+#: src/partials/apps.html
+msgid "Firefox add-on"
+msgstr "Дополнение для Firefox"
+
+#: src/partials/upload.html
+msgid "Forever"
+msgstr "Вечно"
+
+#: src/partials/upload.html
+msgid "Four weeks"
+msgstr "Четырех недель"
+
+#: src/partials/contacts.html
+msgid "GPG key"
+msgstr "GPG ключ"
+
+#: src/partials/js.html
+msgid "How to use"
+msgstr "Как это использовать"
+
+#: src/partials/autorm.html
+msgid "Image was autoremoved."
+msgstr "Изображение было автоматически удалено."
+
+#: src/partials/upload.html
+msgid ""
+"Images are encrypted using <a href=\"https://en.wikipedia.org/wiki/"
+"Advanced_Encryption_Standard\">AES-256</a> with random key in your browser "
+"before upload. Nobody can view your images, even people who have direct "
+"access to servers. We also use <a href=\"https://en.wikipedia.org/wiki/"
+"Transport_Layer_Security\">TLS</a> which defend you from <a href=\"https://"
+"en.wikipedia.org/wiki/Man-in-the-middle_attack\">Man-in-the-Middle attacks</"
+"a>."
+msgstr ""
+"Изображения шифруются с помощью <a href=\"https://ru.wikipedia.org/wiki/"
+"Advanced_Encryption_Standard\">AES-256</a> со случайным ключом в вашем "
+"браузере перед загрузкой. Никто не может посмотреть ваши изображения, даже "
+"те, кто имеет прямой доступ к серверам. Мы также используем <a href="
+"\"https://ru.wikipedia.org/wiki/TLS\">TLS</a>, что позволяет вам защититься "
+"от атак «<a href=\"https://ru.wikipedia.org/wiki/%D0%A7%D0%B5%D0%BB%D0%BE"
+"%D0%B2%D0%B5%D0%BA_%D0%BF%D0%BE%D1%81%D0%B5%D1%80%D0%B5%D0%B4%D0%B8%D0%BD"
+"%D0%B5\">человек посередине</a>»."
+
+#: src/index.html
+msgid "In the internet"
+msgstr "В Интернете"
+
+#: src/partials/apps.html
+msgid "Install"
+msgstr "Установить"
+
+#: src/partials/apps.html
+msgid ""
+"Just a simple command-line client for uploading/downloading/deleting images. "
+"Also can be used in Node.js applications."
+msgstr ""
+"Простой клиент с интерфейсом командной строки для загрузки/скачивания/"
+"удаления изображений. Также может быть использован в приложениях на Node.js."
+
+#: src/partials/apps.html
+msgid "License"
+msgstr "Лицензия"
+
+#: src/partials/view.html
+msgid "Link to remove image."
+msgstr "Ссылка для удаления изображения."
+
+#: src/partials/view.html
+msgid "Link to view image."
+msgstr "Ссылка для просмотра изображения."
+
+#: src/partials/donate.html
+msgid "Litecoin address"
+msgstr "Litecoin адрес"
+
+#: src/partials/js.html
+msgid "Load it"
+msgstr "Загрузите их"
+
+#: src/partials/my.html
+msgid "Load more"
+msgstr "Загрузить больше"
+
+#: src/partials/autorm.html src/partials/rm.html src/partials/view.html
+msgid "Loading"
+msgstr "Загружается"
+
+#: src/partials/apps.html
+msgid ""
+"More examples in <a href=\"https://github.com/imgbi/imgbi-client/blob/master/"
+"README.md\">readme</a>."
+msgstr ""
+"Больше примеров в <a href=\"https://github.com/imgbi/imgbi-client/blob/"
+"master/README.md\">README</a>."
+
+#: src/partials/my.html
+msgid "No images found in localStorage. Try <a href=\"/\">upload some</a>."
+msgstr ""
+"Изображения не найдены в localStorage. Попробуйте <a href=\"/\">загрузить "
+"несколько</a>."
+
+#: src/partials/ads.html
+msgid "No pop-unders, pop-ups and other bad things."
+msgstr "Никаких pop-under, pop-up подобных плохих вещей."
+
+#: src/partials/ads.html
+msgid "Nothing illegal in NL on banner."
+msgstr "На баннере не может быть ничего, что запрещено в Нидерландах."
+
+#: src/partials/ads.html
+msgid "Nothing that can violate privacy of img.bi users."
+msgstr "Реклама не может нарушать конфиденциальность пользователей img.bi."
+
+#: src/partials/upload.html
+msgid "One day"
+msgstr "Одного дня"
+
+#: src/partials/upload.html
+msgid "One week"
+msgstr "Одной недели"
+
+#: src/partials/upload.html
+msgid "One year"
+msgstr "Одного года"
+
+#: src/partials/upload.html
+msgid "Open source"
+msgstr "Открытый исходный код"
+
+#: src/partials/upload.html
+msgid "Privacy"
+msgstr "Конфиденциальность"
+
+#: src/partials/my.html
+msgid "Remove"
+msgstr "Удалить"
+
+#: src/partials/view.html
+msgid "Remove image after first view."
+msgstr "Удалить изображение после первого просмотра."
+
+#: src/partials/ads.html
+msgid "Rules"
+msgstr "Правила"
+
+#: src/scripts/services.js
+msgid "Sorry, filesize over %s MiB is not allowed."
+msgstr "Простите, файлы размером больше %s МиБ не разрешены."
+
+#: src/scripts/services.js
+msgid "Sorry, filetype %s is not supported."
+msgstr "Простите, тип файлов %s не поддерживается."
+
+#: src/index.html
+msgid "Source code"
+msgstr "Исходный код"
+
+#: src/partials/upload.html
+msgid "Store for:"
+msgstr "Хранить в течение:"
+
+#: src/scripts/controllers.js
+msgid "Success"
+msgstr "Успешно"
+
+#: src/partials/upload.html
+msgid "Three days"
+msgstr "Трех дней"
+
+#: src/index.html
+msgid "Tor hidden service"
+msgstr "Скрытый сервис Tor"
+
+#: src/partials/upload.html
+msgid "Upload"
+msgstr "Загрузить"
+
+#: src/partials/upload.html
+msgid "Uploading"
+msgstr "Идет загрузка"
+
+#: src/partials/js.html
+msgid "Use!"
+msgstr "Используйте!"
+
+#: src/partials/my.html
+msgid "View"
+msgstr "Посмотреть"
+
+#: src/partials/js.html
+msgid "View on GitHub"
+msgstr "Посмотреть на GitHub"
+
+#: src/partials/ads.html
+msgid "We accept Bitcoin, Litecoin and much more payment systems."
+msgstr "Мы принимаем Bitcoin, Litecoin и много чего еще."
+
+#: src/partials/upload.html
+msgid ""
+"We believe that only open source crypto is acceptable, so all source code of "
+"img.bi is <a href=\"https://github.com/imgbi\">available on GitHub</a> under "
+"GPLv3 license."
+msgstr ""
+"Мы верим, что приемлимы только криптосистемы с открытым исходным кодом, "
+"поэтому все исходные коды img.bi <a href=\"https://github.com/imgbi"
+"\">доступны на GitHub</a> на условиях лицензии GPLv3."
+
+#: src/partials/upload.html
+msgid ""
+"We do not store any logs, except <a href=\"https://en.wikipedia.org/wiki/"
+"SHA-3\">SHA-3</a> hash of uploader's IP address with random <a href="
+"\"https://en.wikipedia.org/wiki/Salt_%28cryptography%29\">salt</a> for a "
+"day. But our hosting provider and systems like <a href=\"https://en."
+"wikipedia.org/wiki/SORM\">SORM</a>, <a href=\"https://en.wikipedia.org/wiki/"
+"Hepting_v._AT%26T\">NarusInsight</a>, <a href=\"https://en.wikipedia.org/"
+"wiki/Titan_traffic_database\">Titan traffic database</a> and other can store "
+"their own logs. Be careful."
+msgstr ""
+"Мы не храним никаких логов, кроме <a href=\"https://ru.wikipedia.org/wiki/"
+"Keccak\">SHA-3</a> хеша от IP адреса загружающего с <a href=\"https://ru."
+"wikipedia.org/wiki/%D0%A1%D0%BE%D0%BB%D1%8C_%28%D0%BA%D1%80%D0%B8%D0%BF"
+"%D1%82%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%8F%29\">солью</a> в течении "
+"суток. Но наш хостинг провайдер и такие системы, как <a href=\"https://ru."
+"wikipedia.org/wiki/%D0%A1%D0%9E%D0%A0%D0%9C\">СОРМ</a>, <a href=\"https://ru."
+"wikipedia.org/wiki/NarusInsight\">NarusInsight</a>, <a href=\"https://en."
+"wikipedia.org/wiki/Titan_traffic_database\">Titan traffic database</a> и "
+"другие могут хранить свои логи. Будьте осторожны."
+
+#: src/partials/upload.html
+msgid "Why img.bi is secure and awesome?"
+msgstr "Почему img.bi такой потрясающий и безопасный?"
+
+#: src/partials/ads.html
+msgid "Without external requests."
+msgstr "Без внешних запросов."
+
+#: src/partials/rm.html
+msgid "Yes, remove image"
+msgstr "Да, удалить изображение"
+
+#: src/partials/apps.html
+msgid "command-line, node.js"
+msgstr "командная строка, node.js"
+
+#: src/partials/donate.html
+msgid ""
+"img.bi is an open source project available free of charge to anyone. But "
+"servers, domains, certs and many other things cost some money. Even a little "
+"donation helps to run img.bi."
+msgstr ""
+"img.bi — проект с открытым исходным кодом, доступный бесплатно для каждого. "
+"Но сервера, домены, сертификаты и множество других вещей стоят некоторых "
+"денег. Даже небольшое пожертвование поможет работе img.bi."
+
+#: src/index.html
+msgid "my images"
+msgstr "мои изображения"
+
+#: src/index.html
+msgid "really secure image hosting"
+msgstr "действительно безопасный хостинг изображений"

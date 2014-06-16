@@ -1,6 +1,0 @@
-# robotstxt.org/
-
-User-agent: *
-Disallow: /rm
-Disallow: /autorm
-Dissallow: /my
