@@ -5,7 +5,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: mail@img.bi\n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
-"Last-Translator: |Random|\n"
+"Last-Translator: Anthologist\n"
 "Language-Team: \n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
@@ -67,6 +67,10 @@ msgstr ""
 #: src/partials/donate.html
 msgid "Bitcoin address"
 msgstr "Indirizzo Bitcoin"
+
+#: src/partials/modal.tpl.html
+msgid "Close"
+msgstr "Chiudi"
 
 #: src/partials/ads.html
 #, fuzzy
@@ -235,7 +239,7 @@ msgstr "Nessun pop-up e altre schifezze."
 
 #: src/partials/ads.html
 msgid "Nothing illegal in NL on banner."
-msgstr ""
+msgstr "Niente di illegale nei Paesi Bassi sul banner."
 
 #: src/partials/ads.html
 msgid "Nothing that can violate privacy of img.bi users."
