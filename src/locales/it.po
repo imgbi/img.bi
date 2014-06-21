@@ -5,7 +5,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: mail@img.bi\n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
-"Last-Translator: Domenico Luciani <domenicoleoneluciani@gmail.com>\n"
+"Last-Translator: Anthologist\n"
 "Language-Team: \n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
@@ -14,60 +14,68 @@ msgstr ""
 
 #: src/partials/upload.html
 msgid "180 days"
-msgstr ""
+msgstr "180 giorni"
 
 #: src/partials/upload.html
 msgid "90 days"
-msgstr ""
+msgstr "90 giorni"
 
 #: src/partials/donate.html
 msgid "<a href=\"/contacts\">Contact us</a> if you want to donate another way."
-msgstr ""
+msgstr "<a href=\"/contacts\">Contattaci</a> se vuoi fare una donazione in modo differente."
 
 #: src/partials/apps.html
 msgid ""
 "Add-on for Firefox which let you upload images to img.bi from your browser."
 msgstr ""
+"Componente aggiuntivo per Firefox che ti permette di inviare immagini a img.bi dal tuo browser."
 
 #: src/partials/ads.html
 msgid ""
 "Ads must be <a href=\"https://adblockplus.org/en/acceptable-ads#criteria"
 "\">acceptable</a>."
 msgstr ""
+"Le pubblicità devono essere <a href=\"https://adblockplus.org/en/acceptable-ads#criteria"
+"\">accettabili</a>."
 
 #: src/index.html src/partials/ads.html
 msgid "Advertising"
-msgstr ""
+msgstr "Pubblicità"
 
 #: src/partials/donate.html
 msgid ""
 "Also, you can <a href=\"/ads\">buy ads</a> on img.bi. That will help too."
 msgstr ""
+"Puoi anche <a href=\"/ads\">comprare pubblicità</a> su img.bi. Aiuterebbe anche quello."
 
 #: src/partials/apps.html
 msgid "Applications for use img.bi"
-msgstr ""
+msgstr "Applicazioni per usare img.bi"
 
 #: src/index.html
 msgid "Apps"
-msgstr ""
+msgstr "Applicazioni"
 
 #: src/partials/rm.html
 msgid ""
 "Are you sure you want to remove this image from server? This cannot be "
 "undone."
 msgstr ""
-"Sei sicuro di voler rimuovere l&#39;immagine dal server? Non puoi tornare "
-"indietro."
+"Sei sicuro di voler rimuovere questa immagine dal server? L&#39;azione è "
+"irreversibile."
 
 #: src/partials/donate.html
 msgid "Bitcoin address"
-msgstr ""
+msgstr "Indirizzo Bitcoin"
+
+#: src/partials/modal.tpl.html
+msgid "Close"
+msgstr "Chiudi"
 
 #: src/partials/ads.html
 #, fuzzy
 msgid "Contact us"
-msgstr "Contatti"
+msgstr "Contattaci"
 
 #: src/index.html src/partials/contacts.html
 msgid "Contacts"
@@ -75,7 +83,7 @@ msgstr "Contatti"
 
 #: src/index.html
 msgid "Copyleft"
-msgstr ""
+msgstr "Copyleft"
 
 #: src/partials/upload.html
 msgid "Cryptography"
@@ -83,59 +91,60 @@ msgstr "Crittografia"
 
 #: src/index.html src/partials/donate.html
 msgid "Donate"
-msgstr ""
+msgstr "Donazioni"
 
 #: src/partials/js.html
 msgid "Download"
-msgstr ""
+msgstr "Scarica"
 
 #: src/partials/js.html
 msgid ""
 "Download img.bi.js and <a href=\"http://bitwiseshiftleft.github.io/sjcl/"
 "\">SJCL</a>."
 msgstr ""
+"Scarica img.bi.js e <a href=\"http://bitwiseshiftleft.github.io/sjcl/"
+"\">SJCL</a>."
 
 #: src/partials/upload.html
 msgid "Drop images here or just click"
-msgstr "Trascina le immagini qui o clicca semplicemente"
+msgstr "Trascina le immagini qui o semplicemente clicca"
 
 #: src/index.html
 msgid "Eepsite"
-msgstr ""
+msgstr "Eepsite"
 
 #: src/partials/view.html
 msgid "Embed image (require <a href=\"https://img.bi/#/js\">img.bi.js</a>)."
-msgstr ""
-"Embeddda l&#39;immagine (richiede <a href=\"https://img.bi/#/js\">img.bi.js</"
-"a>)."
+msgstr "Incorpora l&#39;immagine (richiede <a href=\"https://img.bi/#/js\">img.bi.js</a>)."
+
 
 #: src/partials/js.html
 msgid "Embed images from sites based on img.bi software."
-msgstr ""
+msgstr "Incorpora le immagini dai siti basati sul software img.bi ."
 
 #: src/scripts/controllers.js src/scripts/services.js
 msgid "Error"
-msgstr ""
+msgstr "Errore"
 
 #: src/scripts/controllers.js
 msgid "Error during removing"
-msgstr ""
+msgstr "Errore durante la rimozione"
 
 #: src/scripts/controllers.js
 msgid "File was successfuly removed."
-msgstr ""
+msgstr "Il file è stato rimosso."
 
 #: src/partials/apps.html
 msgid "Firefox add-on"
-msgstr ""
+msgstr "Componente aggiuntivo per Firefox"
 
 #: src/partials/upload.html
 msgid "Forever"
-msgstr ""
+msgstr "Per sempre"
 
 #: src/partials/upload.html
 msgid "Four weeks"
-msgstr ""
+msgstr "Quattro settimane"
 
 #: src/partials/contacts.html
 msgid "GPG key"
@@ -143,11 +152,11 @@ msgstr "Chiave GPG"
 
 #: src/partials/js.html
 msgid "How to use"
-msgstr ""
+msgstr "Come si usa"
 
 #: src/partials/autorm.html
 msgid "Image was autoremoved."
-msgstr ""
+msgstr "L&#39;immagine è stata rimossa automaticamente."
 
 #: src/partials/upload.html
 msgid ""
@@ -159,7 +168,7 @@ msgid ""
 "en.wikipedia.org/wiki/Man-in-the-middle_attack\">Man-in-the-Middle attacks</"
 "a>."
 msgstr ""
-"Le immagini vengono criptate usando la criptatura <a href=\"https://it."
+"Le immagini vengono criptate usando la cifratura <a href=\"https://it."
 "wikipedia.org/wiki/Advanced_Encryption_Standard\">AES-256</a> con chiave "
 "casuale nel tuo browser prima del caricamento. Nessuno può vedere le tue "
 "immagini, neanche le persone che hanno l&#39;accesso diretto al server. Noi "
@@ -169,21 +178,23 @@ msgstr ""
 
 #: src/index.html
 msgid "In the internet"
-msgstr ""
+msgstr "In internet"
 
 #: src/partials/apps.html
 msgid "Install"
-msgstr ""
+msgstr "Installa"
 
 #: src/partials/apps.html
 msgid ""
 "Just a simple command-line client for uploading/downloading/deleting images. "
 "Also can be used in Node.js applications."
 msgstr ""
+"Un semplice client da linea di comando per inviare/scaricare/eliminare le immagini. "
+"Può anche essere usato in applicazioni Node.js ."
 
 #: src/partials/apps.html
 msgid "License"
-msgstr ""
+msgstr "Licenza"
 
 #: src/partials/view.html
 msgid "Link to remove image."
@@ -195,15 +206,15 @@ msgstr "Link per vedere l&#39;immagine."
 
 #: src/partials/donate.html
 msgid "Litecoin address"
-msgstr ""
+msgstr "Indirizzo Litecoin"
 
 #: src/partials/js.html
 msgid "Load it"
-msgstr ""
+msgstr "Caricalo"
 
 #: src/partials/my.html
 msgid "Load more"
-msgstr ""
+msgstr "Carica altro"
 
 #: src/partials/autorm.html src/partials/rm.html src/partials/view.html
 #, fuzzy
@@ -215,82 +226,84 @@ msgid ""
 "More examples in <a href=\"https://github.com/imgbi/imgbi-client/blob/master/"
 "README.md\">readme</a>."
 msgstr ""
+"Altri esempi nel <a href=\"https://github.com/imgbi/imgbi-client/blob/master/"
+"README.md\">readme</a>."
 
 #: src/partials/my.html
 msgid "No images found in localStorage. Try <a href=\"/\">upload some</a>."
-msgstr ""
+msgstr "Nessuna immagine trovata nel localStorage. Prova a <a href=\"/\">inviarne</a>."
 
 #: src/partials/ads.html
 msgid "No pop-unders, pop-ups and other bad things."
-msgstr ""
+msgstr "Nessun pop-up e altre schifezze."
 
 #: src/partials/ads.html
 msgid "Nothing illegal in NL on banner."
-msgstr ""
+msgstr "Niente di illegale nei Paesi Bassi sul banner."
 
 #: src/partials/ads.html
 msgid "Nothing that can violate privacy of img.bi users."
-msgstr ""
+msgstr "Niente che possa violare la privacy degli utenti di img.bi ."
 
 #: src/partials/upload.html
 msgid "One day"
-msgstr ""
+msgstr "Un giorno"
 
 #: src/partials/upload.html
 msgid "One week"
-msgstr ""
+msgstr "Una settimana"
 
 #: src/partials/upload.html
 msgid "One year"
-msgstr ""
+msgstr "Un anno"
 
 #: src/partials/upload.html
 msgid "Open source"
-msgstr "Open Source"
+msgstr "Open source"
 
 #: src/partials/upload.html
 msgid "Privacy"
-msgstr ""
+msgstr "Privacy"
 
 #: src/partials/my.html
 msgid "Remove"
-msgstr ""
+msgstr "Rimuovi"
 
 #: src/partials/view.html
 msgid "Remove image after first view."
-msgstr "Rimuovi l&#39;immagine dopo averla vista."
+msgstr "Rimuovi l&#39;immagine dopo la prima visualizzazione."
 
 #: src/partials/ads.html
 msgid "Rules"
-msgstr ""
+msgstr "Regole"
 
 #: src/scripts/services.js
 msgid "Sorry, filesize over %s MiB is not allowed."
-msgstr ""
+msgstr "Spiacenti, i file di oltre %s MiB non sono permessi."
 
 #: src/scripts/services.js
 msgid "Sorry, filetype %s is not supported."
-msgstr ""
+msgstr "Spiacenti, l&#39;estensione %s non è supportata."
 
 #: src/index.html
 msgid "Source code"
-msgstr "Codice Sorgente"
+msgstr "Codice sorgente"
 
 #: src/partials/upload.html
 msgid "Store for:"
-msgstr ""
+msgstr "Mantieni per:"
 
 #: src/scripts/controllers.js
 msgid "Success"
-msgstr ""
+msgstr "Completato"
 
 #: src/partials/upload.html
 msgid "Three days"
-msgstr ""
+msgstr "Tre giorni"
 
 #: src/index.html
 msgid "Tor hidden service"
-msgstr ""
+msgstr "Servizio nascosto Tor"
 
 #: src/partials/upload.html
 msgid "Upload"
@@ -302,19 +315,19 @@ msgstr "Caricamento"
 
 #: src/partials/js.html
 msgid "Use!"
-msgstr ""
+msgstr "Usa!"
 
 #: src/partials/my.html
 msgid "View"
-msgstr ""
+msgstr "Visualizza"
 
 #: src/partials/js.html
 msgid "View on GitHub"
-msgstr ""
+msgstr "Vedi su GitHub"
 
 #: src/partials/ads.html
 msgid "We accept Bitcoin, Litecoin and much more payment systems."
-msgstr ""
+msgstr "Accettiamo Bitcoin, Litecoin e molti altri metodi di pagamento."
 
 #: src/partials/upload.html
 msgid ""
@@ -322,7 +335,7 @@ msgid ""
 "img.bi is <a href=\"https://github.com/imgbi\">available on GitHub</a> under "
 "GPLv3 license."
 msgstr ""
-"Noi crediamo che solo la crittografia open source è accettabile, così tutto "
+"Noi crediamo che solo la crittografia open source sia accettabile, perciò tutto "
 "il codice di img.bi è <a href=\"https://github.com/imgbi\">disponibile su "
 "GitHub</a> sotto licenza GPLv3."
 
@@ -337,10 +350,10 @@ msgid ""
 "wiki/Titan_traffic_database\">Titan traffic database</a> and other can store "
 "their own logs. Be careful."
 msgstr ""
-"Noi non salviamo alcun dato, eccetto l'hash <a href=\"https://en."
-"wikipedia.org/wiki/SHA-3\">SHA-3</a> del caricamento, l&#39;indirizzo IP  "
+"Non salviamo alcun dato, eccetto l'hash <a href=\"https://en."
+"wikipedia.org/wiki/SHA-3\">SHA-3</a> dell&#39;indirizzo IP di chi carica "
 "con un <a href=\"https://it.wikipedia.org/wiki/Sale_%28crittografia"
-"%29\">salt</a> casuale giornaliero. Ma i nostri fornitori di servizi come <a "
+"%29\">salt</a> casuale, per un giorno. Ma i nostri fornitori di servizi come <a "
 "href=\"https://it.wikipedia.org/wiki/SORM\">SORM</a>, <a href=\"https://en."
 "wikipedia.org/wiki/Hepting_v._AT%26T\">NarusInsight</a>, <a href=\"https://"
 "en.wikipedia.org/wiki/Titan_traffic_database\">Titan traffic database</a> ed "
@@ -352,7 +365,7 @@ msgstr "Perché img.bi è sicuro e fantastico?"
 
 #: src/partials/ads.html
 msgid "Without external requests."
-msgstr ""
+msgstr "Senza richieste esterne."
 
 #: src/partials/rm.html
 msgid "Yes, remove image"
@@ -360,7 +373,7 @@ msgstr "Sì, rimuovi l&#39;immagine"
 
 #: src/partials/apps.html
 msgid "command-line, node.js"
-msgstr ""
+msgstr "linea di comando, node.js"
 
 #: src/partials/donate.html
 msgid ""
@@ -368,11 +381,14 @@ msgid ""
 "servers, domains, certs and many other things cost some money. Even a little "
 "donation helps to run img.bi."
 msgstr ""
+"img.bi è un progetto open source disponibile gratuitamente per tutti. Ma i "
+"server, i domini, i certificati e moltre altre cose costano denaro. Anche una "
+"piccola donazione aiuta img.bi."
 
 #: src/index.html
 msgid "my images"
-msgstr ""
+msgstr "mie immagini"
 
 #: src/index.html
 msgid "really secure image hosting"
-msgstr "Hosting d&#39;immagini davvero sicure"
+msgstr "hosting d&#39;immagini davvero sicuro"
