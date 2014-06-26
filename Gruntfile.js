@@ -14,7 +14,7 @@ grunt.initConfig({
   cssmin: {
     combine: {
       files: {
-        'build/css/main.css': ['tmp/main.css', 'tmp/fontello.css', 'tmp/animation.css']
+        'build/css/main.css': ['tmp/main.css', 'tmp/icons.css']
       }
     }
   },
@@ -137,7 +137,7 @@ grunt.initConfig({
       dest: 'build/scripts/main.js'
     },
     css: {
-      src: ['tmp/main.css', 'tmp/fontello.css', 'tmp/animation.css'],
+      src: ['tmp/main.css', 'tmp/icons.css'],
       dest: 'build/css/main.css'
     }
   },
@@ -157,7 +157,7 @@ grunt.initConfig({
     options: {
       fileNameFormat: '${hash}-${name}.${ext}',
     },
-    fontello: {
+    icons: {
       src: [
         'build/font/*'
       ],
@@ -169,11 +169,11 @@ grunt.initConfig({
       src: [
         'build/css/main.css',
         'build/scripts/main.js',
-        'build/favicon.png',
-        'build/favicon152.png'
+        'build/*.png'
       ],
       dest: [
-        'build/index.html'
+        'build/index.html',
+        'build/partials/*.html'
       ]
     }
   },
@@ -246,13 +246,23 @@ grunt.initConfig({
       }
     },
   },
-  fontello: {
-    dist: {
+  webfont: {
+    icons: {
+      src: [
+        'bower_components/awesome-uni.font/src/svg/spinner.svg',
+        'bower_components/awesome-uni.font/src/svg/mail.svg',
+        'bower_components/awesome-uni.font/src/svg/key.svg',
+        'bower_components/awesome-uni.font/src/svg/github-circled.svg',
+        'bower_components/awesome-uni.font/src/svg/spinner.svg',
+        'bower_components/awesome-uni.font/src/svg/twitter.svg'
+      ],
+      dest: 'build/font',
+      destCss: 'tmp',
       options: {
-        config : 'config-fontello.json',
-        fonts : 'build/font',
-        styles : 'tmp',
-        force : true
+        hashes: false,
+        syntax: 'bootstrap',
+        htmlDemo: false,
+        relativeFontPath: '../font',
       }
     }
   }
@@ -275,15 +285,15 @@ grunt.loadNpmTasks('grunt-contrib-jshint');
 grunt.loadNpmTasks('grunt-jsonlint');
 grunt.loadNpmTasks('grunt-angular-gettext');
 grunt.loadNpmTasks('grunt-ng-constant');
-grunt.loadNpmTasks('grunt-fontello');
 grunt.loadNpmTasks('grunt-contrib-cssmin');
+grunt.loadNpmTasks('grunt-webfont');
 
-grunt.registerTask('afterall', [ 'less', 'fontello', 'nggettext_compile', 'uglify', 'cssmin', 'htmlmin', 'copy:build' ]);
+grunt.registerTask('afterall', [ 'less', 'webfont', 'nggettext_compile', 'uglify', 'cssmin', 'htmlmin', 'copy:build' ]);
 grunt.registerTask('default', [ 'ngconstant:web', 'afterall' ]);
 grunt.registerTask('tor', [ 'ngconstant:tor', 'afterall' ]);
 grunt.registerTask('i2p', [ 'ngconstant:i2p', 'afterall' ]);
 grunt.registerTask('extract', [ 'nggettext_extract' ]);
-grunt.registerTask('serve', [ 'less', 'fontello', 'nggettext_compile', 'ngconstant:local', 'concat', 'mkdir', 'copy', 'configureProxies:server', 'connect:server', 'watch' ]);
+grunt.registerTask('serve', [ 'less', 'webfont', 'nggettext_compile', 'ngconstant:local', 'concat', 'mkdir', 'copy', 'configureProxies:server', 'connect:server', 'watch' ]);
 grunt.registerTask('test', [ 'jshint', 'jsonlint']);
 grunt.registerTask('deploy', 'Deploy', function(n) {
   if (grunt.option('web')) {

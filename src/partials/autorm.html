@@ -1,7 +1,7 @@
 <div ng-show="image" class="alert alert-danger text-center">
   <h3 translate>Image was autoremoved.</h3>
 </div>
-<h4 ng-show="!image" class="text-center"><i class="icon-spin5 animate-spin"></i> <span translate>Loading</span></h4>
+<h4 ng-show="!image" class="text-center"><i class="icon-spinner animate-spin"></i> <span translate>Loading</span></h4>
 <div class="text-center" ng-init="zoom = false">
   <img ng-src="{{image}}" ng-class="{'image': !zoom, 'zoom-out': zoom}" ng-click="zoom = !zoom" />
 </div>
