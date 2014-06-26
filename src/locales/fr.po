@@ -72,6 +72,10 @@ msgstr ""
 msgid "Bitcoin address"
 msgstr "Adresse Bitcoin"
 
+#: src/partials/modal.tpl.html
+msgid "Close"
+msgstr ""
+
 #: src/partials/ads.html
 msgid "Contact us"
 msgstr "Contactez-nous"
@@ -88,6 +92,10 @@ msgstr ""
 #: src/partials/upload.html
 msgid "Cryptography"
 msgstr "Cryptographie"
+
+#: src/partials/donate.html
+msgid "Dogecoin address"
+msgstr "Adresse Dogecoin"
 
 #: src/index.html src/partials/donate.html
 msgid "Donate"
@@ -226,7 +234,7 @@ msgstr "Chargement"
 #: src/partials/apps.html
 msgid ""
 "More examples in <a href=\"https://github.com/imgbi/imgbi-client/blob/master/"
-"README.md\">readme</a>."
+"README.md\">README</a>."
 msgstr ""
 "Plus d'exemples dans le <a href=\"https://github.com/imgbi/imgbi-client/blob/"
 "master/README.md\">README (en anglais)</a>."

@@ -92,6 +92,10 @@ msgstr "Копилефт"
 msgid "Cryptography"
 msgstr "Криптография"
 
+#: src/partials/donate.html
+msgid "Dogecoin address"
+msgstr "Dogecoin адрес"
+
 #: src/index.html src/partials/donate.html
 msgid "Donate"
 msgstr "Пожертвовать"
@@ -230,7 +234,7 @@ msgstr "Загружается"
 #: src/partials/apps.html
 msgid ""
 "More examples in <a href=\"https://github.com/imgbi/imgbi-client/blob/master/"
-"README.md\">readme</a>."
+"README.md\">README</a>."
 msgstr ""
 "Больше примеров в <a href=\"https://github.com/imgbi/imgbi-client/blob/"
 "master/README.md\">README</a>."

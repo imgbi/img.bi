@@ -26,3 +26,5 @@ Also you need to update ``config.json``. Make sure it's a valid json, you can te
 Bitcoin: [1imgbioAKhqeSaAG2SB6Ct79r7UeyGpYP](bitcoin:1imgbioAKhqeSaAG2SB6Ct79r7UeyGpYP)
 
 Litecoin: [LiMgBiGCWR3bYsHXLfZYonLBZpgCVqMAw2](litecoin:LiMgBiGCWR3bYsHXLfZYonLBZpgCVqMAw2)
+
+Dogecoin: [DGimgbiEpUJREs2zgFEY8xux3oF85JpkWY](dogecoin:DGimgbiEpUJREs2zgFEY8xux3oF85JpkWY)

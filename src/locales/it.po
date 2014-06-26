@@ -22,21 +22,24 @@ msgstr "90 giorni"
 
 #: src/partials/donate.html
 msgid "<a href=\"/contacts\">Contact us</a> if you want to donate another way."
-msgstr "<a href=\"/contacts\">Contattaci</a> se vuoi fare una donazione in modo differente."
+msgstr ""
+"<a href=\"/contacts\">Contattaci</a> se vuoi fare una donazione in modo "
+"differente."
 
 #: src/partials/apps.html
 msgid ""
 "Add-on for Firefox which let you upload images to img.bi from your browser."
 msgstr ""
-"Componente aggiuntivo per Firefox che ti permette di inviare immagini a img.bi dal tuo browser."
+"Componente aggiuntivo per Firefox che ti permette di inviare immagini a img."
+"bi dal tuo browser."
 
 #: src/partials/ads.html
 msgid ""
 "Ads must be <a href=\"https://adblockplus.org/en/acceptable-ads#criteria"
 "\">acceptable</a>."
 msgstr ""
-"Le pubblicità devono essere <a href=\"https://adblockplus.org/en/acceptable-ads#criteria"
-"\">accettabili</a>."
+"Le pubblicità devono essere <a href=\"https://adblockplus.org/en/acceptable-"
+"ads#criteria\">accettabili</a>."
 
 #: src/index.html src/partials/ads.html
 msgid "Advertising"
@@ -46,7 +49,8 @@ msgstr "Pubblicità"
 msgid ""
 "Also, you can <a href=\"/ads\">buy ads</a> on img.bi. That will help too."
 msgstr ""
-"Puoi anche <a href=\"/ads\">comprare pubblicità</a> su img.bi. Aiuterebbe anche quello."
+"Puoi anche <a href=\"/ads\">comprare pubblicità</a> su img.bi. Aiuterebbe "
+"anche quello."
 
 #: src/partials/apps.html
 msgid "Applications for use img.bi"
@@ -89,6 +93,10 @@ msgstr "Copyleft"
 msgid "Cryptography"
 msgstr "Crittografia"
 
+#: src/partials/donate.html
+msgid "Dogecoin address"
+msgstr "Indirizzo Dogecoin"
+
 #: src/index.html src/partials/donate.html
 msgid "Donate"
 msgstr "Donazioni"
@@ -115,8 +123,9 @@ msgstr "Eepsite"
 
 #: src/partials/view.html
 msgid "Embed image (require <a href=\"https://img.bi/#/js\">img.bi.js</a>)."
-msgstr "Incorpora l&#39;immagine (richiede <a href=\"https://img.bi/#/js\">img.bi.js</a>)."
-
+msgstr ""
+"Incorpora l&#39;immagine (richiede <a href=\"https://img.bi/#/js\">img.bi."
+"js</a>)."
 
 #: src/partials/js.html
 msgid "Embed images from sites based on img.bi software."
@@ -189,8 +198,8 @@ msgid ""
 "Just a simple command-line client for uploading/downloading/deleting images. "
 "Also can be used in Node.js applications."
 msgstr ""
-"Un semplice client da linea di comando per inviare/scaricare/eliminare le immagini. "
-"Può anche essere usato in applicazioni Node.js ."
+"Un semplice client da linea di comando per inviare/scaricare/eliminare le "
+"immagini. Può anche essere usato in applicazioni Node.js ."
 
 #: src/partials/apps.html
 msgid "License"
@@ -224,14 +233,16 @@ msgstr "Caricamento"
 #: src/partials/apps.html
 msgid ""
 "More examples in <a href=\"https://github.com/imgbi/imgbi-client/blob/master/"
-"README.md\">readme</a>."
+"README.md\">README</a>."
 msgstr ""
 "Altri esempi nel <a href=\"https://github.com/imgbi/imgbi-client/blob/master/"
-"README.md\">readme</a>."
+"README.md\">README</a>."
 
 #: src/partials/my.html
 msgid "No images found in localStorage. Try <a href=\"/\">upload some</a>."
-msgstr "Nessuna immagine trovata nel localStorage. Prova a <a href=\"/\">inviarne</a>."
+msgstr ""
+"Nessuna immagine trovata nel localStorage. Prova a <a href=\"/\">inviarne</"
+"a>."
 
 #: src/partials/ads.html
 msgid "No pop-unders, pop-ups and other bad things."
@@ -335,9 +346,9 @@ msgid ""
 "img.bi is <a href=\"https://github.com/imgbi\">available on GitHub</a> under "
 "GPLv3 license."
 msgstr ""
-"Noi crediamo che solo la crittografia open source sia accettabile, perciò tutto "
-"il codice di img.bi è <a href=\"https://github.com/imgbi\">disponibile su "
-"GitHub</a> sotto licenza GPLv3."
+"Noi crediamo che solo la crittografia open source sia accettabile, perciò "
+"tutto il codice di img.bi è <a href=\"https://github.com/imgbi\">disponibile "
+"su GitHub</a> sotto licenza GPLv3."
 
 #: src/partials/upload.html
 msgid ""
@@ -350,14 +361,14 @@ msgid ""
 "wiki/Titan_traffic_database\">Titan traffic database</a> and other can store "
 "their own logs. Be careful."
 msgstr ""
-"Non salviamo alcun dato, eccetto l'hash <a href=\"https://en."
-"wikipedia.org/wiki/SHA-3\">SHA-3</a> dell&#39;indirizzo IP di chi carica "
-"con un <a href=\"https://it.wikipedia.org/wiki/Sale_%28crittografia"
-"%29\">salt</a> casuale, per un giorno. Ma i nostri fornitori di servizi come <a "
-"href=\"https://it.wikipedia.org/wiki/SORM\">SORM</a>, <a href=\"https://en."
-"wikipedia.org/wiki/Hepting_v._AT%26T\">NarusInsight</a>, <a href=\"https://"
-"en.wikipedia.org/wiki/Titan_traffic_database\">Titan traffic database</a> ed "
-"altri possono salvare i loro dati, fate attenzione."
+"Non salviamo alcun dato, eccetto l'hash <a href=\"https://en.wikipedia.org/"
+"wiki/SHA-3\">SHA-3</a> dell&#39;indirizzo IP di chi carica con un <a href="
+"\"https://it.wikipedia.org/wiki/Sale_%28crittografia%29\">salt</a> casuale, "
+"per un giorno. Ma i nostri fornitori di servizi come <a href=\"https://it."
+"wikipedia.org/wiki/SORM\">SORM</a>, <a href=\"https://en.wikipedia.org/wiki/"
+"Hepting_v._AT%26T\">NarusInsight</a>, <a href=\"https://en.wikipedia.org/"
+"wiki/Titan_traffic_database\">Titan traffic database</a> ed altri possono "
+"salvare i loro dati, fate attenzione."
 
 #: src/partials/upload.html
 msgid "Why img.bi is secure and awesome?"
@@ -382,8 +393,8 @@ msgid ""
 "donation helps to run img.bi."
 msgstr ""
 "img.bi è un progetto open source disponibile gratuitamente per tutti. Ma i "
-"server, i domini, i certificati e moltre altre cose costano denaro. Anche una "
-"piccola donazione aiuta img.bi."
+"server, i domini, i certificati e moltre altre cose costano denaro. Anche "
+"una piccola donazione aiuta img.bi."
 
 #: src/index.html
 msgid "my images"
