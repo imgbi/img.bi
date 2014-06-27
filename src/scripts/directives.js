@@ -44,18 +44,12 @@ angular.module('imgbi.directives', [])
       }
     };
   }])
-  .directive('expire', function() {
+  .directive('copy', function() {
     return {
-      link: function($element) {
-        if (localStorage.getItem('expire')) {
-        
-        }
-        else {
-          localStorage.setItem('expire', $element[0].options[$element[0].selectedIndex].value);
-        }
-        $element.bind('change', function(event) {
-          
-        });
+      restrict: 'AE',    
+      link: function($scope, $element) {
+        ZeroClipboard.config( { swfPath: '../ZeroClipboard.swf' } );
+        new ZeroClipboard($element);
       }
     };
   });

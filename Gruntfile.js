@@ -1,6 +1,13 @@
 module.exports = function(grunt) {
 grunt.initConfig({
-  clean: ['tmp'],
+  clean: {
+    tmp: {
+      src: ['tmp']
+    },
+    build: {
+      src: ['build']
+    }
+  },
   less: {
     production: {
       options: {
@@ -25,6 +32,7 @@ grunt.initConfig({
     main: {
       files: {
         'build/scripts/main.js': [
+          'bower_components/zeroclipboard/dist/ZeroClipboard.min.js',
           'bower_components/angular/angular.min.js',
           'bower_components/angular-route/angular-route.js',
           'bower_components/angular-gettext/dist/angular-gettext.min.js',
@@ -118,12 +126,17 @@ grunt.initConfig({
         src: ['*.png', 'favicon.ico', 'browserconfig.xml', 'key.gpg'],
         cwd: 'src/',
         dest: 'build/',
+      },
+      {
+        src: 'bower_components/zeroclipboard/dist/ZeroClipboard.swf',
+        dest: 'build/ZeroClipboard.swf'
       }]
     }
   },
   concat: {
     js: {
       src: [
+        'bower_components/zeroclipboard/dist/ZeroClipboard.min.js',
         'bower_components/angular/angular.min.js',
         'bower_components/angular-route/angular-route.js',
         'bower_components/angular-gettext/dist/angular-gettext.min.js',
@@ -254,7 +267,8 @@ grunt.initConfig({
         'bower_components/awesome-uni.font/src/svg/key.svg',
         'bower_components/awesome-uni.font/src/svg/github-circled.svg',
         'bower_components/awesome-uni.font/src/svg/spinner.svg',
-        'bower_components/awesome-uni.font/src/svg/twitter.svg'
+        'bower_components/awesome-uni.font/src/svg/twitter.svg',
+        'bower_components/awesome-uni.font/src/svg/link.svg'
       ],
       dest: 'build/font',
       destCss: 'tmp',
@@ -288,12 +302,12 @@ grunt.loadNpmTasks('grunt-ng-constant');
 grunt.loadNpmTasks('grunt-contrib-cssmin');
 grunt.loadNpmTasks('grunt-webfont');
 
-grunt.registerTask('afterall', [ 'less', 'webfont', 'nggettext_compile', 'uglify', 'cssmin', 'htmlmin', 'copy:build' ]);
+grunt.registerTask('afterall', [ 'clean:build', 'less', 'webfont', 'nggettext_compile', 'uglify', 'cssmin', 'htmlmin', 'copy:build', 'clean:tmp' ]);
 grunt.registerTask('default', [ 'ngconstant:web', 'afterall' ]);
 grunt.registerTask('tor', [ 'ngconstant:tor', 'afterall' ]);
 grunt.registerTask('i2p', [ 'ngconstant:i2p', 'afterall' ]);
 grunt.registerTask('extract', [ 'nggettext_extract' ]);
-grunt.registerTask('serve', [ 'less', 'webfont', 'nggettext_compile', 'ngconstant:local', 'concat', 'mkdir', 'copy', 'configureProxies:server', 'connect:server', 'watch' ]);
+grunt.registerTask('serve', [ 'clean:build', 'less', 'webfont', 'nggettext_compile', 'ngconstant:local', 'concat', 'mkdir', 'copy', 'configureProxies:server', 'connect:server', 'watch', 'clean:tmp']);
 grunt.registerTask('test', [ 'jshint', 'jsonlint']);
 grunt.registerTask('deploy', 'Deploy', function(n) {
   if (grunt.option('web')) {

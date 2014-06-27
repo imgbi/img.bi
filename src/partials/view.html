@@ -14,14 +14,34 @@
         <li ng-show="config.i2p" ng-class="{true: 'active'}[url == config.i2p]" ng-click="url = config.i2p"><a>I2P</a></li>
       </ul>
       <div class="form-group text-center">
-        <input type="text" readonly="readonly" class="form-control link text-center" value="{{url}}/#/{{image.id}}!{{image.pass}}">
+        <div class="input-group">
+          <input type="text" readonly="readonly" class="form-control link text-center" value="{{url}}/#/{{image.id}}!{{image.pass}}">
+          <span class="input-group-btn">
+            <button class="btn btn-default icon-link" type="button" title="{{'Copy to clipboard'|translate}}" data-clipboard-text="{{url}}/#/{{image.id}}!{{image.pass}}" copy></button>
+          </span>
+        </div>
         <span class="help-block" translate>Link to view image.</span>
-        <input type="text" readonly="readonly" class="form-control link text-center" value="<img data-imgbi=&quot;{{url}}/#/{{image.id}}!{{image.pass}}&quot;' />">
+        <div class="input-group">
+          <input type="text" readonly="readonly" class="form-control link text-center" value="<img data-imgbi=&quot;{{url}}/#/{{image.id}}!{{image.pass}}&quot; />">
+          <span class="input-group-btn">
+            <button class="btn btn-default icon-link" type="button" title="{{'Copy to clipboard'|translate}}" data-clipboard-text="<img data-imgbi=&quot;{{url}}/#/{{image.id}}!{{image.pass}}&quot; />" copy></button>
+          </span>
+        </div>
         <span class="help-block" translate>Embed image (require <a href="https://img.bi/#/js">img.bi.js</a>).</span>
         <div data-ng-if="image.rmpass">
-          <input type="text" readonly="readonly" class="form-control link text-center" value="{{url}}/#rm/{{image.id}}!{{image.pass}}!{{image.rmpass}}">
+          <div class="input-group">
+            <input type="text" readonly="readonly" class="form-control link text-center" value="{{url}}/#rm/{{image.id}}!{{image.pass}}!{{image.rmpass}}">
+            <span class="input-group-btn">
+              <button class="btn btn-default icon-link" type="button" title="{{'Copy to clipboard'|translate}}" data-clipboard-text="{{url}}/#rm/{{image.id}}!{{image.pass}}!{{image.rmpass}}" copy></button>
+            </span>
+          </div>
           <span class="help-block" translate>Link to remove image.</span>
-          <input type="text" readonly="readonly" class="form-control link text-center" value="{{url}}/#autorm/{{image.id}}!{{image.pass}}!{{image.rmpass}}">
+          <div class="input-group">
+            <input type="text" readonly="readonly" class="form-control link text-center" value="{{url}}/#autorm/{{image.id}}!{{image.pass}}!{{image.rmpass}}">
+            <span class="input-group-btn">
+              <button class="btn btn-default icon-link" type="button" title="{{'Copy to clipboard'|translate}}" data-clipboard-text="{{url}}/#autorm/{{image.id}}!{{image.pass}}!{{image.rmpass}}" copy></button>
+            </span>
+          </div>
           <span class="help-block" translate>Remove image after first view.</span>
         </div>
       </div>
