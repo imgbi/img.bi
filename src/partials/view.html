@@ -13,34 +13,26 @@
         <li ng-show="config.tor" ng-class="{true: 'active'}[url == config.tor]" ng-click="url = config.tor"><a>Tor</a></li>
         <li ng-show="config.i2p" ng-class="{true: 'active'}[url == config.i2p]" ng-click="url = config.i2p"><a>I2P</a></li>
       </ul>
-      <div class="form-group text-center">
-        <div class="input-group">
-          <input type="text" readonly="readonly" class="form-control link text-center" value="{{url}}/#/{{image.id}}!{{image.pass}}">
-          <span class="input-group-btn">
-            <button class="btn btn-default icon-link" type="button" title="{{'Copy to clipboard'|translate}}" data-clipboard-text="{{url}}/#/{{image.id}}!{{image.pass}}" copy></button>
-          </span>
+      <div class="text-center">
+        <div class="row">
+          <div class="div-input col-md-11">{{url}}/#/{{image.id}}!{{image.pass}}</div>
+          <button class="btn btn-default icon-link btn-input-copy col-md-1" type="button" title="{{'Copy to clipboard'|translate}}" data-clipboard-text="{{url}}/#/{{image.id}}!{{image.pass}}" copy></button>
         </div>
         <span class="help-block" translate>Link to view image.</span>
-        <div class="input-group">
-          <input type="text" readonly="readonly" class="form-control link text-center" value="<img data-imgbi=&quot;{{url}}/#/{{image.id}}!{{image.pass}}&quot; />">
-          <span class="input-group-btn">
-            <button class="btn btn-default icon-link" type="button" title="{{'Copy to clipboard'|translate}}" data-clipboard-text="<img data-imgbi=&quot;{{url}}/#/{{image.id}}!{{image.pass}}&quot; />" copy></button>
-          </span>
+        <div class="row">
+          <div class="div-input col-md-11">&lt;img data-imgbi=&quot;{{url}}/#/{{image.id}}!{{image.pass}}&quot; /></div>
+          <button class="btn btn-default icon-link btn-input-copy col-md-1" type="button" title="{{'Copy to clipboard'|translate}}" data-clipboard-text="<img data-imgbi=&quot;{{url}}/#/{{image.id}}!{{image.pass}}&quot; />" copy></button>
         </div>
         <span class="help-block" translate>Embed image (require <a href="https://img.bi/#/js">img.bi.js</a>).</span>
         <div data-ng-if="image.rmpass">
-          <div class="input-group">
-            <input type="text" readonly="readonly" class="form-control link text-center" value="{{url}}/#rm/{{image.id}}!{{image.pass}}!{{image.rmpass}}">
-            <span class="input-group-btn">
-              <button class="btn btn-default icon-link" type="button" title="{{'Copy to clipboard'|translate}}" data-clipboard-text="{{url}}/#rm/{{image.id}}!{{image.pass}}!{{image.rmpass}}" copy></button>
-            </span>
+          <div class="row">
+            <div class="div-input col-md-11">{{url}}/#rm/{{image.id}}!{{image.pass}}!{{image.rmpass}}</div>
+            <button class="btn btn-default icon-link btn-input-copy col-md-1" type="button" title="{{'Copy to clipboard'|translate}}" data-clipboard-text="{{url}}/#rm/{{image.id}}!{{image.pass}}!{{image.rmpass}}" copy></button>
           </div>
           <span class="help-block" translate>Link to remove image.</span>
-          <div class="input-group">
-            <input type="text" readonly="readonly" class="form-control link text-center" value="{{url}}/#autorm/{{image.id}}!{{image.pass}}!{{image.rmpass}}">
-            <span class="input-group-btn">
-              <button class="btn btn-default icon-link" type="button" title="{{'Copy to clipboard'|translate}}" data-clipboard-text="{{url}}/#autorm/{{image.id}}!{{image.pass}}!{{image.rmpass}}" copy></button>
-            </span>
+          <div class="row">
+            <div class="div-input col-md-11">{{url}}/#autorm/{{image.id}}!{{image.pass}}!{{image.rmpass}}</div>
+            <button class="btn btn-default icon-link btn-input-copy col-md-1" type="button" title="{{'Copy to clipboard'|translate}}" data-clipboard-text="{{url}}/#autorm/{{image.id}}!{{image.pass}}!{{image.rmpass}}" copy></button>
           </div>
           <span class="help-block" translate>Remove image after first view.</span>
         </div>
