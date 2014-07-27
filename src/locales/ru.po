@@ -84,6 +84,10 @@ msgstr "Свяжитесь с нами"
 msgid "Contacts"
 msgstr "Контакты"
 
+#: src/partials/view.html
+msgid "Copy to clipboard"
+msgstr "Скопировать в буфер обмена"
+
 #: src/index.html
 msgid "Copyleft"
 msgstr "Копилефт"
@@ -139,6 +143,10 @@ msgstr "Ошибка"
 #: src/scripts/controllers.js
 msgid "Error during removing"
 msgstr "Ошибка во время удаления"
+
+#: src/scripts/controllers.js
+msgid "File was not found"
+msgstr "Файл не найден"
 
 #: src/scripts/controllers.js
 msgid "File was successfuly removed."
@@ -276,6 +284,10 @@ msgstr "Открытый исходный код"
 #: src/partials/upload.html
 msgid "Privacy"
 msgstr "Конфиденциальность"
+
+#: src/scripts/controllers.js
+msgid "Probably it was already removed."
+msgstr "Скорее все, он уже был удален."
 
 #: src/partials/my.html
 msgid "Remove"

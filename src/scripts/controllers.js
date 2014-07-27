@@ -21,8 +21,13 @@ angular.module('imgbi.controllers', [])
           pass: $routeParams.pass
         }];
       })
-      .error(function(err) {
-        notify(gettextCatalog.getString('Error'), err);
+      .error(function(err,status) {
+        if (status === 404) {
+          notify(gettextCatalog.getString('File was not found'), gettextCatalog.getString('Probably it was already removed.'));
+        }
+        else {
+          notify(gettextCatalog.getString('Error'), err);
+        }
         $location.path('/');
       });
   }])
@@ -43,8 +48,14 @@ angular.module('imgbi.controllers', [])
       .success(function(data) {
         $scope.image = sjcl.decrypt($routeParams.pass, JSON.stringify(data));
       })
-      .error(function(err) {
-        notify(gettextCatalog.getString('Error'), err);
+      .error(function(err,status) {
+        
+        if (status === 404) {
+          notify(gettextCatalog.getString('File was not found'), gettextCatalog.getString('Probably it was already removed.'));
+        }
+        else {
+          notify(gettextCatalog.getString('Error'), err);
+        }
         $location.path('/');
       });
   }])
@@ -59,8 +70,13 @@ angular.module('imgbi.controllers', [])
         );
         $scope.image = uri;
       })
-      .error(function(err) {
-        notify(gettextCatalog.getString('Error'), err);
+      .error(function(err,status) {
+        if (status === 404) {
+          notify(gettextCatalog.getString('File was not found'), gettextCatalog.getString('Probably it was already removed.'));
+        }
+        else {
+          notify(gettextCatalog.getString('Error'), err);
+        }
         $location.path('/');
       });
   }])
