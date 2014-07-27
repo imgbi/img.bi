@@ -14,12 +14,18 @@ angular.module('imgbi.controllers', [])
   .controller('view', ['$routeParams', '$scope', '$http', '$location', 'notify', 'gettextCatalog', function($routeParams, $scope, $http, $location, notify, gettextCatalog) {
     $http({method: 'GET', url: '/download/' + $routeParams.id.replace('!','')})
       .success(function(data) {
-        var uri = sjcl.decrypt($routeParams.pass, JSON.stringify(data));
-        $scope.images = [{
-          url: uri,
-          id: $routeParams.id,
-          pass: $routeParams.pass
-        }];
+        try {
+          var uri = sjcl.decrypt($routeParams.pass, JSON.stringify(data));
+          $scope.images = [{
+            url: uri,
+            id: $routeParams.id,
+            pass: $routeParams.pass
+          }];
+        } 
+        catch (err) {
+          notify(gettextCatalog.getString('Error during decryption'),gettextCatalog.getString('Probably password is wrong.'));
+          $location.path('/');
+        }
       })
       .error(function(err,status) {
         if (status === 404) {
@@ -46,10 +52,15 @@ angular.module('imgbi.controllers', [])
     };
     $http({method: 'GET', url: '/download/' + $routeParams.id})
       .success(function(data) {
-        $scope.image = sjcl.decrypt($routeParams.pass, JSON.stringify(data));
+        try {
+          $scope.image = sjcl.decrypt($routeParams.pass, JSON.stringify(data));
+        }
+        catch (err) {
+          notify(gettextCatalog.getString('Error during decryption'),gettextCatalog.getString('Probably password is wrong.'));
+          $location.path('/');
+        }
       })
       .error(function(err,status) {
-        
         if (status === 404) {
           notify(gettextCatalog.getString('File was not found'), gettextCatalog.getString('Probably it was already removed.'));
         }
@@ -62,13 +73,19 @@ angular.module('imgbi.controllers', [])
   .controller('autoremove', ['$routeParams', '$scope', '$http', '$location', 'notify', 'gettextCatalog', 'removeFile', function($routeParams, $scope, $http, $location, notify, gettextCatalog, removeFile) {
     $http({method: 'GET', url: '/download/' + $routeParams.id})
       .success(function(data) {
-        var uri = sjcl.decrypt($routeParams.pass, JSON.stringify(data));
-        removeFile($routeParams.id,$routeParams.rmpass).then(function(ok) {
-          }, function(err) {
-            notify(gettextCatalog.getString('Error during removing'), err);
-          }
-        );
-        $scope.image = uri;
+        try {
+          var uri = sjcl.decrypt($routeParams.pass, JSON.stringify(data));
+          removeFile($routeParams.id,$routeParams.rmpass).then(function(ok) {
+            }, function(err) {
+              notify(gettextCatalog.getString('Error during removing'), err);
+            }
+          );
+          $scope.image = uri;
+        }
+        catch (err) {
+          notify(gettextCatalog.getString('Error during decryption'),gettextCatalog.getString('Probably password is wrong.'));
+          $location.path('/');
+        }
       })
       .error(function(err,status) {
         if (status === 404) {

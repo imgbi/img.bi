@@ -141,6 +141,10 @@ msgid "Error"
 msgstr "Ошибка"
 
 #: src/scripts/controllers.js
+msgid "Error during decryption"
+msgstr "Ошибка во время расшифровки"
+
+#: src/scripts/controllers.js
 msgid "Error during removing"
 msgstr "Ошибка во время удаления"
 
@@ -288,6 +292,10 @@ msgstr "Конфиденциальность"
 #: src/scripts/controllers.js
 msgid "Probably it was already removed."
 msgstr "Скорее все, он уже был удален."
+
+#: src/scripts/controllers.js
+msgid "Probably password is wrong."
+msgstr "Скорее всего, пароль неверен."
 
 #: src/partials/my.html
 msgid "Remove"
