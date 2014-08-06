@@ -344,7 +344,7 @@ msgid ""
 "wiki/Titan_traffic_database\">Titan traffic database</a> and other can store "
 "their own logs. Be careful."
 msgstr ""
-"Wir speichern keine Logs, ausgenommen den <a href=\"https://de.wikipedia.org/wiki/SHA-3\">SHA-3</a>"-Hashwert deiner IP-Adresse mit einem zufälligem <a href=\"https://de.wikipedia.org/wiki/Salt_%28cryptography%29\">Salt</a> für einen Tag. Jedoch kann der Host-Provider des Servers seine eigenen Logs führen, auf die wir keinen Einfluss haben. Seit vorsichtig."
+"Wir speichern keine Logs, ausgenommen den <a href=\"https://de.wikipedia.org/wiki/SHA-3\">SHA-3</a>\"-Hashwert deiner IP-Adresse mit einem zufälligem <a href=\"https://de.wikipedia.org/wiki/Salt_%28cryptography%29\">Salt</a> für einen Tag. Jedoch kann der Host-Provider des Servers seine eigenen Logs führen, auf die wir keinen Einfluss haben. Seit vorsichtig."
 
 #: src/partials/upload.html
 msgid "Why img.bi is secure and awesome?"

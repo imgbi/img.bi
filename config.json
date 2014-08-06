@@ -25,6 +25,10 @@
     {
       "iso": "nl",
       "name": "Nederlands"
+    },
+    {
+      "iso": "de",
+      "name": "Deutsch"
     }
   ]
 }
