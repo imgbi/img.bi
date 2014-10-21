@@ -4,11 +4,11 @@ angular.module('imgbi.controllers', [])
     $scope.config = config;
     $scope.url = url;
     $scope.localize = function(lang) {
-      gettextCatalog.currentLanguage = lang;
+      gettextCatalog.setCurrentLanguage(lang);
       localStorage.setItem('lang', lang);
     };
     if (localStorage.getItem('lang')) {
-      gettextCatalog.currentLanguage = localStorage.getItem('lang');
+      gettextCatalog.setCurrentLanguage(localStorage.getItem('lang'));
     }
   }])
   .controller('view', ['$routeParams', '$scope', '$http', '$location', 'notify', 'gettextCatalog', function($routeParams, $scope, $http, $location, notify, gettextCatalog) {
