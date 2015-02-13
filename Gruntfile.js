@@ -123,7 +123,7 @@ grunt.initConfig({
     build: {
       files: [{
         expand: true,
-        src: ['*.png', 'favicon.ico', 'browserconfig.xml', 'key.gpg'],
+        src: ['key.gpg'],
         cwd: 'src/',
         dest: 'build/',
       },
@@ -279,6 +279,41 @@ grunt.initConfig({
         relativeFontPath: '../font',
       }
     }
+  },
+  multiresize: {
+    main: {
+      src: 'logo.svg',
+      dest: [
+        'build/icons/apple-touch-icon-57x57.png',
+        'build/icons/apple-touch-icon-114x114.png',
+        'build/icons/apple-touch-icon-72x72.png',
+        'build/icons/apple-touch-icon-144x144.png',
+        'build/icons/apple-touch-icon-60x60.png',
+        'build/icons/apple-touch-icon-120x120.png',
+        'build/icons/apple-touch-icon-76x76.png',
+        'build/icons/apple-touch-icon-152x152.png',
+        'build/icons/favicon-196x196.png',
+        'build/icons/favicon-160x160.png',
+        'build/icons/favicon-96x96.png',
+        'build/icons/favicon-16x16.png',
+        'build/icons/favicon-32x32.png',
+      ],
+      destSizes: [
+        '57x57',
+        '114x114',
+        '72x72',
+        '144x144',
+        '60x60',
+        '120x120',
+        '76x76',
+        '152x152',
+        '196x196',
+        '160x160',
+        '96x96',
+        '16x16',
+        '32x32'
+      ]
+    }
   }
 });
 
@@ -301,13 +336,14 @@ grunt.loadNpmTasks('grunt-angular-gettext');
 grunt.loadNpmTasks('grunt-ng-constant');
 grunt.loadNpmTasks('grunt-contrib-cssmin');
 grunt.loadNpmTasks('grunt-webfont');
+grunt.loadNpmTasks('grunt-multiresize');
 
-grunt.registerTask('afterall', [ 'clean:build', 'less', 'webfont', 'nggettext_compile', 'uglify', 'cssmin', 'htmlmin', 'copy:build', 'clean:tmp' ]);
+grunt.registerTask('afterall', [ 'clean:build', 'less', 'webfont', 'multiresize', 'nggettext_compile', 'uglify', 'cssmin', 'htmlmin', 'copy:build', 'clean:tmp' ]);
 grunt.registerTask('default', [ 'ngconstant:web', 'afterall' ]);
 grunt.registerTask('tor', [ 'ngconstant:tor', 'afterall' ]);
 grunt.registerTask('i2p', [ 'ngconstant:i2p', 'afterall' ]);
 grunt.registerTask('extract', [ 'nggettext_extract' ]);
-grunt.registerTask('serve', [ 'clean:build', 'less', 'webfont', 'nggettext_compile', 'ngconstant:local', 'concat', 'mkdir', 'copy', 'configureProxies:server', 'connect:server', 'watch', 'clean:tmp']);
+grunt.registerTask('serve', [ 'clean:build', 'less', 'webfont', 'multiresize', 'nggettext_compile', 'ngconstant:local', 'concat', 'mkdir', 'copy', 'configureProxies:server', 'connect:server', 'watch', 'clean:tmp']);
 grunt.registerTask('test', [ 'jshint', 'jsonlint']);
 grunt.registerTask('deploy', 'Deploy', function(n) {
   if (grunt.option('web')) {
