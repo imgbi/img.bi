@@ -5,12 +5,13 @@ msgstr ""
 "Report-Msgid-Bugs-To: mail@img.bi\n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
-"Last-Translator: Thomas Toye <toye.thomas@gmail.com>\n"
+"Last-Translator: Nathan Follens <nathan@unseen.is>\n"
 "Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
 
 #: src/partials/upload.html
 msgid "180 days"
@@ -30,7 +31,7 @@ msgstr ""
 msgid ""
 "Add-on for Firefox which let you upload images to img.bi from your browser."
 msgstr ""
-"Add-on voor Firefox die toelaat om afbeeldingen up te loaden naar img.bi "
+"Add-on voor Firefox die toelaat om afbeeldingen te uploaden naar img.bi "
 "vanuit je browser."
 
 #: src/partials/ads.html
@@ -48,7 +49,8 @@ msgstr "Advertenties"
 #: src/partials/donate.html
 msgid ""
 "Also, you can <a href=\"/ads\">buy ads</a> on img.bi. That will help too."
-msgstr "Je kan ook <a href=\"/ads\">advertenties</a> on img.bi. Dat helpt ook!"
+msgstr ""
+"Je kan ook <a href=\"/ads\">advertenties kopen</a> op img.bi. Dat helpt ook!"
 
 #: src/partials/apps.html
 msgid "Applications for use img.bi"
@@ -56,7 +58,7 @@ msgstr "Applicaties om img.bi te gebruiken"
 
 #: src/index.html
 msgid "Apps"
-msgstr ""
+msgstr "Applicaties"
 
 #: src/partials/rm.html
 msgid ""
@@ -72,7 +74,7 @@ msgstr "Bitcoinadres"
 
 #: src/partials/modal.tpl.html
 msgid "Close"
-msgstr ""
+msgstr "Sluiten"
 
 #: src/partials/ads.html
 msgid "Contact us"
@@ -84,7 +86,7 @@ msgstr "Contacten"
 
 #: src/index.html
 msgid "Copyleft"
-msgstr ""
+msgstr "Copyleft"
 
 #: src/partials/upload.html
 msgid "Cryptography"
@@ -100,13 +102,15 @@ msgstr "Doneren"
 
 #: src/partials/js.html
 msgid "Download"
-msgstr ""
+msgstr "Downloaden"
 
 #: src/partials/js.html
 msgid ""
 "Download img.bi.js and <a href=\"http://bitwiseshiftleft.github.io/sjcl/"
 "\">SJCL</a>."
 msgstr ""
+"Download img.bi.js en <a href=\"http://bitwiseshiftleft.github.io/sjcl/"
+"\">SJCL</a>."
 
 #: src/partials/upload.html
 msgid "Drop images here or just click"
@@ -114,7 +118,7 @@ msgstr "Sleep afbeeldingen naar hier of klik gewoon"
 
 #: src/index.html
 msgid "Eepsite"
-msgstr ""
+msgstr "Eepsite"
 
 #: src/partials/view.html
 msgid "Embed image (require <a href=\"https://img.bi/#/js\">img.bi.js</a>)."
@@ -127,19 +131,19 @@ msgstr "Afbeeldingen van sites gebaseerd op img.bi-software insluiten."
 
 #: src/scripts/controllers.js src/scripts/services.js
 msgid "Error"
-msgstr ""
+msgstr "Fout"
 
 #: src/scripts/controllers.js
 msgid "Error during removing"
-msgstr ""
+msgstr "Fout bij verwijderen"
 
 #: src/scripts/controllers.js
 msgid "File was successfuly removed."
-msgstr ""
+msgstr "Bestand is succesvol verwijderd."
 
 #: src/partials/apps.html
 msgid "Firefox add-on"
-msgstr ""
+msgstr "Firefox add-on"
 
 #: src/partials/upload.html
 msgid "Forever"
@@ -151,7 +155,7 @@ msgstr "Vier weken"
 
 #: src/partials/contacts.html
 msgid "GPG key"
-msgstr ""
+msgstr "GPG-sleutel"
 
 #: src/partials/js.html
 msgid "How to use"
@@ -171,7 +175,7 @@ msgid ""
 "en.wikipedia.org/wiki/Man-in-the-middle_attack\">Man-in-the-Middle attacks</"
 "a>."
 msgstr ""
-"Afbeeldingen worden geëncrypteerd door middel van <a href=\"https://nl."
+"Afbeeldingen worden versleuteld door middel van <a href=\"https://nl."
 "wikipedia.org/wiki/Advanced_Encryption_Standard\">AES-256</a> met een "
 "willekeurige sleutel in je browser voor het uploaden. Niemand kan je "
 "afbeelding zien, zelfs mensen die directe toegang hebben tot de servers. Ook "
@@ -192,7 +196,7 @@ msgid ""
 "Just a simple command-line client for uploading/downloading/deleting images. "
 "Also can be used in Node.js applications."
 msgstr ""
-"Gewoon een eenvoudige command-line client voor het uploaden/downloaden/"
+"Gewoon een eenvoudige commandoregel-cliënt voor het uploaden/downloaden/"
 "verwijderen van afbeeldingen. Kan ook gebruikt worden in Node.js-applicaties."
 
 #: src/partials/apps.html
@@ -201,11 +205,11 @@ msgstr "Licentie"
 
 #: src/partials/view.html
 msgid "Link to remove image."
-msgstr "Link om afbeelding te verwijderen."
+msgstr "Link om de afbeelding te verwijderen."
 
 #: src/partials/view.html
 msgid "Link to view image."
-msgstr "Link om afbeelding te bekijken."
+msgstr "Link om de afbeelding te bekijken."
 
 #: src/partials/donate.html
 msgid "Litecoin address"
@@ -221,7 +225,7 @@ msgstr "Meer laden"
 
 #: src/partials/autorm.html src/partials/rm.html src/partials/view.html
 msgid "Loading"
-msgstr "Laden"
+msgstr "Bezig met laden"
 
 #: src/partials/apps.html
 msgid ""
@@ -234,8 +238,8 @@ msgstr ""
 #: src/partials/my.html
 msgid "No images found in localStorage. Try <a href=\"/\">upload some</a>."
 msgstr ""
-"Geen afbeeldingen gevonden in localStorage. Probeer er <a href=\"/\">wat up "
-"te loaden</a>."
+"Geen afbeeldingen gevonden in localStorage. Probeer er <a href=\"/\">wat te "
+"uploaden</a>."
 
 #: src/partials/ads.html
 msgid "No pop-unders, pop-ups and other bad things."
@@ -243,7 +247,7 @@ msgstr "Geen pop-unders, pop-ups en andere slechte dingen."
 
 #: src/partials/ads.html
 msgid "Nothing illegal in NL on banner."
-msgstr ""
+msgstr "Niets illegaals in NL op banner."
 
 #: src/partials/ads.html
 msgid "Nothing that can violate privacy of img.bi users."
@@ -267,7 +271,7 @@ msgstr "Open-source"
 
 #: src/partials/upload.html
 msgid "Privacy"
-msgstr ""
+msgstr "Privacy"
 
 #: src/partials/my.html
 msgid "Remove"
@@ -275,7 +279,7 @@ msgstr "Verwijderen"
 
 #: src/partials/view.html
 msgid "Remove image after first view."
-msgstr ""
+msgstr "Afbeelding verwijderen nadat deze eenmaal bekeken is."
 
 #: src/partials/ads.html
 msgid "Rules"
@@ -283,11 +287,11 @@ msgstr "Regels"
 
 #: src/scripts/services.js
 msgid "Sorry, filesize over %s MiB is not allowed."
-msgstr ""
+msgstr "Sorry, bestandsgroottes boven %s zijn niet toegestaan."
 
 #: src/scripts/services.js
 msgid "Sorry, filetype %s is not supported."
-msgstr ""
+msgstr "Sorry, bestandstype %s wordt niet ondersteund."
 
 #: src/index.html
 msgid "Source code"
@@ -299,7 +303,7 @@ msgstr "Opslaan voor:"
 
 #: src/scripts/controllers.js
 msgid "Success"
-msgstr ""
+msgstr "Succes"
 
 #: src/partials/upload.html
 msgid "Three days"
@@ -307,16 +311,15 @@ msgstr "Drie dagen"
 
 #: src/index.html
 msgid "Tor hidden service"
-msgstr ""
+msgstr "Tor verborgen dienst"
 
 #: src/partials/upload.html
 msgid "Upload"
-msgstr ""
+msgstr "Uploaden"
 
 #: src/partials/upload.html
-#, fuzzy
 msgid "Uploading"
-msgstr "Laden"
+msgstr "Bezig met uploaden"
 
 #: src/partials/js.html
 msgid "Use!"
@@ -328,7 +331,7 @@ msgstr "Bekijken"
 
 #: src/partials/js.html
 msgid "View on GitHub"
-msgstr "Bekijk op GitHub"
+msgstr "Bekijken op GitHub"
 
 #: src/partials/ads.html
 msgid "We accept Bitcoin, Litecoin and much more payment systems."
@@ -356,22 +359,23 @@ msgid ""
 "wiki/Titan_traffic_database\">Titan traffic database</a> and other can store "
 "their own logs. Be careful."
 msgstr ""
-"We slaan onder geen enkele vorm geen logs op, behalve de <a href=\"https://"
-"nl.wikipedia.org/wiki/SHA-3\">SHA-3</a>hash vand de uploader&#39;s IP-adres "
-"met een willekeurig <a href=\"https://nl.wikipedia.org/wiki/Salt_"
-"%28cryptografie%29\">salt</a> voor een dag. Maar onze hostingprovider en "
+"We slaan onder geen enkele vorm logs op, behalve de <a href=\"https://nl."
+"wikipedia.org/wiki/SHA-3\">SHA-3</a>-hash van het IP-adres van de uploader, "
+"met een willekeurige <a href=\"https://nl.wikipedia.org/wiki/Salt_"
+"%28cryptografie%29\">salt</a>, voor één dag. Onze hostingprovider en "
 "systemen als <a href=\"https://en.wikipedia.org/wiki/SORM\">SORM</a>, <a "
 "href=\"https://en.wikipedia.org/wiki/Hepting_v._AT%26T\">NarusInsight</a>, "
 "<a href=\"https://en.wikipedia.org/wiki/Titan_traffic_database\">Titan "
-"traffic database</a> en anderen kunnen wel logs opslaan. Wees voorzichtig."
+"traffic database</a> en anderen kunnen echter wel logs opslaan. Wees "
+"voorzichtig."
 
 #: src/partials/upload.html
 msgid "Why img.bi is secure and awesome?"
-msgstr "Waarom img.bi veilig en cool is?"
+msgstr "Waarom is img.bi veilig en cool?"
 
 #: src/partials/ads.html
 msgid "Without external requests."
-msgstr "Geen externe requests."
+msgstr "Geen externe aanvragen."
 
 #: src/partials/rm.html
 msgid "Yes, remove image"
@@ -379,7 +383,7 @@ msgstr "Ja, verwijder de afbeelding"
 
 #: src/partials/apps.html
 msgid "command-line, node.js"
-msgstr ""
+msgstr "commandoregel, node.js"
 
 #: src/partials/donate.html
 msgid ""
@@ -387,9 +391,9 @@ msgid ""
 "servers, domains, certs and many other things cost some money. Even a little "
 "donation helps to run img.bi."
 msgstr ""
-"img.bi is een open-sourceproject dat voor iedereen beschikbaar is. Maar "
-"services, certificaten en veel andere dingen kosten geld. Zelfs een kleine "
-"donatie helpt om img.bi draaiende te houden."
+"img.bi is een open-sourceproject dat voor iedereen beschikbaar is. Servers, "
+"domeinen, certificaten en veel andere dingen kosten echter geld. Zelfs een "
+"kleine donatie helpt om img.bi draaiende te houden."
 
 #: src/index.html
 msgid "my images"
@@ -397,4 +401,4 @@ msgstr "mijn afbeeldingen"
 
 #: src/index.html
 msgid "really secure image hosting"
-msgstr "heel veilig afbeeldingen hosten"
+msgstr "echt veilig afbeeldingen hosten"
