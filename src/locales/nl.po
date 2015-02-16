@@ -123,7 +123,7 @@ msgstr "Eepsite"
 #: src/partials/view.html
 msgid "Embed image (require <a href=\"https://img.bi/#/js\">img.bi.js</a>)."
 msgstr ""
-"Afbeelding insluiten (require <a href=\"https://img.bi/#/js\">img.bi.js</a>)."
+"Afbeelding insluiten (vereist <a href=\"https://img.bi/#/js\">img.bi.js</a>)."
 
 #: src/partials/js.html
 msgid "Embed images from sites based on img.bi software."
@@ -178,7 +178,7 @@ msgstr ""
 "Afbeeldingen worden versleuteld door middel van <a href=\"https://nl."
 "wikipedia.org/wiki/Advanced_Encryption_Standard\">AES-256</a> met een "
 "willekeurige sleutel in je browser voor het uploaden. Niemand kan je "
-"afbeelding zien, zelfs mensen die directe toegang hebben tot de servers. Ook "
+"afbeelding zien, zelfs niet mensen die directe toegang hebben tot de servers. Ook "
 "gebruiken we <a href=\"https://nl.wikipedia.org/wiki/Transport_Layer_Security"
 "\">TLS</a> dat beschermt tegen <a href=\"https://nl.wikipedia.org/wiki/Man-"
 "in-the-middle\">Man-in-the-Middle aanvallen</a>."
