@@ -6,7 +6,10 @@ var imgbi = angular.module('imgbi', [
   'imgbi.services',
   'imgbi.directives',
   'imgbi.controllers',
-  'imgbi.filters'
+  'imgbi.filters',
+  'imgbi.webservices',
+  'imgbi.storage',
+  'imgbi.clipboard'
 ]);
 
 imgbi.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
@@ -23,10 +26,12 @@ imgbi.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
     .when('/uploaded', {templateUrl: 'partials/view.html', controller: 'uploaded'})
     .otherwise({templateUrl: 'partials/upload.html', controller: 'upload'});
   }])
-  .config(function($modalProvider) {
+  .config(['$modalProvider', function($modalProvider) {
     angular.extend($modalProvider.defaults, {
       template: 'partials/modal.tpl.html'
     });
-  });
-        
-
+  }])
+  .config(['$compileProvider', function($compileProvider) {   
+      $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|resource|chrome-extension):/);
+    }
+  ]);

@@ -6,19 +6,19 @@ angular.module('imgbi.directives', [])
           event.preventDefault();
           document.getElementById('imageUpload').click();
         });
-        
+
         $element.bind('dragover', function(event) {
           event.stopPropagation();
           event.preventDefault();
           $element.addClass('hover');
         });
-        
+
         $element.bind('dragleave', function(event) {
           event.stopPropagation();
           event.preventDefault();
           $element.removeClass('hover');
         });
-        
+
         $element.bind('drop', function(event) {
           event.stopPropagation();
           event.preventDefault();
@@ -43,13 +43,4 @@ angular.module('imgbi.directives', [])
         });
       }
     };
-  }])
-  .directive('copy', function() {
-    return {
-      restrict: 'AE',    
-      link: function($scope, $element) {
-        ZeroClipboard.config( { swfPath: '../ZeroClipboard.swf' } );
-        new ZeroClipboard($element);
-      }
-    };
-  });
+  }]);

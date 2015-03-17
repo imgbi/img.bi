@@ -51,6 +51,23 @@ angular.module('imgbi.services', [])
       return deferred.promise;
     };
   }])
+  .factory('getThumb', ['$q', 'downloadThumb', function($q, downloadThumb) {
+    return function(id, pass, rmpass) {
+      var deferred = $q.defer();
+      downloadThumb(id).then(function(data) {
+        var result = sjcl.decrypt(pass, data);
+        if (result.match(/^data:(.+);base64,*/)[1] == 'image/jpeg') {
+          deferred.resolve({
+            uri: result,
+            id: id,
+            pass: pass,
+            rmpass: rmpass
+          });
+        }
+      });
+      return deferred.promise;
+    };
+  }])
   .factory('randomString', [function() {
       return function(length) {
         var charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789',
@@ -72,29 +89,6 @@ angular.module('imgbi.services', [])
         return params.join('&').replace(/%20/g, '+');
       };
   }])
-  .factory('removeFile', ['$q', '$http', function($q, $http) {
-      return function(id, rmpass) {
-        var deferred = $q.defer();
-        $http({
-          method: 'GET',
-          url: '/api/remove',
-          params: {id: id, password: rmpass}
-        })
-        .success(function(data) {
-          if (data.status == 'Success') {
-            localStorage.removeItem(id);
-            deferred.resolve(true);
-          }
-          else {
-            deferred.reject(data.status);
-          }
-        })
-        .error(function(err) {
-          deferred.reject(err);
-        });
-        return deferred.promise;
-      };
-  }])
   .factory('myFiles', ['$q', '$rootScope', 'getThumb', function($q, $rootScope, getThumb) {
       return function(count) {
         var deferred = $q.defer();
@@ -105,31 +99,6 @@ angular.module('imgbi.services', [])
           });
         }
         /*jshint +W083 */
-        return deferred.promise;
-      };
-  }])
-  .factory('getThumb', ['$q', '$http', function($q, $http) {
-      return function(id, pass, rmpass) {
-        var deferred = $q.defer();
-        $http({
-          method: 'GET',
-          url: '/download/thumb/' + id
-        }).success(function(data, status) {
-          var result = sjcl.decrypt(pass, JSON.stringify(data));
-          if (result.match(/^data:(.+);base64,*/)[1] == 'image/jpeg') {
-            deferred.resolve({
-              uri: result,
-              id: id,
-              pass: pass,
-              rmpass: rmpass
-            });
-          }
-        })
-        .error(function(data, status) {
-          if (status === 404) {
-            localStorage.removeItem(id);
-          }
-        });
         return deferred.promise;
       };
   }])
