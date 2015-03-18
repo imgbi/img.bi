@@ -68,16 +68,20 @@ angular.module('imgbi.services', [])
       return deferred.promise;
     };
   }])
-  .factory('randomString', [function() {
+  .factory('randomString', ['$q', function($q) {
       return function(length) {
-        var charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789',
-        i,
-        result = '',
-        values = sjcl.random.randomWords(length);
-        for (i = 0; i < length; i++) {
-          result += charset[values[i].toString().replace('-', '') % charset.length];
-        }
-        return result;
+        var deferred = $q.defer();
+        var result = '';
+        var checkReadyness = setInterval(function () {
+          while (result.length < length && sjcl.random.isReady()) {
+            var bytes = sjcl.random.randomWords(1);
+            result += sjcl.codec.base64.fromBits(bytes,true,true);
+          }
+          result = result.substr(0, length);
+          deferred.resolve(result);
+          clearInterval(checkReadyness);
+        }, 1);
+        return deferred.promise;
       };
   }])
   .factory('param', [function() {

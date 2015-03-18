@@ -131,11 +131,12 @@ angular.module('imgbi.controllers', [])
       }
     };
   }])
-  .controller('uploaded', ['$scope', '$rootScope', 'generateThumb', 'randomString', 'uploadFile', 'notify', 'gettextCatalog', 'setStorage', function($scope, $rootScope, generateThumb, randomString, uploadFile, notify, gettextCatalog, setStorage) {
+  .controller('uploaded', ['$scope', '$rootScope', 'generateThumb', 'randomString', 'uploadFile', 'notify', 'gettextCatalog', 'setStorage', '$q', function($scope, $rootScope, generateThumb, randomString, uploadFile, notify, gettextCatalog, setStorage, $q) {
     setStorage('expire', $rootScope.expire);
     angular.forEach($rootScope.files, function(file) {
-      generateThumb(file.url).then(function(thumb) {
-        var pass = randomString(40),
+      $q.all([generateThumb(file.url), randomString(40)]).then(function(ans) {
+        var thumb = ans[0],
+        pass = ans[1],
         encrypted = sjcl.encrypt(pass, file.url, {ks: 256}),
         ethumb = sjcl.encrypt(pass, thumb, {ks: 256});
         uploadFile(ethumb, encrypted, $rootScope.expire).then(function(data) {
