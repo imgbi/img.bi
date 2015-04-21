@@ -191,7 +191,7 @@ grunt.initConfig({
     }
   },
   jshint: {
-    all: ['Gruntfile.js', 'src/scripts/*.js']
+    all: ['Gruntfile.js', 'src/scripts/*.js', 'tests/*.js']
   },
   jsonlint: {
     all: {
@@ -314,6 +314,23 @@ grunt.initConfig({
         '32x32'
       ]
     }
+  },
+  karma: {  
+    unit: {
+      options: {
+        frameworks: ['jasmine'],
+        singleRun: true,
+        browsers: ['PhantomJS'],
+        reporters: 'spec',
+        files: [
+          'bower_components/angular/angular.min.js',
+          'bower_components/angular-mocks/angular-mocks.js',
+          'bower_components/sjcl/sjcl.js',
+          'src/scripts/*.js',
+          'tests/*.js'
+        ]
+      }
+    }
   }
 });
 
@@ -337,6 +354,7 @@ grunt.loadNpmTasks('grunt-ng-constant');
 grunt.loadNpmTasks('grunt-contrib-cssmin');
 grunt.loadNpmTasks('grunt-webfont');
 grunt.loadNpmTasks('grunt-multiresize');
+grunt.loadNpmTasks('grunt-karma');
 
 grunt.registerTask('afterall', [ 'clean:build', 'less', 'webfont', 'multiresize', 'nggettext_compile', 'uglify', 'cssmin', 'htmlmin', 'copy:build', 'clean:tmp' ]);
 grunt.registerTask('default', [ 'ngconstant:web', 'afterall' ]);
@@ -344,7 +362,7 @@ grunt.registerTask('tor', [ 'ngconstant:tor', 'afterall' ]);
 grunt.registerTask('i2p', [ 'ngconstant:i2p', 'afterall' ]);
 grunt.registerTask('extract', [ 'nggettext_extract' ]);
 grunt.registerTask('serve', [ 'clean:build', 'less', 'webfont', 'multiresize', 'nggettext_compile', 'ngconstant:local', 'concat', 'mkdir', 'copy', 'configureProxies:server', 'connect:server', 'watch', 'clean:tmp']);
-grunt.registerTask('test', [ 'jshint', 'jsonlint']);
+grunt.registerTask('test', [ 'jshint', 'jsonlint', 'karma' ]);
 grunt.registerTask('deploy', 'Deploy', function(n) {
   if (grunt.option('web')) {
     grunt.task.run(['default', 'hashres', 'compress', 'exec:deploy:' + grunt.option('web')]);
