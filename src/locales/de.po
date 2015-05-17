@@ -29,7 +29,7 @@ msgstr ""
 msgid ""
 "Add-on for Firefox which let you upload images to img.bi from your browser."
 msgstr ""
-"Add-On für Firefox, welche es ermöglicht, Bilder auf img.bi aus deinem Browser aus hochzuladen."
+"Add-On für Firefox, welches es ermöglicht, Bilder direkt von deinem Browser aus zu img.bi hochzuladen."
 
 #: src/partials/ads.html
 msgid ""
@@ -60,7 +60,8 @@ msgid ""
 "Are you sure you want to remove this image from server? This cannot be "
 "undone."
 msgstr ""
-"Bist du dir sicher, dass du dieses Bild vom Server löschen willst? Dies kann nicht rückgängig gemacht werden."
+"Bist du dir sicher, dass du dieses Bild vom Server löschen willst? Dies "
+"kann nicht rückgängig gemacht werden."
 
 #: src/partials/donate.html
 msgid "Bitcoin address"
@@ -84,7 +85,7 @@ msgstr ""
 
 #: src/partials/upload.html
 msgid "Cryptography"
-msgstr "Cryptografie"
+msgstr "Kryptographie"
 
 #: src/partials/donate.html
 msgid "Dogecoin address"
@@ -129,7 +130,7 @@ msgstr "Fehler"
 
 #: src/scripts/controllers.js
 msgid "Error during removing"
-msgstr "Fehler während des löschens"
+msgstr "Fehler während des Löschens"
 
 #: src/scripts/controllers.js
 msgid "File was successfuly removed."
@@ -149,7 +150,7 @@ msgstr "Vier Wochen"
 
 #: src/partials/contacts.html
 msgid "GPG key"
-msgstr "GPG Key"
+msgstr "GPG-Schlüssel"
 
 #: src/partials/js.html
 msgid "How to use"
@@ -169,7 +170,14 @@ msgid ""
 "en.wikipedia.org/wiki/Man-in-the-middle_attack\">Man-in-the-Middle attacks</"
 "a>."
 msgstr ""
-"Bilder werden nach dem <a href=\"https://de.wikipedia.org/wiki/Advanced_Encryption_Standard\">AES-256 Standard</a> mit einem zufälligem Key in deinem lokalen Browser verschlüsselt, bevor sie hochgeladen werden. Es können nur Personen das Bild sehen, die über den Link zum Bild verfügen - nicht einmal Personen, die Zugang zum Server haben, können das Bild öffnen oder ansehen. Außerdem benutzen wir <a href=\"https://de.wikipedia.org/wiki/Transport_Layer_Security\">TLS</a>, welches dich vor <a href=\"https://de.wikipedia.org/wiki/Man-in-the-middle_attack\">Man-in-the-Middle Angriffen</a> schützt."
+"Bilder werden nach dem <a href=\"https://de.wikipedia.org/wiki/Advanced_Encr"
+"yption_Standard\">AES-256 Standard</a> mit einem zufälligem Key in deinem lo"
+"kalen Browser verschlüsselt, bevor sie hochgeladen werden. Es können nur Per"
+"sonen das Bild sehen, die über den Link zum Bild verfügen - nicht einmal Per"
+"sonen, die Zugang zum Server haben, können das Bild öffnen oder ansehen. Auß"
+"erdem benutzen wir <a href=\"https://de.wikipedia.org/wiki/Transport_Layer_S"
+"ecurity\">TLS</a>, welches dich vor <a href=\"https://de.wikipedia.org/wiki/"
+"Man-in-the-Middle-Angriff\">Man-in-the-Middle Angriffen</a> schützt."
 
 #: src/index.html
 msgid "In the internet"
@@ -184,7 +192,7 @@ msgid ""
 "Just a simple command-line client for uploading/downloading/deleting images. "
 "Also can be used in Node.js applications."
 msgstr ""
-"Ein einfacher Command-Line Client zum hochladen/herunterladen/löschen von Bildern."
+"Ein einfacher Command-Line Client zum Hochladen/Herunterladen/Löschen von Bildern."
 "Er kann ebenso in Node.js Anwendungen genutzt werden."
 
 #: src/partials/apps.html
@@ -220,7 +228,8 @@ msgid ""
 "More examples in <a href=\"https://github.com/imgbi/imgbi-client/blob/master/"
 "README.md\">README</a>."
 msgstr ""
-"Weitere Beispiele sind im <a href=\"https://github.com/imgbi/imgbi-client/blob/master/README.md\">README</a> zu finden."
+"Weitere Beispiele sind in der <a href=\"https://github.com/imgbi/imgbi-client/"
+"blob/master/README.md\">README</a> zu finden."
 
 #: src/partials/my.html
 msgid "No images found in localStorage. Try <a href=\"/\">upload some</a>."
@@ -233,7 +242,7 @@ msgstr "Keine Pop-Unders, Pop-Ups und andere böse Sachen."
 
 #: src/partials/ads.html
 msgid "Nothing illegal in DE on banner."
-msgstr ""
+msgstr "Nichts illegales in DE auf Bannern."
 
 #: src/partials/ads.html
 msgid "Nothing that can violate privacy of img.bi users."
@@ -253,11 +262,11 @@ msgstr "Ein Jahr"
 
 #: src/partials/upload.html
 msgid "Open source"
-msgstr "Open-Source"
+msgstr "Open Source"
 
 #: src/partials/upload.html
 msgid "Privacy"
-msgstr "Privatleben"
+msgstr "Privatsphäre"
 
 #: src/partials/my.html
 msgid "Remove"
@@ -277,11 +286,11 @@ msgstr "Verzeihung, Dateien dürfen nicht größer als %s MiB sein."
 
 #: src/scripts/services.js
 msgid "Sorry, filetype %s is not supported."
-msgstr "Verzeihung, %s wird nicht unterstützt."
+msgstr "Verzeihung, der Dateityp %s wird nicht unterstützt."
 
 #: src/index.html
 msgid "Source code"
-msgstr "Source-Code"
+msgstr "Quellcode"
 
 #: src/partials/upload.html
 msgid "Store for:"
@@ -331,7 +340,9 @@ msgid ""
 "img.bi is <a href=\"https://github.com/imgbi\">available on GitHub</a> under "
 "GPLv3 license."
 msgstr ""
-"Wir glauben, dass nur Open-Source Verschlüsselung akzeptabel ist. Der gesamte Quellcode von img.bi ist auf <a href=\"https://github.com/imgbi\">available on GitHub</a> unter der GPLv3 Lizenz verfügbar."
+"Wir glauben, dass nur Open-Source Verschlüsselung akzeptabel ist. Der gesamte "
+"Quellcode von img.bi ist <a href=\"https://github.com/imgbi\">bei GitHub</a> u"
+"nter der GPLv3 Lizenz verfügbar."
 
 #: src/partials/upload.html
 msgid ""
@@ -344,11 +355,16 @@ msgid ""
 "wiki/Titan_traffic_database\">Titan traffic database</a> and other can store "
 "their own logs. Be careful."
 msgstr ""
-"Wir speichern keine Logs, ausgenommen den <a href=\"https://de.wikipedia.org/wiki/SHA-3\">SHA-3</a>\"-Hashwert deiner IP-Adresse mit einem zufälligem <a href=\"https://de.wikipedia.org/wiki/Salt_%28cryptography%29\">Salt</a> für einen Tag. Jedoch kann der Host-Provider des Servers seine eigenen Logs führen, auf die wir keinen Einfluss haben. Seit vorsichtig."
+"Wir speichern keine Logs, außer einem <a href=\"https://de.wikipedia.org/wiki/"
+"SHA-3\">SHA-3</a>-Hashwert deiner IP-Adresse mit einem zufälligem <a href=\"ht"
+"tps://de.wikipedia.org/wiki/Salt_%28Kryptologie%29\">Salt</a> für einen Tag. Je"
+"doch kann unser Hoster des Servers und Systeme wie <a href=\"https://de.wikiped"
+"ia.org/wiki/Sorm\">Snorm</a> seine eigenen Logs führen, auf die wir keinen Einf"
+"luss haben. Seit vorsichtig."
 
 #: src/partials/upload.html
 msgid "Why img.bi is secure and awesome?"
-msgstr "Warum ist img.bi sicher und genial?"
+msgstr "Warum ist img.bi sicher und großartig?"
 
 #: src/partials/ads.html
 msgid "Without external requests."
@@ -356,7 +372,7 @@ msgstr "Ohne externe Anfragen."
 
 #: src/partials/rm.html
 msgid "Yes, remove image"
-msgstr "Ja, lösche das Boöd"
+msgstr "Ja, lösche das Bild"
 
 #: src/partials/apps.html
 msgid "command-line, node.js"
@@ -368,7 +384,10 @@ msgid ""
 "servers, domains, certs and many other things cost some money. Even a little "
 "donation helps to run img.bi."
 msgstr ""
-"img.bi ist ein Open-Source Projekt und wird kostenlos für jeden zur Verfügung gestellt. Jedoch kosten Server, Domains, Zertifikate und viele andere Dinge Geld. Daher würde uns eine kleine Spende helfen, img.bi auch in Zukunft zu betreiben."
+"img.bi ist ein Open-Source-Projekt und wird jedem kostenlos für jeden zur Ver"
+"fügung gestellt. Jedoch kosten Server, Domains, Zertifikate und viele andere "
+"Dinge Geld. Daher würde uns sogar eine kleine Spende helfen, img.bi auch in "
+"Zukunft zu betreiben."
 
 #: src/index.html
 msgid "my images"
