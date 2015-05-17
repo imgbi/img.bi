@@ -29,7 +29,7 @@ msgstr ""
 msgid ""
 "Add-on for Firefox which let you upload images to img.bi from your browser."
 msgstr ""
-"Add-On für Firefox, welches es ermöglicht, von deinem Browser Bilder zu img.bi hochzuladen."
+"Add-On für Firefox, welches es ermöglicht, Bilder direkt von deinem Browser aus zu img.bi hochzuladen."
 
 #: src/partials/ads.html
 msgid ""
