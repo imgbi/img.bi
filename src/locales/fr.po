@@ -21,10 +21,8 @@ msgid "90 days"
 msgstr ""
 
 #: src/partials/donate.html
-msgid "<a href=\"/contacts\">Contact us</a> if you want to donate another way."
+msgid "<a href=\"#contacts\">Contact us</a> if you want to donate another way."
 msgstr ""
-"<a href=\"/contacts\">Contactez-nous (en anglais)</a> si vous voulez faire "
-"un don d\"une autre manière."
 
 #: src/partials/apps.html
 msgid ""
@@ -47,10 +45,8 @@ msgstr "Publicité"
 
 #: src/partials/donate.html
 msgid ""
-"Also, you can <a href=\"/ads\">buy ads</a> on img.bi. That will help too."
+"Also, you can <a href=\"#ads\">buy ads</a> on img.bi. That will help too."
 msgstr ""
-"Vous pouvez également <a href=\"/ads\">acheter des publicités</a> sur img."
-"bi. Cela nous aidera aussi."
 
 #: src/partials/apps.html
 msgid "Applications for use img.bi"
@@ -84,6 +80,10 @@ msgstr "Contactez-nous"
 #, fuzzy
 msgid "Contacts"
 msgstr "Contactez-nous"
+
+#: src/partials/view.html
+msgid "Copy to clipboard"
+msgstr ""
 
 #: src/index.html
 msgid "Copyleft"
@@ -136,7 +136,15 @@ msgid "Error"
 msgstr ""
 
 #: src/scripts/controllers.js
+msgid "Error during decryption"
+msgstr ""
+
+#: src/scripts/controllers.js
 msgid "Error during removing"
+msgstr ""
+
+#: src/scripts/controllers.js
+msgid "File was not found"
 msgstr ""
 
 #: src/scripts/controllers.js
@@ -240,10 +248,8 @@ msgstr ""
 "master/README.md\">README (en anglais)</a>."
 
 #: src/partials/my.html
-msgid "No images found in localStorage. Try <a href=\"/\">upload some</a>."
+msgid "No images found in localStorage. Try <a href=\"#\">upload some</a>."
 msgstr ""
-"Pas d&#39;images trouvées dans localStorage. Essayez d&#39;en <a href=\"/"
-"\">transférer quelques-unes</a>."
 
 #: src/partials/ads.html
 msgid "No pop-unders, pop-ups and other bad things."
@@ -276,6 +282,14 @@ msgstr "Libre"
 #: src/partials/upload.html
 msgid "Privacy"
 msgstr "Vie privée"
+
+#: src/scripts/controllers.js
+msgid "Probably it was already removed."
+msgstr ""
+
+#: src/scripts/controllers.js
+msgid "Probably password is wrong."
+msgstr ""
 
 #: src/partials/my.html
 msgid "Remove"
@@ -316,6 +330,10 @@ msgstr ""
 #: src/index.html
 msgid "Tor hidden service"
 msgstr "Service Tor caché"
+
+#: src/index.html
+msgid "Transparency"
+msgstr ""
 
 #: src/partials/upload.html
 msgid "Upload"
@@ -358,20 +376,28 @@ msgid ""
 "SHA-3\">SHA-3</a> hash of uploader's IP address with random <a href="
 "\"https://en.wikipedia.org/wiki/Salt_%28cryptography%29\">salt</a> for a "
 "day. But our hosting provider and systems like <a href=\"https://en."
-"wikipedia.org/wiki/SORM\">SORM</a>, <a href=\"https://en.wikipedia.org/wiki/"
-"Hepting_v._AT%26T\">NarusInsight</a>, <a href=\"https://en.wikipedia.org/"
-"wiki/Titan_traffic_database\">Titan traffic database</a> and other can store "
-"their own logs. Be careful."
+"wikipedia.org/wiki/Tempora\">Tempora</a>, <a href=\"https://en.wikipedia.org/"
+"wiki/SORM\">SORM</a>, <a href=\"https://en.wikipedia.org/wiki/Hepting_v._AT"
+"%26T\">NarusInsight</a>, <a href=\"https://en.wikipedia.org/wiki/"
+"Titan_traffic_database\">Titan traffic database</a>, <a href=\"https://en."
+"wikipedia.org/wiki/Golden_Shield_Project\">Golden Shield Project</a>, <a "
+"href=\"https://en.wikipedia.org/wiki/Mass_surveillance_in_India\">Lawful "
+"Intercept And Monitoring Project</a>, and others can store their own logs. "
+"Be careful."
 msgstr ""
 "Nous ne stockons pas d'historique, sauf un hachage <a href=\"https://fr."
 "wikipedia.org/wiki/SHA-3\">SHA-3</a> de l&#39;adresse IP de la personne "
 "ayant mis en ligne une image avec un <a href=\"https://fr.wikipedia.org/wiki/"
 "Salage_%28cryptographie%29\">salage</a> aléatoire pour une journée. Mais "
 "notre hébergeur et des systèmes comme <a href=\"https://fr.wikipedia.org/"
-"wiki/SORM\">SORM</a>, <a href=\"https://en.wikipedia.org/wiki/Hepting_v._AT"
-"%26T\">NarusInsight</a>, <a href=\"https://en.wikipedia.org/wiki/"
-"Titan_traffic_database\">Titan traffic database</a> et d&#39;autres peuvent "
-"stocker leurs propres historiques. Faites attention."
+"wiki/Tempora\">Tempora</a>, <a href=\"https://fr.wikipedia.org/wiki/SORM"
+"\">SORM</a>, <a href=\"https://en.wikipedia.org/wiki/Hepting_v._AT%26T"
+"\">NarusInsight</a>, <a href=\"https://en.wikipedia.org/wiki/"
+"Titan_traffic_database\">Titan traffic database</a>, <a href=\"https://fr."
+"wikipedia.org/wiki/Grand_Firewall_de_Chine\">Projet bouclier doré</a>, <a "
+"href=\"https://en.wikipedia.org/wiki/Mass_surveillance_in_India\">Lawful "
+"Intercept And Monitoring Project</a> et d&#39;autres peuvent stocker leurs "
+"propres historiques. Faites attention."
 
 #: src/partials/upload.html
 msgid "Why img.bi is secure and awesome?"
@@ -406,3 +432,40 @@ msgstr "mes images"
 #: src/index.html
 msgid "really secure image hosting"
 msgstr "hébergement d&#39;images vraiment sécurisé"
+
+#~ msgid ""
+#~ "<a href=\"/contacts\">Contact us</a> if you want to donate another way."
+#~ msgstr ""
+#~ "<a href=\"/contacts\">Contactez-nous (en anglais)</a> si vous voulez "
+#~ "faire un don d\"une autre manière."
+
+#~ msgid ""
+#~ "Also, you can <a href=\"/ads\">buy ads</a> on img.bi. That will help too."
+#~ msgstr ""
+#~ "Vous pouvez également <a href=\"/ads\">acheter des publicités</a> sur img."
+#~ "bi. Cela nous aidera aussi."
+
+#~ msgid "No images found in localStorage. Try <a href=\"/\">upload some</a>."
+#~ msgstr ""
+#~ "Pas d&#39;images trouvées dans localStorage. Essayez d&#39;en <a href=\"/"
+#~ "\">transférer quelques-unes</a>."
+
+#~ msgid ""
+#~ "We do not store any logs, except <a href=\"https://en.wikipedia.org/wiki/"
+#~ "SHA-3\">SHA-3</a> hash of uploader's IP address with random <a href="
+#~ "\"https://en.wikipedia.org/wiki/Salt_%28cryptography%29\">salt</a> for a "
+#~ "day. But our hosting provider and systems like <a href=\"https://en."
+#~ "wikipedia.org/wiki/SORM\">SORM</a>, <a href=\"https://en.wikipedia.org/"
+#~ "wiki/Hepting_v._AT%26T\">NarusInsight</a>, <a href=\"https://en.wikipedia."
+#~ "org/wiki/Titan_traffic_database\">Titan traffic database</a> and other "
+#~ "can store their own logs. Be careful."
+#~ msgstr ""
+#~ "Nous ne stockons pas d'historique, sauf un hachage <a href=\"https://fr."
+#~ "wikipedia.org/wiki/SHA-3\">SHA-3</a> de l&#39;adresse IP de la personne "
+#~ "ayant mis en ligne une image avec un <a href=\"https://fr.wikipedia.org/"
+#~ "wiki/Salage_%28cryptographie%29\">salage</a> aléatoire pour une journée. "
+#~ "Mais notre hébergeur et des systèmes comme <a href=\"https://fr.wikipedia."
+#~ "org/wiki/SORM\">SORM</a>, <a href=\"https://en.wikipedia.org/wiki/"
+#~ "Hepting_v._AT%26T\">NarusInsight</a>, <a href=\"https://en.wikipedia.org/"
+#~ "wiki/Titan_traffic_database\">Titan traffic database</a> et d&#39;autres "
+#~ "peuvent stocker leurs propres historiques. Faites attention."

@@ -11,7 +11,6 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
 
 #: src/partials/upload.html
 msgid "180 days"
@@ -22,10 +21,8 @@ msgid "90 days"
 msgstr "90 dagen"
 
 #: src/partials/donate.html
-msgid "<a href=\"/contacts\">Contact us</a> if you want to donate another way."
+msgid "<a href=\"#contacts\">Contact us</a> if you want to donate another way."
 msgstr ""
-"<a href=\"/contacts\">Contacteer ons</a> als je wil doneren op een andere "
-"manier."
 
 #: src/partials/apps.html
 msgid ""
@@ -48,9 +45,8 @@ msgstr "Advertenties"
 
 #: src/partials/donate.html
 msgid ""
-"Also, you can <a href=\"/ads\">buy ads</a> on img.bi. That will help too."
+"Also, you can <a href=\"#ads\">buy ads</a> on img.bi. That will help too."
 msgstr ""
-"Je kan ook <a href=\"/ads\">advertenties kopen</a> op img.bi. Dat helpt ook!"
 
 #: src/partials/apps.html
 msgid "Applications for use img.bi"
@@ -83,6 +79,10 @@ msgstr "Contacteer ons"
 #: src/index.html src/partials/contacts.html
 msgid "Contacts"
 msgstr "Contacten"
+
+#: src/partials/view.html
+msgid "Copy to clipboard"
+msgstr ""
 
 #: src/index.html
 msgid "Copyleft"
@@ -134,8 +134,16 @@ msgid "Error"
 msgstr "Fout"
 
 #: src/scripts/controllers.js
+msgid "Error during decryption"
+msgstr ""
+
+#: src/scripts/controllers.js
 msgid "Error during removing"
 msgstr "Fout bij verwijderen"
+
+#: src/scripts/controllers.js
+msgid "File was not found"
+msgstr ""
 
 #: src/scripts/controllers.js
 msgid "File was successfuly removed."
@@ -178,10 +186,10 @@ msgstr ""
 "Afbeeldingen worden versleuteld door middel van <a href=\"https://nl."
 "wikipedia.org/wiki/Advanced_Encryption_Standard\">AES-256</a> met een "
 "willekeurige sleutel in je browser voor het uploaden. Niemand kan je "
-"afbeelding zien, zelfs niet mensen die directe toegang hebben tot de servers. Ook "
-"gebruiken we <a href=\"https://nl.wikipedia.org/wiki/Transport_Layer_Security"
-"\">TLS</a> dat beschermt tegen <a href=\"https://nl.wikipedia.org/wiki/Man-"
-"in-the-middle\">Man-in-the-Middle aanvallen</a>."
+"afbeelding zien, zelfs niet mensen die directe toegang hebben tot de "
+"servers. Ook gebruiken we <a href=\"https://nl.wikipedia.org/wiki/"
+"Transport_Layer_Security\">TLS</a> dat beschermt tegen <a href=\"https://nl."
+"wikipedia.org/wiki/Man-in-the-middle\">Man-in-the-Middle aanvallen</a>."
 
 #: src/index.html
 msgid "In the internet"
@@ -236,10 +244,8 @@ msgstr ""
 "master/README.md\">README</a>."
 
 #: src/partials/my.html
-msgid "No images found in localStorage. Try <a href=\"/\">upload some</a>."
+msgid "No images found in localStorage. Try <a href=\"#\">upload some</a>."
 msgstr ""
-"Geen afbeeldingen gevonden in localStorage. Probeer er <a href=\"/\">wat te "
-"uploaden</a>."
 
 #: src/partials/ads.html
 msgid "No pop-unders, pop-ups and other bad things."
@@ -272,6 +278,14 @@ msgstr "Open-source"
 #: src/partials/upload.html
 msgid "Privacy"
 msgstr "Privacy"
+
+#: src/scripts/controllers.js
+msgid "Probably it was already removed."
+msgstr ""
+
+#: src/scripts/controllers.js
+msgid "Probably password is wrong."
+msgstr ""
 
 #: src/partials/my.html
 msgid "Remove"
@@ -312,6 +326,10 @@ msgstr "Drie dagen"
 #: src/index.html
 msgid "Tor hidden service"
 msgstr "Tor verborgen dienst"
+
+#: src/index.html
+msgid "Transparency"
+msgstr ""
 
 #: src/partials/upload.html
 msgid "Upload"
@@ -354,20 +372,27 @@ msgid ""
 "SHA-3\">SHA-3</a> hash of uploader's IP address with random <a href="
 "\"https://en.wikipedia.org/wiki/Salt_%28cryptography%29\">salt</a> for a "
 "day. But our hosting provider and systems like <a href=\"https://en."
-"wikipedia.org/wiki/SORM\">SORM</a>, <a href=\"https://en.wikipedia.org/wiki/"
-"Hepting_v._AT%26T\">NarusInsight</a>, <a href=\"https://en.wikipedia.org/"
-"wiki/Titan_traffic_database\">Titan traffic database</a> and other can store "
-"their own logs. Be careful."
+"wikipedia.org/wiki/Tempora\">Tempora</a>, <a href=\"https://en.wikipedia.org/"
+"wiki/SORM\">SORM</a>, <a href=\"https://en.wikipedia.org/wiki/Hepting_v._AT"
+"%26T\">NarusInsight</a>, <a href=\"https://en.wikipedia.org/wiki/"
+"Titan_traffic_database\">Titan traffic database</a>, <a href=\"https://en."
+"wikipedia.org/wiki/Golden_Shield_Project\">Golden Shield Project</a>, <a "
+"href=\"https://en.wikipedia.org/wiki/Mass_surveillance_in_India\">Lawful "
+"Intercept And Monitoring Project</a>, and others can store their own logs. "
+"Be careful."
 msgstr ""
 "We slaan onder geen enkele vorm logs op, behalve de <a href=\"https://nl."
 "wikipedia.org/wiki/SHA-3\">SHA-3</a>-hash van het IP-adres van de uploader, "
 "met een willekeurige <a href=\"https://nl.wikipedia.org/wiki/Salt_"
 "%28cryptografie%29\">salt</a>, voor één dag. Onze hostingprovider en "
-"systemen als <a href=\"https://en.wikipedia.org/wiki/SORM\">SORM</a>, <a "
-"href=\"https://en.wikipedia.org/wiki/Hepting_v._AT%26T\">NarusInsight</a>, "
-"<a href=\"https://en.wikipedia.org/wiki/Titan_traffic_database\">Titan "
-"traffic database</a> en anderen kunnen echter wel logs opslaan. Wees "
-"voorzichtig."
+"systemen als <a href=\"https://en.wikipedia.org/wiki/Tempora\">Tempora</a>, "
+"<a href=\"https://en.wikipedia.org/wiki/SORM\">SORM</a>, <a href=\"https://"
+"en.wikipedia.org/wiki/Hepting_v._AT%26T\">NarusInsight</a>, <a href="
+"\"https://en.wikipedia.org/wiki/Titan_traffic_database\">Titan traffic "
+"database</a>, <a href=\"https://en.wikipedia.org/wiki/Golden_Shield_Project"
+"\">Golden Shield Project</a>, <a href=\"https://en.wikipedia.org/wiki/"
+"Mass_surveillance_in_India\">Lawful Intercept And Monitoring Project</a> en "
+"anderen kunnen echter wel logs opslaan. Wees voorzichtig."
 
 #: src/partials/upload.html
 msgid "Why img.bi is secure and awesome?"
@@ -402,3 +427,40 @@ msgstr "mijn afbeeldingen"
 #: src/index.html
 msgid "really secure image hosting"
 msgstr "echt veilig afbeeldingen hosten"
+
+#~ msgid ""
+#~ "<a href=\"/contacts\">Contact us</a> if you want to donate another way."
+#~ msgstr ""
+#~ "<a href=\"/contacts\">Contacteer ons</a> als je wil doneren op een andere "
+#~ "manier."
+
+#~ msgid ""
+#~ "Also, you can <a href=\"/ads\">buy ads</a> on img.bi. That will help too."
+#~ msgstr ""
+#~ "Je kan ook <a href=\"/ads\">advertenties kopen</a> op img.bi. Dat helpt "
+#~ "ook!"
+
+#~ msgid "No images found in localStorage. Try <a href=\"/\">upload some</a>."
+#~ msgstr ""
+#~ "Geen afbeeldingen gevonden in localStorage. Probeer er <a href=\"/\">wat "
+#~ "te uploaden</a>."
+
+#~ msgid ""
+#~ "We do not store any logs, except <a href=\"https://en.wikipedia.org/wiki/"
+#~ "SHA-3\">SHA-3</a> hash of uploader's IP address with random <a href="
+#~ "\"https://en.wikipedia.org/wiki/Salt_%28cryptography%29\">salt</a> for a "
+#~ "day. But our hosting provider and systems like <a href=\"https://en."
+#~ "wikipedia.org/wiki/SORM\">SORM</a>, <a href=\"https://en.wikipedia.org/"
+#~ "wiki/Hepting_v._AT%26T\">NarusInsight</a>, <a href=\"https://en.wikipedia."
+#~ "org/wiki/Titan_traffic_database\">Titan traffic database</a> and other "
+#~ "can store their own logs. Be careful."
+#~ msgstr ""
+#~ "We slaan onder geen enkele vorm logs op, behalve de <a href=\"https://nl."
+#~ "wikipedia.org/wiki/SHA-3\">SHA-3</a>-hash van het IP-adres van de "
+#~ "uploader, met een willekeurige <a href=\"https://nl.wikipedia.org/wiki/"
+#~ "Salt_%28cryptografie%29\">salt</a>, voor één dag. Onze hostingprovider en "
+#~ "systemen als <a href=\"https://en.wikipedia.org/wiki/SORM\">SORM</a>, <a "
+#~ "href=\"https://en.wikipedia.org/wiki/Hepting_v._AT%26T\">NarusInsight</"
+#~ "a>, <a href=\"https://en.wikipedia.org/wiki/Titan_traffic_database"
+#~ "\">Titan traffic database</a> en anderen kunnen echter wel logs opslaan. "
+#~ "Wees voorzichtig."
