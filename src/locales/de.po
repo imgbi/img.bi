@@ -266,7 +266,7 @@ msgstr "Open Source"
 
 #: src/partials/upload.html
 msgid "Privacy"
-msgstr "Privatleben"
+msgstr "Privatsphäre"
 
 #: src/partials/my.html
 msgid "Remove"
