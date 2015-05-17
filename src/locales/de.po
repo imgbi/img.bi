@@ -23,6 +23,7 @@ msgstr "90 Tage"
 #: src/partials/donate.html
 msgid "<a href=\"#contacts\">Contact us</a> if you want to donate another way."
 msgstr ""
+"<a href=\"#contacts\">Kontaktiere uns</a>, wenn du auf anderem Wege eine Spende einreichen möchtest."
 
 #: src/partials/apps.html
 msgid ""
@@ -47,6 +48,7 @@ msgstr "Werbung"
 msgid ""
 "Also, you can <a href=\"#ads\">buy ads</a> on img.bi. That will help too."
 msgstr ""
+"Du kannst auch <a href=\"/ads\">einen Werbeplatz auf img.bi kaufen</a>. Das würde uns auch sehr helfen!"
 
 #: src/partials/apps.html
 msgid "Applications for use img.bi"
@@ -82,7 +84,7 @@ msgstr "Kontakte"
 
 #: src/partials/view.html
 msgid "Copy to clipboard"
-msgstr ""
+msgstr "In die Zwischenablage kopieren"
 
 #: src/index.html
 msgid "Copyleft"
@@ -135,15 +137,15 @@ msgstr "Fehler"
 
 #: src/scripts/controllers.js
 msgid "Error during decryption"
-msgstr ""
+msgstr "Fehler beim Entschlüsseln"
 
 #: src/scripts/controllers.js
 msgid "Error during removing"
-msgstr "Fehler während des Löschens"
+msgstr "Fehler beim Löschen"
 
 #: src/scripts/controllers.js
 msgid "File was not found"
-msgstr ""
+msgstr "Die Datei wurde nicht gefunden"
 
 #: src/scripts/controllers.js
 msgid "File was successfuly removed."
@@ -207,7 +209,7 @@ msgid ""
 "Also can be used in Node.js applications."
 msgstr ""
 "Ein einfacher Command-Line Client zum Hochladen/Herunterladen/Löschen von "
-"Bildern.Er kann ebenso in Node.js Anwendungen genutzt werden."
+"Bildern. Er kann ebenso in Node.js Anwendungen genutzt werden."
 
 #: src/partials/apps.html
 msgid "License"
@@ -247,7 +249,7 @@ msgstr ""
 
 #: src/partials/my.html
 msgid "No images found in localStorage. Try <a href=\"#\">upload some</a>."
-msgstr ""
+"Es wurden keine Bilder gefunden. <a href=\"/\">Lade Bilder hoch</a>."
 
 #: src/partials/ads.html
 msgid "No pop-unders, pop-ups and other bad things."
@@ -255,7 +257,7 @@ msgstr "Keine Pop-Unders, Pop-Ups und andere böse Sachen."
 
 #: src/partials/ads.html
 msgid "Nothing illegal in NL on banner."
-msgstr ""
+msgstr "Nichts was in den Niederlanden illegal ist auf Bannern."
 
 #: src/partials/ads.html
 msgid "Nothing that can violate privacy of img.bi users."
@@ -283,11 +285,11 @@ msgstr "Privatsphäre"
 
 #: src/scripts/controllers.js
 msgid "Probably it was already removed."
-msgstr ""
+msgstr "Möglicherweise wurde es bereits entfernt."
 
 #: src/scripts/controllers.js
 msgid "Probably password is wrong."
-msgstr ""
+msgstr "Möglicherweise ist das Passwort falsch."
 
 #: src/partials/my.html
 msgid "Remove"
@@ -331,7 +333,7 @@ msgstr ""
 
 #: src/index.html
 msgid "Transparency"
-msgstr ""
+msgstr "Transparenz"
 
 #: src/partials/upload.html
 msgid "Upload"
@@ -393,8 +395,8 @@ msgstr ""
 "wiki/Titan_traffic_database\">Titan traffic database</a>, <a href=\"https://"
 "de.wikipedia.org/wiki/Projekt_Goldener_Schild\">Projekt Goldener Schild</a>, "
 "<a href=\"https://en.wikipedia.org/wiki/Mass_surveillance_in_India\">Lawful "
-"Intercept And Monitoring Project</a>  seine eigenen Logs führen, auf die wir "
-"keinen Einfluss haben. Seit vorsichtig."
+"Intercept And Monitoring Project</a> und andere seine eigenen Logs führen, auf die wir "
+"keinen Einfluss haben. Sei vorsichtig."
 
 #: src/partials/upload.html
 msgid "Why img.bi is secure and awesome?"
