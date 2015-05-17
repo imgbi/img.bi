@@ -48,7 +48,7 @@ msgstr "Werbung"
 msgid ""
 "Also, you can <a href=\"#ads\">buy ads</a> on img.bi. That will help too."
 msgstr ""
-"Du kannst auch <a href=\"/ads\">einen Werbeplatz auf img.bi kaufen</a>. Das würde uns auch sehr helfen!"
+"Du kannst auch <a href=\"#ads\">einen Werbeplatz auf img.bi kaufen</a>. Das würde uns auch sehr helfen!"
 
 #: src/partials/apps.html
 msgid "Applications for use img.bi"
