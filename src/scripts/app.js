@@ -20,7 +20,7 @@ imgbi.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
     .when('/my', {templateUrl: 'partials/my.html', controller: 'myfiles'})
     .when('/contacts', {templateUrl: 'partials/contacts.html'})
     .when('/apps', {templateUrl: 'partials/apps.html'})
-    .when('/ads', {templateUrl: 'partials/ads.html'})
+    .when('/ads', {templateUrl: 'partials/kokoku.html'})
     .when('/donate', {templateUrl: 'partials/donate.html'})
     .when('/js', {templateUrl: 'partials/js.html'})
     .when('/uploaded', {templateUrl: 'partials/view.html', controller: 'uploaded'})
