@@ -5,12 +5,13 @@ msgstr ""
 "Report-Msgid-Bugs-To: mail@img.bi\n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
-"Last-Translator: Nathan Follens <nathan@unseen.is>\n"
+"Last-Translator: Nathan Follens <nthn@unseen.is>\n"
 "Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
 
 #: src/partials/upload.html
 msgid "180 days"
@@ -23,6 +24,8 @@ msgstr "90 dagen"
 #: src/partials/donate.html
 msgid "<a href=\"#contacts\">Contact us</a> if you want to donate another way."
 msgstr ""
+"<a href=\"#contacts\">Contacteer ons</a> als je op een andere manier wil "
+"doneren."
 
 #: src/partials/apps.html
 msgid ""
@@ -47,6 +50,8 @@ msgstr "Advertenties"
 msgid ""
 "Also, you can <a href=\"#ads\">buy ads</a> on img.bi. That will help too."
 msgstr ""
+"Je kan ook <a href=\"#ads\">advertenties kopen</a> op img.bi. Dat zal ook "
+"helpen."
 
 #: src/partials/apps.html
 msgid "Applications for use img.bi"
@@ -82,7 +87,7 @@ msgstr "Contacten"
 
 #: src/partials/view.html
 msgid "Copy to clipboard"
-msgstr ""
+msgstr "Kopiëren naar klembord"
 
 #: src/index.html
 msgid "Copyleft"
@@ -135,7 +140,7 @@ msgstr "Fout"
 
 #: src/scripts/controllers.js
 msgid "Error during decryption"
-msgstr ""
+msgstr "Fout bij ontsleuteling"
 
 #: src/scripts/controllers.js
 msgid "Error during removing"
@@ -143,7 +148,7 @@ msgstr "Fout bij verwijderen"
 
 #: src/scripts/controllers.js
 msgid "File was not found"
-msgstr ""
+msgstr "Bestand niet gevonden"
 
 #: src/scripts/controllers.js
 msgid "File was successfuly removed."
@@ -246,6 +251,8 @@ msgstr ""
 #: src/partials/my.html
 msgid "No images found in localStorage. Try <a href=\"#\">upload some</a>."
 msgstr ""
+"Geen afbeeldingen gevonden in localStorage. Probeer <a href=\"#\">er te "
+"uploaden</a>."
 
 #: src/partials/ads.html
 msgid "No pop-unders, pop-ups and other bad things."
@@ -281,11 +288,11 @@ msgstr "Privacy"
 
 #: src/scripts/controllers.js
 msgid "Probably it was already removed."
-msgstr ""
+msgstr "Het is waarschijnlijk al verwijderd."
 
 #: src/scripts/controllers.js
 msgid "Probably password is wrong."
-msgstr ""
+msgstr "Het wachtwoord is waarschijnlijk verkeerd."
 
 #: src/partials/my.html
 msgid "Remove"
@@ -329,7 +336,7 @@ msgstr "Tor verborgen dienst"
 
 #: src/index.html
 msgid "Transparency"
-msgstr ""
+msgstr "Openheid"
 
 #: src/partials/upload.html
 msgid "Upload"
