@@ -249,7 +249,7 @@ msgstr ""
 
 #: src/partials/my.html
 msgid "No images found in your browser's storage. Try <a href=\"#\">upload some</a>."
-msgstr "Es wurden keine Bilder gefunden. <a href=\"/\">Lade Bilder hoch</a>."
+msgstr "Es wurden keine Bilder gefunden. <a href=\"#\">Lade Bilder hoch</a>."
 
 #: src/partials/ads.html
 msgid "No pop-unders, pop-ups and other bad things."
