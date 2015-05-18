@@ -252,9 +252,9 @@ msgstr ""
 "master/README.md\">README</a>."
 
 #: src/partials/my.html
-msgid "No images found in localStorage. Try <a href=\"#\">upload some</a>."
+msgid "No images found in your browser's storage. Try <a href=\"#\">upload some</a>."
 msgstr ""
-"Изображения не найдены в localStorage. Попробуйте <a href=\"#\">загрузить "
+"Изображения не найдены в хранилище вашего браузера. Попробуйте <a href=\"#\">загрузить "
 "несколько</a>."
 
 #: src/partials/ads.html
@@ -262,7 +262,7 @@ msgid "No pop-unders, pop-ups and other bad things."
 msgstr "Никаких pop-under, pop-up подобных плохих вещей."
 
 #: src/partials/ads.html
-msgid "Nothing illegal in NL on banner."
+msgid "Nothing which is illegal in Netherlands on banner."
 msgstr "На баннере не может быть ничего, что запрещено в Нидерландах."
 
 #: src/partials/ads.html
@@ -437,40 +437,3 @@ msgstr "мои изображения"
 #: src/index.html
 msgid "really secure image hosting"
 msgstr "действительно безопасный хостинг изображений"
-
-#~ msgid ""
-#~ "<a href=\"/contacts\">Contact us</a> if you want to donate another way."
-#~ msgstr ""
-#~ "<a href=\"/contacts\">Свяжитесь с нами</a> если вы хотите пожертвовать "
-#~ "другим способом."
-
-#~ msgid ""
-#~ "Also, you can <a href=\"/ads\">buy ads</a> on img.bi. That will help too."
-#~ msgstr ""
-#~ "Также вы можете <a href=\"/ads\">купить рекламу</a> на img.bi. Это тоже "
-#~ "поможет нам."
-
-#~ msgid "No images found in localStorage. Try <a href=\"/\">upload some</a>."
-#~ msgstr ""
-#~ "Изображения не найдены в localStorage. Попробуйте <a href=\"/\">загрузить "
-#~ "несколько</a>."
-
-#~ msgid ""
-#~ "We do not store any logs, except <a href=\"https://en.wikipedia.org/wiki/"
-#~ "SHA-3\">SHA-3</a> hash of uploader's IP address with random <a href="
-#~ "\"https://en.wikipedia.org/wiki/Salt_%28cryptography%29\">salt</a> for a "
-#~ "day. But our hosting provider and systems like <a href=\"https://en."
-#~ "wikipedia.org/wiki/SORM\">SORM</a>, <a href=\"https://en.wikipedia.org/"
-#~ "wiki/Hepting_v._AT%26T\">NarusInsight</a>, <a href=\"https://en.wikipedia."
-#~ "org/wiki/Titan_traffic_database\">Titan traffic database</a> and other "
-#~ "can store their own logs. Be careful."
-#~ msgstr ""
-#~ "Мы не храним никаких логов, кроме <a href=\"https://ru.wikipedia.org/wiki/"
-#~ "Keccak\">SHA-3</a> хеша от IP адреса загружающего с <a href=\"https://ru."
-#~ "wikipedia.org/wiki/%D0%A1%D0%BE%D0%BB%D1%8C_%28%D0%BA%D1%80%D0%B8%D0%BF"
-#~ "%D1%82%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%8F%29\">солью</a> в течении "
-#~ "суток. Но наш хостинг провайдер и такие системы, как <a href=\"https://ru."
-#~ "wikipedia.org/wiki/%D0%A1%D0%9E%D0%A0%D0%9C\">СОРМ</a>, <a href=\"https://"
-#~ "ru.wikipedia.org/wiki/NarusInsight\">NarusInsight</a>, <a href=\"https://"
-#~ "en.wikipedia.org/wiki/Titan_traffic_database\">Titan traffic database</a> "
-#~ "и другие могут хранить свои логи. Будьте осторожны."

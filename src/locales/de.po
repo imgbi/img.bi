@@ -248,15 +248,15 @@ msgstr ""
 "client/blob/master/README.md\">README</a> zu finden."
 
 #: src/partials/my.html
-msgid "No images found in localStorage. Try <a href=\"#\">upload some</a>."
-"Es wurden keine Bilder gefunden. <a href=\"/\">Lade Bilder hoch</a>."
+msgid "No images found in your browser's storage. Try <a href=\"#\">upload some</a>."
+msgstr "Es wurden keine Bilder gefunden. <a href=\"/\">Lade Bilder hoch</a>."
 
 #: src/partials/ads.html
 msgid "No pop-unders, pop-ups and other bad things."
 msgstr "Keine Pop-Unders, Pop-Ups und andere böse Sachen."
 
 #: src/partials/ads.html
-msgid "Nothing illegal in NL on banner."
+msgid "Nothing which is illegal in Netherlands on banner."
 msgstr "Nichts was in den Niederlanden illegal ist auf Bannern."
 
 #: src/partials/ads.html
@@ -432,39 +432,3 @@ msgstr "Meine Bilder"
 #: src/index.html
 msgid "really secure image hosting"
 msgstr "Wirklich sicheres Bild-Hosting"
-
-#~ msgid ""
-#~ "<a href=\"/contacts\">Contact us</a> if you want to donate another way."
-#~ msgstr ""
-#~ "<a href=\"/contacts\">Kontaktiere uns</a>, wenn du auf anderem Wege eine "
-#~ "Spende einreichen möchtest."
-
-#~ msgid ""
-#~ "Also, you can <a href=\"/ads\">buy ads</a> on img.bi. That will help too."
-#~ msgstr ""
-#~ "Du kannst auch <a href=\"/ads\">Werbung von img.bi kaufen</a>. Das würde "
-#~ "auch helfen!"
-
-#~ msgid "No images found in localStorage. Try <a href=\"/\">upload some</a>."
-#~ msgstr ""
-#~ "Es wurden keine Bilder gefunden. <a href=\"/\">Lade Bilder hoch</a>."
-
-#~ msgid "Nothing illegal in DE on banner."
-#~ msgstr "Nichts illegales in DE auf Bannern."
-
-#~ msgid ""
-#~ "We do not store any logs, except <a href=\"https://en.wikipedia.org/wiki/"
-#~ "SHA-3\">SHA-3</a> hash of uploader's IP address with random <a href="
-#~ "\"https://en.wikipedia.org/wiki/Salt_%28cryptography%29\">salt</a> for a "
-#~ "day. But our hosting provider and systems like <a href=\"https://en."
-#~ "wikipedia.org/wiki/SORM\">SORM</a>, <a href=\"https://en.wikipedia.org/"
-#~ "wiki/Hepting_v._AT%26T\">NarusInsight</a>, <a href=\"https://en.wikipedia."
-#~ "org/wiki/Titan_traffic_database\">Titan traffic database</a> and other "
-#~ "can store their own logs. Be careful."
-#~ msgstr ""
-#~ "Wir speichern keine Logs, außer einem <a href=\"https://de.wikipedia.org/"
-#~ "wiki/SHA-3\">SHA-3</a>-Hashwert deiner IP-Adresse mit einem zufälligem <a "
-#~ "href=\"https://de.wikipedia.org/wiki/Salt_%28Kryptologie%29\">Salt</a> "
-#~ "für einen Tag. Jedoch kann unser Hoster des Servers und Systeme wie <a "
-#~ "href=\"https://de.wikipedia.org/wiki/Sorm\">Snorm</a> seine eigenen Logs "
-#~ "führen, auf die wir keinen Einfluss haben. Seit vorsichtig."

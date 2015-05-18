@@ -23,6 +23,8 @@ msgstr ""
 #: src/partials/donate.html
 msgid "<a href=\"#contacts\">Contact us</a> if you want to donate another way."
 msgstr ""
+"<a href=\"#contacts\">Contactez-nous (en anglais)</a> si vous voulez "
+"faire un don d\"une autre manière."
 
 #: src/partials/apps.html
 msgid ""
@@ -47,6 +49,8 @@ msgstr "Publicité"
 msgid ""
 "Also, you can <a href=\"#ads\">buy ads</a> on img.bi. That will help too."
 msgstr ""
+"Vous pouvez également <a href=\"#ads\">acheter des publicités</a> sur img."
+"bi. Cela nous aidera aussi."
 
 #: src/partials/apps.html
 msgid "Applications for use img.bi"
@@ -248,15 +252,17 @@ msgstr ""
 "master/README.md\">README (en anglais)</a>."
 
 #: src/partials/my.html
-msgid "No images found in localStorage. Try <a href=\"#\">upload some</a>."
+msgid "No images found in your browser's storage. Try <a href=\"#\">upload some</a>."
 msgstr ""
+"Pas d&#39;images trouvées dans localStorage. Essayez d&#39;en <a href=\"#"
+"\">transférer quelques-unes</a>."
 
 #: src/partials/ads.html
 msgid "No pop-unders, pop-ups and other bad things."
 msgstr "Pas de pop-under, pop-ups ou autres dispositifs similaires."
 
 #: src/partials/ads.html
-msgid "Nothing illegal in NL on banner."
+msgid "Nothing which is illegal in Netherlands on banner."
 msgstr "Rien d\"illégal dans les Pays-Bas sur la bannière."
 
 #: src/partials/ads.html
@@ -432,40 +438,3 @@ msgstr "mes images"
 #: src/index.html
 msgid "really secure image hosting"
 msgstr "hébergement d&#39;images vraiment sécurisé"
-
-#~ msgid ""
-#~ "<a href=\"/contacts\">Contact us</a> if you want to donate another way."
-#~ msgstr ""
-#~ "<a href=\"/contacts\">Contactez-nous (en anglais)</a> si vous voulez "
-#~ "faire un don d\"une autre manière."
-
-#~ msgid ""
-#~ "Also, you can <a href=\"/ads\">buy ads</a> on img.bi. That will help too."
-#~ msgstr ""
-#~ "Vous pouvez également <a href=\"/ads\">acheter des publicités</a> sur img."
-#~ "bi. Cela nous aidera aussi."
-
-#~ msgid "No images found in localStorage. Try <a href=\"/\">upload some</a>."
-#~ msgstr ""
-#~ "Pas d&#39;images trouvées dans localStorage. Essayez d&#39;en <a href=\"/"
-#~ "\">transférer quelques-unes</a>."
-
-#~ msgid ""
-#~ "We do not store any logs, except <a href=\"https://en.wikipedia.org/wiki/"
-#~ "SHA-3\">SHA-3</a> hash of uploader's IP address with random <a href="
-#~ "\"https://en.wikipedia.org/wiki/Salt_%28cryptography%29\">salt</a> for a "
-#~ "day. But our hosting provider and systems like <a href=\"https://en."
-#~ "wikipedia.org/wiki/SORM\">SORM</a>, <a href=\"https://en.wikipedia.org/"
-#~ "wiki/Hepting_v._AT%26T\">NarusInsight</a>, <a href=\"https://en.wikipedia."
-#~ "org/wiki/Titan_traffic_database\">Titan traffic database</a> and other "
-#~ "can store their own logs. Be careful."
-#~ msgstr ""
-#~ "Nous ne stockons pas d'historique, sauf un hachage <a href=\"https://fr."
-#~ "wikipedia.org/wiki/SHA-3\">SHA-3</a> de l&#39;adresse IP de la personne "
-#~ "ayant mis en ligne une image avec un <a href=\"https://fr.wikipedia.org/"
-#~ "wiki/Salage_%28cryptographie%29\">salage</a> aléatoire pour une journée. "
-#~ "Mais notre hébergeur et des systèmes comme <a href=\"https://fr.wikipedia."
-#~ "org/wiki/SORM\">SORM</a>, <a href=\"https://en.wikipedia.org/wiki/"
-#~ "Hepting_v._AT%26T\">NarusInsight</a>, <a href=\"https://en.wikipedia.org/"
-#~ "wiki/Titan_traffic_database\">Titan traffic database</a> et d&#39;autres "
-#~ "peuvent stocker leurs propres historiques. Faites attention."

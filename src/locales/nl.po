@@ -249,7 +249,7 @@ msgstr ""
 "master/README.md\">README</a>."
 
 #: src/partials/my.html
-msgid "No images found in localStorage. Try <a href=\"#\">upload some</a>."
+msgid "No images found in your browser's storage. Try <a href=\"#\">upload some</a>."
 msgstr ""
 "Geen afbeeldingen gevonden in localStorage. Probeer <a href=\"#\">er te "
 "uploaden</a>."
@@ -259,7 +259,7 @@ msgid "No pop-unders, pop-ups and other bad things."
 msgstr "Geen pop-unders, pop-ups en andere slechte dingen."
 
 #: src/partials/ads.html
-msgid "Nothing illegal in NL on banner."
+msgid "Nothing which is illegal in Netherlands on banner."
 msgstr "Niets illegaals in NL op banner."
 
 #: src/partials/ads.html
@@ -434,40 +434,3 @@ msgstr "mijn afbeeldingen"
 #: src/index.html
 msgid "really secure image hosting"
 msgstr "echt veilig afbeeldingen hosten"
-
-#~ msgid ""
-#~ "<a href=\"/contacts\">Contact us</a> if you want to donate another way."
-#~ msgstr ""
-#~ "<a href=\"/contacts\">Contacteer ons</a> als je wil doneren op een andere "
-#~ "manier."
-
-#~ msgid ""
-#~ "Also, you can <a href=\"/ads\">buy ads</a> on img.bi. That will help too."
-#~ msgstr ""
-#~ "Je kan ook <a href=\"/ads\">advertenties kopen</a> op img.bi. Dat helpt "
-#~ "ook!"
-
-#~ msgid "No images found in localStorage. Try <a href=\"/\">upload some</a>."
-#~ msgstr ""
-#~ "Geen afbeeldingen gevonden in localStorage. Probeer er <a href=\"/\">wat "
-#~ "te uploaden</a>."
-
-#~ msgid ""
-#~ "We do not store any logs, except <a href=\"https://en.wikipedia.org/wiki/"
-#~ "SHA-3\">SHA-3</a> hash of uploader's IP address with random <a href="
-#~ "\"https://en.wikipedia.org/wiki/Salt_%28cryptography%29\">salt</a> for a "
-#~ "day. But our hosting provider and systems like <a href=\"https://en."
-#~ "wikipedia.org/wiki/SORM\">SORM</a>, <a href=\"https://en.wikipedia.org/"
-#~ "wiki/Hepting_v._AT%26T\">NarusInsight</a>, <a href=\"https://en.wikipedia."
-#~ "org/wiki/Titan_traffic_database\">Titan traffic database</a> and other "
-#~ "can store their own logs. Be careful."
-#~ msgstr ""
-#~ "We slaan onder geen enkele vorm logs op, behalve de <a href=\"https://nl."
-#~ "wikipedia.org/wiki/SHA-3\">SHA-3</a>-hash van het IP-adres van de "
-#~ "uploader, met een willekeurige <a href=\"https://nl.wikipedia.org/wiki/"
-#~ "Salt_%28cryptografie%29\">salt</a>, voor één dag. Onze hostingprovider en "
-#~ "systemen als <a href=\"https://en.wikipedia.org/wiki/SORM\">SORM</a>, <a "
-#~ "href=\"https://en.wikipedia.org/wiki/Hepting_v._AT%26T\">NarusInsight</"
-#~ "a>, <a href=\"https://en.wikipedia.org/wiki/Titan_traffic_database"
-#~ "\">Titan traffic database</a> en anderen kunnen echter wel logs opslaan. "
-#~ "Wees voorzichtig."
