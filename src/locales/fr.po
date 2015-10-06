@@ -372,7 +372,7 @@ msgid ""
 "img.bi is <a href=\"https://github.com/imgbi\">available on GitHub</a> under "
 "GPLv3 license."
 msgstr ""
-"Nous pensors que seule la cryptographie libre est acceptable, donc tout le "
+"Nous pensons que seule la cryptographie libre est acceptable, donc tout le "
 "code source de img.bi est <a href=\"https://github.com/imgbi\">disponible "
 "sur GitHub</a> sous licence GPLv3."
 
