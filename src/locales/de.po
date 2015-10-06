@@ -256,8 +256,8 @@ msgid "No pop-unders, pop-ups and other bad things."
 msgstr "Keine Pop-Unders, Pop-Ups und andere böse Sachen."
 
 #: src/partials/ads.html
-msgid "Nothing which is illegal in Netherlands on banner."
-msgstr "Nichts was in den Niederlanden illegal ist auf Bannern."
+msgid "Nothing which is illegal in France on banner."
+msgstr "Nichts was in den Frankreich illegal ist auf Bannern."
 
 #: src/partials/ads.html
 msgid "Nothing that can violate privacy of img.bi users."
