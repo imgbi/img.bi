@@ -1,0 +1,7 @@
+.alert.alert-danger.text-center(ng-show='imageremoved')
+  h3(translate) Image was autoremoved.
+h4.text-center(ng-show='!image')
+  i.icon-spinner.animate-spin
+  span(translate) Loading
+.text-center(ng-init='zoom = false')
+  img(ng-src='{{image}}', ng-class="{'image': !zoom, 'zoom-out': zoom}", ng-click='zoom = !zoom')

@@ -1,0 +1,40 @@
+.row.text-center(ng-show='images[0] == undefined')
+  h4
+    .icon-spinner.animate-spin
+    span(translate) Loading
+div(ng-init='images = []')
+  .row(data-ng-repeat='image in images')
+    .text-center(ng-init='zoom = false')
+      img(ng-src='{{image.url}}', ng-class="{'image': !zoom, 'zoom-out': zoom}", ng-click='zoom = !zoom')
+    .col-md-6.col-md-offset-3.inputs
+      ul.nav.nav-tabs
+        if clearnet
+          li(ng-class="{true: 'active'}[url == '#{clearnet}']", ng-click="url = '#{clearnet}'")
+            a Web
+        if tor
+          li(ng-class="{true: 'active'}[url == '#{tor}']", ng-click="url = '#{tor}'")
+            a Tor
+        if i2p
+          li(ng-class="{true: 'active'}[url == '#{i2p}']", ng-click="url = '#{i2p}'")
+            a I2P
+      .text-center
+        .row
+          .div-input.col-md-11 {{url}}/#/{{image.id}}\!{{image.pass}}
+          button.btn.btn-default.icon-clipboard.btn-input-copy.col-md-1(type='button', title="{{'Copy to clipboard'|translate}}", data-clipboard-text='{{url}}/#/{{image.id}}\!{{image.pass}}', copy)
+        span.help-block(translate) Link to view image.
+        .row
+          .div-input.col-md-11 &lt;img data-imgbi="{{url}}/#/{{image.id}}\!{{image.pass}}" /&gt;
+          button.btn.btn-default.icon-clipboard.btn-input-copy.col-md-1(type='button', title="{{'Copy to clipboard'|translate}}", data-clipboard-text='<img data-imgbi="{{url}}/#/{{image.id}}\!{{image.pass}}" />', copy)
+        span.help-block(translate)
+          | Embed image (require 
+          a(href='https://img.bi/#/js') img.bi.js
+          | ).
+        div(data-ng-if='image.rmpass')
+          .row
+            .div-input.col-md-11 {{url}}/#rm/{{image.id}}\!{{image.pass}}\!{{image.rmpass}}
+            button.btn.btn-default.icon-clipboard.btn-input-copy.col-md-1(type='button', title="{{'Copy to clipboard'|translate}}", data-clipboard-text='{{url}}/#rm/{{image.id}}\!{{image.pass}}\!{{image.rmpass}}', copy)
+          span.help-block(translate) Link to remove image.
+          .row
+            .div-input.col-md-11 {{url}}/#autorm/{{image.id}}\!{{image.pass}}\!{{image.rmpass}}
+            button.btn.btn-default.icon-clipboard.btn-input-copy.col-md-1(type='button', title="{{'Copy to clipboard'|translate}}", data-clipboard-text='{{url}}/#autorm/{{image.id}}\!{{image.pass}}\!{{image.rmpass}}', copy)
+          span.help-block(translate) Remove image after first view.

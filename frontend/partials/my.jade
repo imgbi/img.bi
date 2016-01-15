@@ -1,0 +1,19 @@
+.container(ng-init='images = []')
+  .row(ng-repeat='rows in images | partition:4')
+    div(ng-repeat='image in rows')
+      .col-md-3
+        .thumbnail
+          a(href='#/{{image.id}}!{{image.pass}}')
+            img(ng-src='{{image.uri}}')
+          .caption.text-center
+            p
+              a.btn.btn-primary.btn-sm(href='#/{{image.id}}!{{image.pass}}', role='button', translate) View
+              a.btn.btn-default.btn-sm(href='#/rm/{{image.id}}!{{image.pass}}!{{image.rmpass}}', role='button', translate) Remove
+h3.text-center(ng-show='images[0] == undefined', translate)
+  | No images found in your browser's storage. Try 
+  a(href='#') upload some
+  | .
+div(ng-show='images[0] != undefined && images.length < thumbs.length')
+  ul.pager.text-center
+    li
+      a(ng-click='loadmore()', translate) Load more

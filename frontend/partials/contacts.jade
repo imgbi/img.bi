@@ -1,0 +1,19 @@
+.row
+  .col-md-12.text-center
+    h3(translate) Contacts
+    if mail
+      p
+        i.icon-mail
+        a(href='mailto:#{email}')= email
+    if gpg
+      p
+        i.icon-key
+        a(href='#{gpg}', translate) GPG key
+    if github
+      p
+        i.icon-github
+        a(href='https://github.com/#{github}') GitHub
+    if twitter
+      p
+        i.icon-twitter
+        a(href='https://twitter.com/#{twitter}') Twitter

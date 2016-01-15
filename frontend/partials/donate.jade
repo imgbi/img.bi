@@ -1,0 +1,30 @@
+.row
+  .col-md-8.col-md-offset-2.text-center
+    h3(translate) Donate
+    p(translate)
+      | img.bi is an open source project available free of charge to anyone. But servers, domains, certs and many other things cost some money. Even a little donation helps to run img.bi.
+    if bitcoin
+      h3
+        span(translate) Bitcoin address
+        | : 
+        a(href='bitcoin:#{bitcoin}')
+          | #{bitcoin}
+    if litecoin
+      h3
+        span(translate) Litecoin address
+        | : 
+        a(href='litecoin:#{litecoin}')
+          | #{litecoin}
+    if dogecoin
+      h3
+        span(translate) Dogecoin address
+        | : 
+        a(href='dogecoin:#{dogecoin}')
+          | #{dogecoin}
+    h4(translate)
+      a(href='#contacts') Contact us
+      |  if you want to donate another way.
+    p(translate)
+      | Also, you can 
+      a(href='#ads') buy ads
+      |  on img.bi. That will help too.

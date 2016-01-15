@@ -1,0 +1,85 @@
+doctype html
+html(ng-app='imgbi', ng-controller='main', prefix='og: http://ogp.me/ns#')
+  head
+    meta(charset='utf-8')
+    title= name
+    meta(name='description', content='Open source secure image hosting with client-side AES-256 encryption.')
+    meta(property='og:title', content=name)
+    meta(property='og:site_name', content=name)
+    meta(property='og:locale', content='en')
+    each lang in languages
+      meta(property='og:locale:alternate', content=lang.iso)
+    meta(name='viewport', content='width=device-width')
+    link(href='css/main.css', rel='stylesheet')
+    link(rel='apple-touch-icon', sizes='57x57', href='icons/apple-touch-icon-57x57.png')
+    link(rel='apple-touch-icon', sizes='114x114', href='icons/apple-touch-icon-114x114.png')
+    link(rel='apple-touch-icon', sizes='72x72', href='icons/apple-touch-icon-72x72.png')
+    link(rel='apple-touch-icon', sizes='144x144', href='icons/apple-touch-icon-144x144.png')
+    link(rel='apple-touch-icon', sizes='60x60', href='icons/apple-touch-icon-60x60.png')
+    link(rel='apple-touch-icon', sizes='120x120', href='icons/apple-touch-icon-120x120.png')
+    link(rel='apple-touch-icon', sizes='76x76', href='icons/apple-touch-icon-76x76.png')
+    link(rel='apple-touch-icon', sizes='152x152', href='icons/apple-touch-icon-152x152.png')
+    link(rel='icon', type='image/png', href='icons/favicon-196x196.png', sizes='196x196')
+    link(rel='icon', type='image/png', href='icons/favicon-160x160.png', sizes='160x160')
+    link(rel='icon', type='image/png', href='icons/favicon-96x96.png', sizes='96x96')
+    link(rel='icon', type='image/png', href='icons/favicon-16x16.png', sizes='16x16')
+    link(rel='icon', type='image/png', href='icons/favicon-32x32.png', sizes='32x32')
+  body
+    .container
+      .pull-right
+        a(href='#my', translate) my images
+        |  
+        each lang in languages
+          span.lang
+            a(title=lang.name, id=lang.iso, ng-click='localize("#{lang.iso}")')= lang.iso
+      .page-header
+        a(href='#')
+          h1
+            span.logo= name
+            = ' '
+            small(translate) really secure image hosting
+      div(ng-view)
+      noscript
+        .text-center
+          | Sorry, #{name} uses JS for encryption and decryption.
+          br
+          | Enable JS and reload page.
+      footer.text-center
+        hr
+        p
+          span(translate) Copyleft
+          = ' '
+          a(href='https://img.bi') img.bi project
+          | .
+        p
+          a(href='https://github.com/imgbi/img.bi', target='_blank', translate) Source code
+          |  |
+          = ' '
+          a(href='#contacts', translate) Contacts
+          |  |
+          = ' '
+          a(href='#ads', translate) Advertising
+          |  |
+          = ' '
+          a(href='#donate', translate) Donate
+          |  |
+          = ' '
+          a(href='#apps', translate) Apps
+          if transparency
+            |  |
+            = ' '
+            a(href=transparency, target='_blank', translate) Transparency
+        p
+          if clearnet
+            a(href=clearnet, translate) In the internet
+          - if (tor || i2p)
+            |  |
+            = ' '
+          if tor
+            a(href=tor, translate) Tor hidden service
+          - if (tor || i2p)
+            |  |
+            = ' '
+          if i2p
+            a(href=i2p + '?i2paddresshelper=' + i2paddresshelper, translate) Eepsite
+    script(src='scripts/main.js')

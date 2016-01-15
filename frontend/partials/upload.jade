@@ -1,0 +1,72 @@
+.row(ng-init='$root.files = []')
+  .col-md-12
+    .text-center.holder(holder='')
+      h2(ng-show='files[0] == undefined', translate) Drop images here or just click
+      span#images(ng-repeat='file in files')
+        img(ng-src='{{file.url}}')
+    input#imageUpload.imageUpload(type='file', multiple='multiple', accept='image/*', imageinput='')
+.row
+  .col-md-12
+    button.btn.btn-primary.btn-lg.btn-block(type='button', ng-click='button()', translate) Upload
+    h4#uploading.text-center.hidden
+      i.icon-spinner.animate-spin
+      span(translate) Uploading
+.form-horizontal.storefor
+  .form-group
+    .col-md-2.col-md-offset-8.control-label.text-muted(translate) Store for:
+    .col-md-2
+      select.form-control.input-sm(ng-model='expire')
+        option(value='1', translate) One day
+        option(value='3', translate) Three days
+        option(value='7', translate) One week
+        option(value='28', translate) Four weeks
+        option(value='90', translate) 90 days
+        option(value='180', translate) 180 days
+        option(value='365', translate) One year
+        option(value='0', translate) Forever
+.row
+  .col-md-12
+    h3.text-center.why(translate) Why img.bi is secure and awesome?
+.row
+  .col-md-4
+    .panel.panel-default
+      .panel-heading
+        h3.panel-title.text-center(translate) Cryptography
+      .panel-body(translate)
+        | Images are encrypted using 
+        a(href='https://en.wikipedia.org/wiki/Advanced_Encryption_Standard') AES-256
+        |  with random key in your browser before upload. Nobody can view your images, even people who have direct access to servers. We also use 
+        a(href='https://en.wikipedia.org/wiki/Transport_Layer_Security') TLS
+        |  which defend you from 
+        a(href='https://en.wikipedia.org/wiki/Man-in-the-middle_attack') Man-in-the-Middle attacks
+        | .
+  .col-md-4
+    .panel.panel-default
+      .panel-heading
+        h3.panel-title.text-center(translate) Open source
+      .panel-body(translate)
+        | We believe that only open source crypto is acceptable, so all source code of img.bi is 
+        a(href='https://github.com/imgbi') available on GitHub
+        |  under GPLv3 license.
+  .col-md-4
+    .panel.panel-default
+      .panel-heading
+        h3.panel-title.text-center(translate) Privacy
+      .panel-body(translate)
+        | We do not store any logs, except 
+        a(href='https://en.wikipedia.org/wiki/Bcrypt') bcrypt
+        |  of uploader's IP address with random 
+        a(href='https://en.wikipedia.org/wiki/Salt_%28cryptography%29') salt
+        |  for a day. But our hosting provider and systems like 
+        a(href='https://en.wikipedia.org/wiki/Tempora') Tempora
+        | , 
+        a(href='https://en.wikipedia.org/wiki/SORM') SORM
+        | , 
+        a(href='https://en.wikipedia.org/wiki/Hepting_v._AT%26T') NarusInsight
+        | , 
+        a(href='https://en.wikipedia.org/wiki/Titan_traffic_database') Titan traffic database
+        | , 
+        a(href='https://en.wikipedia.org/wiki/Golden_Shield_Project') Golden Shield Project
+        | , 
+        a(href='https://en.wikipedia.org/wiki/Mass_surveillance_in_India') Lawful Intercept And Monitoring Project
+        | , and others can store their own logs. Be careful.

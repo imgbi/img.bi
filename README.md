@@ -1,28 +1,19 @@
-# img.bi
 [img.bi](https://img.bi/) is a secure image hosting. Images are encrypted using AES-256 with random key in browser before upload.
 
-## About this repo
-There is only static content. For work you need also [img.bi-api](https://github.com/imgbi/img.bi-api) which will be process POST- and GET- requests.
+## Description
 
-## Localization
-For localization img.bi uses [gettext](https://en.wikipedia.org/wiki/Gettext) format. Language files located in ``src/locales``. You can edit it with your text editor or gettext editor like [Poedit](https://poedit.net/).
+**imgbi-server** is a tool to build and host img.bi instance. I can be used alone, although it's recommended to use it with some webserver like nginx.
 
-If you want to add new language, run ``grunt extract``. It will create file ``src/locales/template.pot`` which you can use as a template for your language file.
+## Installation
 
-Also you need to update ``config.json``. Make sure it's a valid json, you can test it with ``grunt jsonlint``.
+You can get imgbi-server from npm
 
-## Build
+    npm install -g imgbi-server
 
-    npm install
-    bower install
-    grunt
-    
-## Build dependencies
-* [Grunt](http://gruntjs.com)
-* [Bower](http://bower.io)
-* [NPM](https://npmjs.org)
+See `--help` for usage info.
 
 ## Donate
+
 Bitcoin: [1imgbioAKhqeSaAG2SB6Ct79r7UeyGpYP](bitcoin:1imgbioAKhqeSaAG2SB6Ct79r7UeyGpYP)
 
 Litecoin: [LiMgBiGCWR3bYsHXLfZYonLBZpgCVqMAw2](litecoin:LiMgBiGCWR3bYsHXLfZYonLBZpgCVqMAw2)

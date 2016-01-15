@@ -1,34 +1,28 @@
 {
-  "name": "img.bi",
+  "host": "127.0.0.1",
+  "port": 9000,
+  "redis": "redis://127.0.0.1:6379",
+  "uploadDir": "./uploads",
+  "staticContent": "./build",
+  "hostStatic": true,
+  "compress": false,
   "maxSize": "3145728",
   "acceptedTypes": ["image/png", "image/jpeg", "image/gif", "image/svg+xml", "image/webp"],
+  "ipLimit": 100,
+  "hiddenLimit": 2000,
+  "hashids": "img.bi",
+  "name": "img.bi",
+  "transparency": "https://github.com/imgbi/img.bi-transparency",
   "clearnet": "https://img.bi",
-  "i2p": "http://imgbi.i2p",
   "tor": "http://imgbifwwqoixh7te.onion",
-  "languages": [
-    {
-      "iso": "en",
-      "name": "English"
-    },
-    {
-      "iso": "fr",
-      "name": "Français"
-    },
-    {
-      "iso": "ru",
-      "name": "Русский"
-    },
-    {
-      "iso": "it",
-      "name": "Italiano"
-    },
-    {
-      "iso": "nl",
-      "name": "Nederlands"
-    },
-    {
-      "iso": "de",
-      "name": "Deutsch"
-    }
-  ]
+  "i2p": "http://imgbi.i2p",
+  "i2paddresshelper": "HlMhQ2p~WB9WiehsAa2IDfndqXTMTOeYfOIxpeQH5hSeXLxtwUhd9FsaYmXM-hq66jRREcTpBqNmbILwQsInuBnQ7PZTgLel4tdKMrKhUlxDout4eZ6uRRN6QMWX9YzDCV0cmLBWHRcZlFaBirs3RbF5neUXgdnNqgcvdanQEt5-XN05I5JrIe~Dld9vQ1Z0WSn10BcOtXDm7uxnaHqJUbhtfOgmFoGAxF~di220GpRCzDP6Eg9NRIwAGGFxH8Y7PEOmlqiUCOn5aHwxk2msqrFLzBy6aVWq-e8etrhDxckPvJby7G13QCmVCO-cOOYOObP6bk51t99t5DNxIsGEuoEaUHyVNqAf9jvMjAcqpt6Gdk8slcV528rnSXJ6Vu2gcYYnb~kmt7wtvgm46xTE0OXxdDAmbtsRu~U6oSxRROkw02Q7hdnMmiF86dTYxx-dQ6H8aPQJV1SM5cNlv3XfqBl-V0-TounGNPcj4279s4DUs7-FfhuKYJjbZj5KOlPNAAAA",
+  "email": "mail@img.bi",
+  "gpg": "https://nesterov.pw/key.gpg",
+  "github": "imgbi/img.bi",
+  "twitter": "img_bi",
+  "expireInterval": 3600000,
+  "bitcoin": "1imgbioAKhqeSaAG2SB6Ct79r7UeyGpYP",
+  "litecoin": "LiMgBiGCWR3bYsHXLfZYonLBZpgCVqMAw2",
+  "dogecoin": "DGimgbiEpUJREs2zgFEY8xux3oF85JpkWY"
 }

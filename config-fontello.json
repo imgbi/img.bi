@@ -1,0 +1,46 @@
+{
+  "name": "",
+  "css_prefix_text": "icon-",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "ccc2329632396dc096bb638d4b46fb98",
+      "css": "mail",
+      "code": 59394,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "f2aa28a2548ed3d2be718d087b65ee21",
+      "css": "key",
+      "code": 59395,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "cda0cdcfd38f5f1d9255e722dad42012",
+      "css": "spinner",
+      "code": 59393,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "5e0a374728ffa8d0ae1f331a8f648231",
+      "css": "github",
+      "code": 59392,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "627abcdb627cb1789e009c08e2678ef9",
+      "css": "twitter",
+      "code": 59396,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "c9bef3dc67fea47e94c4a5030ea64dad",
+      "css": "clipboard",
+      "code": 59397,
+      "src": "elusive"
+    }
+  ]
+}

@@ -1,4 +1,5 @@
-tmp
+.tmp
+uploads
 Makefile
 bower_components
 
@@ -21,4 +22,4 @@ build
 node_modules
 
 *.mo
-src/locales/template.pot
+imgbi-server.1
