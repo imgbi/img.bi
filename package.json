@@ -1,6 +1,6 @@
 {
   "name": "img.bi-server",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "[img.bi](https://img.bi/) is a secure image hosting. Images are encrypted using AES-256 with random key in browser before upload.",
   "homepage": "https://img.bi",
   "keywords": [

@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 var app = require('./backend/app.js');
 var pkg = require('./package.json');
 var cli = require('cli').enable('version');
