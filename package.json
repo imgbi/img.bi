@@ -17,7 +17,7 @@
     "imgbi-migrate": "./scripts/migrate.js"
   },
   "scripts": {
-    "test": "jshint *.js backend/**/*.js frontend/**/*.js tests/**/*.js && jsonlint -q package.json && jsonlint -q config-fontello.json && jsonlint -q frontend/languages.json && jsonlint -q config.json && jsonlint -q commands.json && karma start karma.conf.js && mocha tests/backend/*.tests.js && jscs *.js backend/**/*.js frontend/**/*.js tests/**/*.js",
+    "test": "./node_modules/jshint/bin/jshint *.js backend/**/*.js frontend/**/*.js tests/**/*.js && ./node_modules/jsonlint/lib/cli.js -q package.json && ./node_modules/jsonlint/lib/cli.js -q config-fontello.json && ./node_modules/jsonlint/lib/cli.js -q frontend/languages.json && ./node_modules/jsonlint/lib/cli.js -q config.json && ./node_modules/jsonlint/lib/cli.js -q commands.json && ./node_modules/karma/bin/karma start karma.conf.js && ./node_modules/mocha/bin/mocha tests/backend/*.tests.js && node_modules/jscs/bin/jscs *.js backend/**/*.js frontend/**/*.js tests/**/*.js",
     "prepublish": "node ./scripts/generate-manpage.js"
   },
   "man": "./imgbi-server.1",
