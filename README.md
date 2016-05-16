@@ -8,7 +8,7 @@
 
 You can get imgbi-server from npm
 
-    npm install -g imgbi-server
+    npm install -g img.bi-server
 
 See `--help` for usage info.
 
