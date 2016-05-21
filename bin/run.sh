@@ -35,4 +35,4 @@ fi
 #start img.bi
 echo "Started img.bi..."
 
-cli.js $@
+./cli.js $@
