@@ -35,7 +35,7 @@ module.exports = function(config, callback) {
           return;
         }
 
-        callback(null, null, 'Static content was successfuly built');
+        callback(null, null, 'Static content was successfully built');
 
         setInterval(function() {
           expire(client, config);
