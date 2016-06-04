@@ -80,7 +80,7 @@ msgstr "Kontaktiere uns"
 
 #: src/index.html src/partials/contacts.html
 msgid "Contacts"
-msgstr "Kontakte"
+msgstr "Kontakt"
 
 #: src/partials/view.html
 msgid "Copy to clipboard"
