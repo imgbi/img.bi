@@ -17,7 +17,7 @@ div(ng-init='images = []')
         if i2p
           li(ng-class="{true: 'active'}[url == '#{i2p}']", ng-click="url = '#{i2p}'")
             a I2P
-      .text-center
+      .text-center(ng-init="url = '#{clearnet}'")
         .row
           .div-input.col-md-11 {{url}}/#/{{image.id}}\!{{image.pass}}
           button.btn.btn-default.icon-clipboard.btn-input-copy.col-md-1(type='button', title="{{'Copy to clipboard'|translate}}", data-clipboard-text='{{url}}/#/{{image.id}}\!{{image.pass}}', copy)
