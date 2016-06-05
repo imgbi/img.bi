@@ -1,7 +1,7 @@
 angular.module('imgbi.storage', [])
   .factory('rmStorage', [function() {
     return function(id) {
-      localStorage.removeItem(id);
+      localStorage.removeItem('imgbi_' + id);
     };
   }])
   .factory('setStorage', [function() {
