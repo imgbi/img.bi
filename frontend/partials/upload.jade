@@ -15,7 +15,7 @@
   .form-group
     .col-md-2.col-md-offset-8.control-label.text-muted(translate) Store for:
     .col-md-2
-      select.form-control.input-sm(ng-model='expire')
+      select.form-control.input-sm(ng-model='expire', ng-change='updateexpire(expire)')
         option(value='1', translate) One day
         option(value='3', translate) Three days
         option(value='7', translate) One week
