@@ -9,16 +9,16 @@ angular.module('imgbi.storage', [])
       if (typeof value === 'object') {
         value = JSON.stringify(value);
       }
-      localStorage.setItem(id, value);
+      localStorage.setItem('imgbi_' + id, value);
     };
   }])
   .factory('getStorage', ['$q', function($q) {
     return function(id) {
       var deferred = $q.defer();
       if (id != 'lang' && id != 'expire') {
-        deferred.resolve(JSON.parse(localStorage.getItem(id)));
+        deferred.resolve(JSON.parse(localStorage.getItem('imgbi_' + id)));
       } else {
-        deferred.resolve(localStorage.getItem(id));
+        deferred.resolve(localStorage.getItem('imgbi_' + id));
       }
       return deferred.promise;
     };
