@@ -162,6 +162,10 @@ angular.module('imgbi.controllers', [])
           $location.path('/uploaded');
         }
       };
+      
+      $scope.updateexpire = function(expire) {
+        $rootScope.expire = expire;
+      };
     }
   ])
   .controller('uploaded', [
