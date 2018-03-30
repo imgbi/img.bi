@@ -2,7 +2,7 @@
 
 ## Description
 
-**imgbi-server** is a tool to build and host img.bi instance. I can be used alone, although it's recommended to use it with some webserver like nginx.
+**imgbi-server** is a tool to build and host img.bi instance. It can be used alone, although it's recommended to use it with some webserver like nginx.
 
 ## Installation
 
