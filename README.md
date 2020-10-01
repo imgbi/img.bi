@@ -1,6 +1,6 @@
 [img.bi](https://img.bi/) is a secure image hosting. Images are encrypted using AES-256 with random key in browser before upload.
 
-## Description
+## Descripction
 
 **imgbi-server** is a tool to build and host img.bi instance. I can be used alone, although it's recommended to use it with some webserver like nginx.
 
