@@ -6,11 +6,11 @@
 
 ## Installation
 
-You can get imgbi-server from npm
+You can get Imgbi-Server from NPM
 
     npm install -g imgbi-server
 
-See `--help` for usage info.
+See `--help` for usage Info.
 
 ## Donate
 
