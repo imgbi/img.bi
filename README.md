@@ -1,4 +1,10 @@
-[img.bi](https://img.bi/) is a secure image hosting. Images are encrypted using AES-256 with random key in browser before upload.
+img.bi is a secure image hosting. Images are encrypted using AES-256 with random key in browser before upload.
+
+# DEPRECATED NOTICE
+img.bi software is really old, not supported and you should not use it.
+
+For alternative, check out [icsend](https://github.com/komachi/icsend).
+
 
 ## Description
 
@@ -12,10 +18,3 @@ You can get imgbi-server from npm
 
 See `--help` for usage info.
 
-## Donate
-
-Bitcoin: [1imgbioAKhqeSaAG2SB6Ct79r7UeyGpYP](bitcoin:1imgbioAKhqeSaAG2SB6Ct79r7UeyGpYP)
-
-Litecoin: [LiMgBiGCWR3bYsHXLfZYonLBZpgCVqMAw2](litecoin:LiMgBiGCWR3bYsHXLfZYonLBZpgCVqMAw2)
-
-Dogecoin: [DGimgbiEpUJREs2zgFEY8xux3oF85JpkWY](dogecoin:DGimgbiEpUJREs2zgFEY8xux3oF85JpkWY)
