@@ -131,12 +131,12 @@ angular.module('imgbi.controllers', [])
       };
       getFullStorage().then(function(storage) {
         angular.forEach(storage, function(content, id) {
-          if (id != 'lang' && id != 'expire') {
+          if (id.substring(0, 6) == 'imgbi_' && id != 'imgbi_lang' && id != 'imgbi_expire') {
             if (typeof content !== 'object') {
               content = JSON.parse(content);
             }
             $rootScope.thumbs.push({
-              id: id,
+              id: id.substring(6, id.length),
               pass: content.pass,
               rmpass: content.rmpass
             });
