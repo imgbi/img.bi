@@ -6,7 +6,7 @@ img.bi software is really old, not supported and you should not use it.
 For alternative, check out [icsend](https://github.com/komachi/icsend).
 
 
-## Description
+## Descripction
 
 **imgbi-server** is a tool to build and host img.bi instance. I can be used alone, although it's recommended to use it with some webserver like nginx.
 
