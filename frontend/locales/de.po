@@ -80,7 +80,7 @@ msgstr "Kontaktiere uns"
 
 #: src/index.html src/partials/contacts.html
 msgid "Contacts"
-msgstr "Kontakte"
+msgstr "Kontakt"
 
 #: src/partials/view.html
 msgid "Copy to clipboard"
@@ -148,7 +148,7 @@ msgid "File was not found"
 msgstr "Die Datei wurde nicht gefunden"
 
 #: src/scripts/controllers.js
-msgid "File was successfuly removed."
+msgid "File was successfully removed."
 msgstr "Datei wurde erfolgreich entfernt."
 
 #: src/partials/apps.html

@@ -151,7 +151,7 @@ msgid "File was not found"
 msgstr "Bestand niet gevonden"
 
 #: src/scripts/controllers.js
-msgid "File was successfuly removed."
+msgid "File was successfully removed."
 msgstr "Bestand is succesvol verwijderd."
 
 #: src/partials/apps.html

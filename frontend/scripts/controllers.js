@@ -56,7 +56,7 @@ angular.module('imgbi.controllers', [])
         removeFile($routeParams.id, $routeParams.rmpass).then(
           function(ok) {
             notify(gettextCatalog.getString('Success'),
-              gettextCatalog.getString('File was successfuly removed.'));
+              gettextCatalog.getString('File was successfully removed.'));
             $location.path('/');
           },
           function(err) {
